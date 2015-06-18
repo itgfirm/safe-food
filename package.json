@@ -1,16 +1,10 @@
 {
   "name": "safe-food",
-  "description": "Provides info about food recalls based on OpenFDA (https://open.fda.gov/)",
-  "version": "0.0.1",
-  "author": {
-      "name":"Incentive Technology Group",
-      "email":"",
-      "url":"http://www.itgfirm.com"
+  "version": "1.0.0",
+  "main": "server/server.js",
+  "scripts": {
+    "pretest": "jshint ."
   },
-  "homepage": "",
-  "contributors": [
-    "Phil Armour <phillip.armour@itgfirm.com>"
-  ],
   "dependencies": {
     "compression": "^1.0.3",
     "cors": "^2.5.2",
@@ -18,28 +12,18 @@
     "loopback": "^2.14.0",
     "loopback-boot": "^2.6.5",
     "loopback-datasource-juggler": "^2.19.0",
-    "serve-favicon": "^2.0.1",
-    "debug": "latest"
+    "strong-express-metrics": "^1.1.0",
+    "serve-favicon": "^2.0.1"
   },
   "optionalDependencies": {
     "loopback-explorer": "^1.1.0"
   },
   "devDependencies": {
-    "chai": "^2.3.0",
-    "chai-as-promised": "^5.0.0",
-    "jsdoc": "^3.3.0",
-    "jshint": "^2.5.6",
-    "mocha": "^2.2.5"
+    "jshint": "^2.5.6"
   },
-  "main": "server/server.js",
   "repository": {
-    "type": "git",
-    "url": "git://github.com/itgfirm/safe-food"
+    "type": "",
+    "url": ""
   },
-  "scripts": {
-    "pretest": "jshint .",
-    "test": "./node_modules/mocha/bin/mocha"
-    "start": "node server/server.js",
-    "jsdoc": "./node_modules/.bin/jsdoc ./common/**/*.js -t ./node_modules/ink-docstrap/template -c ./node_modules/jsdoc/conf.json"
-  },
+  "description": "safe-food"
 }
