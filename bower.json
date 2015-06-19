@@ -4,6 +4,6 @@
 	"dependencies": {
 		"angular": "latest",
 		"bootstrap": "3.2.0",
-		"angular-ui-router": "#master"
+		"angular-route": "latest"
 	}
 }

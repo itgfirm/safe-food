@@ -1,5 +1,5 @@
 var paths = {
-	js: ['*.js', 'client/**/*.js'],
+	js: ['*.js', 'client/js/*.js']
 };
 module.exports = function(grunt){
 

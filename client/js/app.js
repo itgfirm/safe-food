@@ -1,13 +1,12 @@
 angular
-  .module('safeFoodApp', [])
-  .config(['$stateProvider', '$urlRouterProvider', function($stateProvider,
-      $urlRouterProvider) {
-    $stateProvider
-      .state('todo', {
-        url: '',
+  .module('safeFoodApp', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider
+      .when('/', {
         templateUrl: 'views/todo.html',
-        controller: 'TodoController'
+        controller: 'theController'
+      }).
+      otherwise({
+        redirectTo: '/'
       });
-
-    $urlRouterProvider.otherwise('todo');
   }]);
