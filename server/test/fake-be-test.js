@@ -29,7 +29,7 @@ var desired = JSON.parse(process.env.DESIRED || '{"browserName": "chrome"}');
 desired.name = 'example with ' + desired.browserName;
 desired.tags = ['tutorial'];
 
-describe('{%= name %} (' + desired.browserName + ')', function() {
+describe('fake-be-test (' + desired.browserName + ')', function() {
     var browser;
     var allPassed = true;
 
