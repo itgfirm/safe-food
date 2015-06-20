@@ -8,7 +8,12 @@ module.exports = function(grunt){
 	grunt.initConfig({
 		jshint: {
 			all: paths.js
+		},
+		karma: {
+			unit: {
+				configFile: 'client/test/spec/karma.config.js'
+			}
 		}
 	});
-	grunt.registerTask('default', ['jshint']);
+	grunt.registerTask('default', ['jshint', 'karma']);
 };
