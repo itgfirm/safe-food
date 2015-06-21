@@ -8,6 +8,7 @@ require.config({
 
     'angular-ui-router': '../vendor/angular-ui-router/release/angular-ui-router', // jshint ignore:line
     'angular-material': '../vendor/angular-material/angular-material',
+    'angular-google-maps': '../vendor/ngmap/build/scripts/ng-map',
 
     'app': 'app',
   },
@@ -18,14 +19,17 @@ require.config({
     'angular-animate': [ 'angular' ],
     'angular-touch': [ 'angular' ],
     'angular-ui-router': [ 'angular-route' ],
-    'angular-material': [ 'angular', 'angular-aria' ]
+    'angular-material': [ 'angular', 'angular-aria' ],
+    'angular-google-maps': [ 'angular' ]
   }
 });
 
 require([
-  'angular',
-  'app',
-  'features/_example/_example-config'
+    'angular',
+    'app',
+    'features/_example/_example-config',
+    'features/home/home-config',
+    'features/food-recall-search/food-recall-search-config',
   ],
   function(angular, app) {
     angular.element().ready(function() {
