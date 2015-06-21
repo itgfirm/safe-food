@@ -3,7 +3,7 @@ define([ 'angular', 'app', 'features/_example/_example-controller' ],
 
     app.config(function($stateProvider) {
       $stateProvider.state('base._example', {
-        url: '/',
+        url: '/example',
         views: {
           'main@': {
             templateUrl: 'scripts/features/_example/_example.html',

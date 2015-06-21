@@ -4,7 +4,8 @@ define([
     'angular-animate',
     'angular-touch',
     'angular-ui-router',
-    'angular-material'
+    'angular-material',
+    'angular-google-maps'
   ],
   function (angular) {
     var app = angular.module('safeFoodApp', [
@@ -12,7 +13,8 @@ define([
       'ngAnimate',
       'ngTouch',
       'ui.router',
-      'ngMaterial'
+      'ngMaterial',
+      'ngMap'
     ]);
 
     app.config(function($stateProvider, $urlRouterProvider) {
