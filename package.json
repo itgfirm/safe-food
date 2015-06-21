@@ -75,6 +75,6 @@
   "scripts": {
     "test": "grunt test",
     "start": "node server/server.js",
-    "postinstall": "grunt build"
+    "postinstall": "bower cache clean && bower install && grunt build"
   }
 }
