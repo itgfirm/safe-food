@@ -1,18 +1,52 @@
-<map zoom="11" 
-  center="[40.74, -74.18]" 
-  disable-default-u-i="true"
-  disable-double-click-zoom="true"
-  draggable="false"
-  draggable-cursor="help"
-  dragging-cursor="move"
-  keyboard-shortcuts="false"
-  max-zoom="12"
-  min-zoom="8"
-  tilt="45"
-  map-type-id="TERRAIN">
-</map>
 <md-content>
-  <section layout="row" layout-sm="column" layout-align="center center">
-    <md-button class="md-raised md-primary" ng-click="showDisclaimer()">Disclaimer</md-button>
-  </section>
+  <!--
+    Move md-content and md-toolbar to main
+  -->
+  <md-toolbar>
+  </md-toolbar>
+  <!--
+    Height set to 600px but needs to be updated fill remaining space
+    May require a directive or someone good with css
+  -->
+    <map zoom="11" 
+      center="[40.74, -74.18]" 
+      disable-default-u-i="true"
+      disable-double-click-zoom="true"
+      draggable="false"
+      draggable-cursor="help"
+      dragging-cursor="move"
+      keyboard-shortcuts="false"
+      max-zoom="12"
+      min-zoom="8"
+      tilt="45"
+      map-type-id="TERRAIN"
+      style="height: 600px">
+    </map>
+  <!--
+    Needs to be changed to a responsive panel
+  -->
+  <md-sidenav md-component-id="left" class="md-sidenav-left" md-is-open="true">
+    <md-card ng-repeat="item in recallData.results track by $index">
+      <div ng-class="{ 'bg-danger': item.classification === 'Class I',
+                    'bg-warning': item.classification === 'Class II',
+                    'bg-success': item.classification === 'Class III' }"
+                    style="padding:16px">
+        <span class="sr-only">item.classification</span>
+      </div>
+      <md-card-content>
+        <h2 class="md-title" style="margin-top:0px">{{item.recalling_firm}}</h2>
+        <div><strong>Status:</strong> {{item.status}}</div>
+        <div><strong>Date Initiated:</strong> {{item.recall_initiation_date}}</div>
+        <div><strong>Product Description:</strong> {{item.product_description}}</div>
+        <div>
+          <strong class="clearfix">Reason For Recall:</strong>
+          {{item.reason_for_recall}}
+        </div>
+      </md-card-content>
+    </md-card>
+
+    <section layout="row" layout-sm="column" layout-align="center center">
+      <md-button class="md-raised md-primary" ng-click="showDisclaimer()">Disclaimer</md-button>
+    </section>
+  </md-sidenav>
 </md-content>

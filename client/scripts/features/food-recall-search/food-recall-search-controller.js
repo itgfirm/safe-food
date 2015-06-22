@@ -4,6 +4,16 @@ define([ 'angular', 'app',
 
 		app.controller('FoodRecallSearchController',
 			function($scope, $mdDialog, OpenFDAService) {
+				$scope.recallData = null;
+
+				$scope.search = function(params) {
+					OpenFDAService.getData()
+						.then(function(data) {
+							$scope.recallData = data;
+						});
+				};
+
+				$scope.search();
 
 				$scope.showDisclaimer = (function() {
 					var disclaimerDialog = $mdDialog.alert()
