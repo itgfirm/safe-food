@@ -26,6 +26,36 @@
     Needs to be changed to a responsive panel
   -->
   <md-sidenav md-component-id="left" class="md-sidenav-left" md-is-open="true">
+    <form name="recall-search">
+      <md-input-container>
+        <label>City</label>
+        <input name="city" ng-model="search.city">
+      </md-input-container>
+      <md-input-container>
+        <label>State</label>
+        <input name="state" ng-model="search.state">
+      </md-input-container>
+      <md-input-container>
+        <label>Company Name</label>
+        <input name="companyName" ng-model="search.companyName">
+      </md-input-container>
+      <md-input-container>
+        <label>Recall Start Date</label>
+        <input name="recallStartDate" ng-model="search.recallStartDate">
+      </md-input-container>
+      <md-input-container>
+        <label>Recall End Date</label>
+        <input name="recallEndDate" ng-model="search.recallEndDate">
+      </md-input-container>
+      <md-input-container>
+        <label>Product Type</label>
+        <input name="productType" ng-model="search.productType">
+      </md-input-container>
+      <div class="md-action" layout="row" layout-sm="column" layout-align="end center">
+        <md-button class="md-raised md-primary" ng-click="search(search)">Search</md-button>
+      </div>
+    </form>
+    <md-divider></md-divider>
     <md-card ng-repeat="item in recallData.results track by $index">
       <div ng-class="{ 'bg-danger': item.classification === 'Class I',
                     'bg-warning': item.classification === 'Class II',
