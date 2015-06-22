@@ -5,7 +5,6 @@ define([ 'angular', 'app',
 		app.controller('FoodRecallSearchController',
 			function($scope, $mdDialog, OpenFDAService) {
 				$scope.recallData = null;
-				$scope.lastDataUpdatedDate = null;
 
 				$scope.search = function(params) {
 					OpenFDAService.getData()
@@ -15,6 +14,17 @@ define([ 'angular', 'app',
 				};
 
 				$scope.search();
+
+				$scope.searchDisclaimer = function(params) {
+						var confirm = $mdDialog.confirm()
+				      .title('Disclaimer')
+				      .content('Please note, search results prior to 2012 may be incomplete.')
+				      .ariaLabel('Disclaimer')
+				      .ok('Got it!');
+				    $mdDialog.show(confirm).then(function() {
+				      $scope.search(params);
+				    });
+			  };
 
 				$scope.showDisclaimer = (function() {
 					var disclaimerDialog = $mdDialog.alert()
@@ -26,7 +36,6 @@ define([ 'angular', 'app',
 
 					return function() {
 						return metaDataPromise.then(function(meta) {
-							$scope.lastDataUpdatedDate = meta.last_updated;
 							if(!displaying) {
 								displaying = true;
 								disclaimerDialog.content(meta.disclaimer);
