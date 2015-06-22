@@ -5,6 +5,7 @@ define([ 'angular', 'app',
 		app.controller('FoodRecallSearchController',
 			function($scope, $mdDialog, OpenFDAService) {
 				$scope.recallData = null;
+				$scope.lastDataUpdatedDate = null;
 
 				$scope.search = function(params) {
 					OpenFDAService.getData()
@@ -25,6 +26,7 @@ define([ 'angular', 'app',
 
 					return function() {
 						return metaDataPromise.then(function(meta) {
+							$scope.lastDataUpdatedDate = meta.last_updated;
 							if(!displaying) {
 								displaying = true;
 								disclaimerDialog.content(meta.disclaimer);

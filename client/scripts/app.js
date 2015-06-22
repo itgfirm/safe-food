@@ -19,7 +19,7 @@ define([
 
     app.config(function($stateProvider, $urlRouterProvider) {
       $stateProvider.state('base', { abstract: true });
-      $urlRouterProvider.otherwise('/');
+      $urlRouterProvider.otherwise('/food-recall-search');
     });
 
     return app;
