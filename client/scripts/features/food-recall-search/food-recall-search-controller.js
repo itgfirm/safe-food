@@ -7,13 +7,19 @@ define([ 'angular', 'app',
 				$scope.recallData = null;
 
 				$scope.search = function(params) {
-					OpenFDAService.getData()
+					OpenFDAService.getData(params)
 						.then(function(data) {
 							$scope.recallData = data;
+						},
+						function(err){
+							if(err.error.code === 'NOT_FOUND'){
+								var searchErrorMsg = $mdDialog.alert()
+									.title('Record(s) Not Found !')
+									.content('Your search did not return any results. Please modify your search criteria and try again !').ok('Close');
+								$mdDialog.show(searchErrorMsg)
+							}
 						});
 				};
-
-				$scope.search();
 
 				$scope.searchDisclaimer = function(params) {
 						var confirm = $mdDialog.confirm()
@@ -55,6 +61,7 @@ define([ 'angular', 'app',
 					};
 				})();
 
+				$scope.search();
 				$scope.showDisclaimer();
 
 		});

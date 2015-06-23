@@ -21,27 +21,27 @@
     <div layout="row" layout-wrap>
       <md-input-container flex="33" flex-sm="50">
         <label>City</label>
-        <input name="city" ng-model="search.city">
+        <input name="city" ng-model="searchParams.city">
       </md-input-container>
       <md-input-container flex="33" flex-sm="50">
         <label>State</label>
-        <input name="state" ng-model="search.state">
+        <input name="state" ng-model="searchParams.state">
       </md-input-container>
       <md-input-container flex="33" flex-sm="50">
         <label>Company Name</label>
-        <input name="companyName" ng-model="search.companyName">
+        <input name="companyName" ng-model="searchParams.companyName">
       </md-input-container>
       <md-input-container flex="33" flex-sm="50">
         <label>Recall Start Date</label>
-        <input name="recallStartDate" ng-model="search.recallStartDate">
+        <input name="recallStartDate" ng-model="searchParams.recallStartDate">
       </md-input-container>
       <md-input-container flex="33" flex-sm="50">
         <label>Recall End Date</label>
-        <input name="recallEndDate" ng-model="search.recallEndDate">
+        <input name="recallEndDate" ng-model="searchParams.recallEndDate">
       </md-input-container>
       <md-input-container flex="33" flex-sm="50">
         <label>Product Type</label>
-        <input name="productType" ng-model="search.productType">
+        <input name="productType" ng-model="searchParams.product_type">
       </md-input-container>
     </div>
 
@@ -56,7 +56,7 @@
         </md-icon>
       </md-button>
       <md-button class="md-raised md-icon-button md-primary"
-        ng-click="searchDisclaimer(search)"
+        ng-click="searchDisclaimer(searchParams)"
         aria-label="Search">
         <md-tooltip>
           Search
@@ -93,4 +93,4 @@
   </section>
 </md-content>
 
-<footer align="right" style="font-size:12px;padding-right:5px;">The openFDA beta research project contents were last updated on {{lastDataUpdatedDate | date:'MMMM dd, yyyy'}}</footer>
+<footer align="right" style="font-size:12px;padding-right:5px;">The openFDA beta research project contents were last updated on {{recallData.meta.last_updated | date:'MMMM dd, yyyy'}}</footer>

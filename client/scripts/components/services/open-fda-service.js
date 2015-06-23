@@ -21,9 +21,9 @@ define([ 'angular', 'app',
 
 
 			service.getData = function(params) {
-				var defer = $q.defer();
+				var defer = $q.defer(),
+					params = { search: createSearchString(params) };
 
-				params = params || {};
 				params.limit = params.limit || 100;
 
 				$http.get(baseUrl, { params: params })
@@ -35,6 +35,9 @@ define([ 'angular', 'app',
 						});
 
 						defer.resolve(data);
+					}).
+					error(function(err){
+						defer.reject(err);
 					});
 
 				return defer.promise;
@@ -47,7 +50,7 @@ define([ 'angular', 'app',
 					.then(function(data) {
 						LocationService.getStateFromCoords(data.coords)
 							.then(function(data) {
-								service.getData({ search: "distribution_pattern:" + "\"" + data.short_name + "\"" })
+								service.getData({ distribution_pattern: data.short_name })
 									.then(function(data) {
 										defer.resolve(data);
 									});
@@ -69,6 +72,18 @@ define([ 'angular', 'app',
 					month = dateString.substr(6, 2);
 
 				return month + '/' + date + '/' + year;
+			};
+
+			function createSearchString(params){
+				var searchString = '';
+
+				for(key in params) {
+					if(params.hasOwnProperty(key)) {
+						searchString += key + ':"' + params[key] + '"';
+					}
+				}
+
+				return searchString;
 			};
 
 			return service;
