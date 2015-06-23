@@ -26,6 +26,13 @@ define([ 'angular', 'app',
 				    });
 			  };
 
+			  $scope.searchNearMe = function() {
+			  	OpenFDAService.searchNearMe()
+			  		.then(function(data) {
+			  			$scope.recallData = data;
+			  		});
+			  };
+
 				$scope.showDisclaimer = (function() {
 					var disclaimerDialog = $mdDialog.alert()
 						.title('Disclaimer')

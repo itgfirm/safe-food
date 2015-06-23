@@ -1,66 +1,82 @@
-<md-content>
   <!--
     Move md-content and md-toolbar to main
   -->
+<md-content>
   <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h1>Safe Food</h1>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="showDisclaimer()"
+        aria-label="About Safe Food">
+        <md-tooltip>
+          About
+        </md-tooltip>
+        <md-icon class="fa fa-info-circle fa-2x">
+        </md-icon>
+      </md-button>
+    </div>
   </md-toolbar>
-  <!--
-    Height set to 600px but needs to be updated fill remaining space
-    May require a directive or someone good with css
-  -->
-    <map zoom="11"
-      center="[40.74, -74.18]"
-      disable-default-u-i="true"
-      disable-double-click-zoom="true"
-      draggable="false"
-      draggable-cursor="help"
-      dragging-cursor="move"
-      keyboard-shortcuts="false"
-      max-zoom="12"
-      min-zoom="8"
-      tilt="45"
-      map-type-id="TERRAIN"
-      style="height: 600px">
-    </map>
-  <!--
-    Needs to be changed to a responsive panel
-  -->
-  <md-sidenav md-component-id="left" class="md-sidenav-left" md-is-open="true">
-    <form name="recall-search">
-      <md-input-container>
+
+  <form name="recall-search" layout-padding>
+    <div layout="row" layout-wrap>
+      <md-input-container flex="33" flex-sm="50">
         <label>City</label>
         <input name="city" ng-model="search.city">
       </md-input-container>
-      <md-input-container>
+      <md-input-container flex="33" flex-sm="50">
         <label>State</label>
         <input name="state" ng-model="search.state">
       </md-input-container>
-      <md-input-container>
+      <md-input-container flex="33" flex-sm="50">
         <label>Company Name</label>
         <input name="companyName" ng-model="search.companyName">
       </md-input-container>
-      <md-input-container>
+      <md-input-container flex="33" flex-sm="50">
         <label>Recall Start Date</label>
         <input name="recallStartDate" ng-model="search.recallStartDate">
       </md-input-container>
-      <md-input-container>
+      <md-input-container flex="33" flex-sm="50">
         <label>Recall End Date</label>
         <input name="recallEndDate" ng-model="search.recallEndDate">
       </md-input-container>
-      <md-input-container>
+      <md-input-container flex="33" flex-sm="50">
         <label>Product Type</label>
         <input name="productType" ng-model="search.productType">
       </md-input-container>
-      <div class="md-action" layout="row" layout-sm="column" layout-align="end center">
-        <md-button class="md-raised md-primary" ng-click="searchDisclaimer(search)">Search</md-button>
-      </div>
-    </form>
-    <md-divider></md-divider>
-    <md-card ng-repeat="item in recallData.results track by $index">
+    </div>
+
+    <div class="md-action" layout="row" layout-align="end center">
+      <md-button class="md-raised md-icon-button md-primary"
+        ng-click="searchNearMe()"
+        aria-label="Search Near Me">
+        <md-tooltip>
+          Search Near Me
+        </md-tooltip>
+        <md-icon class="fa fa-crosshairs fa-2x">
+        </md-icon>
+      </md-button>
+      <md-button class="md-raised md-icon-button md-primary"
+        ng-click="searchDisclaimer(search)"
+        aria-label="Search">
+        <md-tooltip>
+          Search
+        </md-tooltip>
+        <md-icon class="fa fa-search fa-2x">
+        </md-icon>
+      </md-button>
+    </div>
+  </form>
+
+  <md-divider></md-divider>
+  
+  <section>
+    <md-card ng-repeat="item in recallData.results track by $index"
+      ng-animate="'am-slide-left'">
       <div ng-class="{ 'bg-danger': item.classification === 'Class I',
                     'bg-warning': item.classification === 'Class II',
                     'bg-success': item.classification === 'Class III' }"
-                    style="padding:16px">
+                    style="padding:16px"
+                    >
         <span class="sr-only">item.classification</span>
       </div>
       <md-card-content>
@@ -74,10 +90,7 @@
         </div>
       </md-card-content>
     </md-card>
-
-    <section layout="row" layout-sm="column" layout-align="center center">
-      <md-button class="md-raised md-primary" ng-click="showDisclaimer()">Disclaimer</md-button>
-    </section>
-  </md-sidenav>
+  </section>
 </md-content>
-<div align="right" style="font-size:12px;padding-right:5px;">The openFDA beta research project contents were last updated on {{lastDataUpdatedDate | date:'MMMM dd, yyyy'}}</div>
+
+<footer align="right" style="font-size:12px;padding-right:5px;">The openFDA beta research project contents were last updated on {{lastDataUpdatedDate | date:'MMMM dd, yyyy'}}</footer>

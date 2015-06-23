@@ -1,7 +1,8 @@
-define([ 'angular', 'app' ],
+define([ 'angular', 'app',
+	'components/services/location-service' ],
 	function(angular, app) {
 
-		app.service('OpenFDAService', function($http, $q) {
+		app.service('OpenFDAService', function($http, $q, LocationService) {
 			var service = { meta: null },
 				baseUrl = 'https://api.fda.gov/food/enforcement.json';
 
@@ -34,6 +35,25 @@ define([ 'angular', 'app' ],
 						});
 
 						defer.resolve(data);
+					});
+
+				return defer.promise;
+			};
+
+			service.searchNearMe = function() {
+				var defer = $q.defer();
+
+				LocationService.getGeolocation()
+					.then(function(data) {
+						LocationService.getStateFromCoords(data.coords)
+							.then(function(data) {
+								service.getData({ search: "distribution_pattern:" + "\"" + data.short_name + "\"" })
+									.then(function(data) {
+										defer.resolve(data);
+									});
+							})
+					}, function(error) {
+						defer.reject(error);
 					});
 
 				return defer.promise;
