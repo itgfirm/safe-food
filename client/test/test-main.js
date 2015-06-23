@@ -25,7 +25,6 @@ require.config({
 
     'angular-ui-router': '../vendor/angular-ui-router/release/angular-ui-router', // jshint ignore:line
     'angular-material': '../vendor/angular-material/angular-material',
-    'angular-google-maps': '../vendor/ngmap/build/scripts/ng-map',
 
     'app': 'app',
   },
@@ -37,7 +36,6 @@ require.config({
     'angular-touch': [ 'angular' ],
     'angular-ui-router': [ 'angular-route' ],
     'angular-material': [ 'angular', 'angular-aria' ],
-    'angular-google-maps': [ 'angular' ],
     'angular-mocks': [ 'angular' ]
   },
   // dynamically load all test files
