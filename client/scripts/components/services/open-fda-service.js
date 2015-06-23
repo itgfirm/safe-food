@@ -24,7 +24,7 @@ define([ 'angular', 'app',
 				var defer = $q.defer(),
 					params = { search: createSearchString(params) };
 
-				params.limit = params.limit || 100;
+				params.limit = params.limit || 25;
 
 				$http.get(baseUrl, { params: params })
 					.success(function(data) {

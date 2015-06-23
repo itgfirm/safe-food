@@ -21,12 +21,31 @@ define([ 'angular', 'app',
 						});
 				};
 
+				$scope.viewDetails = (function() {
+					var config = {
+						templateUrl: 'scripts/features/food-recall-search/food-recall-details.html'
+					};
+
+			    return function(item) {
+			    	var dialog = null;
+			    	scope = $scope.$new();
+			    	scope.details = item;
+			    	config.scope = scope;
+
+						scope.hideDialog = function() {
+							$mdDialog.hide(dialog);
+						};
+						
+						dialog = $mdDialog.show(config);
+			    };
+				})();
+
 				$scope.searchDisclaimer = function(params) {
 						var confirm = $mdDialog.confirm()
 				      .title('Disclaimer')
 				      .content('Please note, search results prior to 2012 may be incomplete.')
 				      .ariaLabel('Disclaimer')
-				      .ok('Got it!');
+				      .ok('Ok');
 				    $mdDialog.show(confirm).then(function() {
 				      $scope.search(params);
 				    });
@@ -43,7 +62,7 @@ define([ 'angular', 'app',
 					var disclaimerDialog = $mdDialog.alert()
 						.title('Disclaimer')
 						.ariaLabel('Disclaimer')
-				    .ok('Got it!'),
+				    .ok('Ok'),
 						metaDataPromise = OpenFDAService.getMeta(),
 						displaying = false;
 
@@ -62,7 +81,7 @@ define([ 'angular', 'app',
 				})();
 
 				$scope.search();
-				$scope.showDisclaimer();
+				// $scope.showDisclaimer();
 
 		});
 

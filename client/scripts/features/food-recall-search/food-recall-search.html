@@ -46,7 +46,7 @@
     </div>
 
     <div class="md-action" layout="row" layout-align="end center">
-      <md-button class="md-raised md-icon-button md-primary"
+<!--       <md-button class="md-raised md-icon-button md-primary"
         ng-click="searchNearMe()"
         aria-label="Search Near Me">
         <md-tooltip>
@@ -54,15 +54,11 @@
         </md-tooltip>
         <md-icon class="fa fa-crosshairs fa-2x">
         </md-icon>
-      </md-button>
-      <md-button class="md-raised md-icon-button md-primary"
+      </md-button> -->
+      <md-button class="md-raised md-primary"
         ng-click="searchDisclaimer(searchParams)"
         aria-label="Search">
-        <md-tooltip>
-          Search
-        </md-tooltip>
-        <md-icon class="fa fa-search fa-2x">
-        </md-icon>
+        Search
       </md-button>
     </div>
   </form>
@@ -71,7 +67,7 @@
   
   <section>
     <md-card ng-repeat="item in recallData.results track by $index"
-      ng-animate="'am-slide-left'">
+      ng-click="viewDetails(item)">
       <div ng-class="{ 'bg-danger': item.classification === 'Class I',
                     'bg-warning': item.classification === 'Class II',
                     'bg-success': item.classification === 'Class III' }"
@@ -91,6 +87,15 @@
       </md-card-content>
     </md-card>
   </section>
-</md-content>
+
+<!-- <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="recall-details">
+  <md-toolbar class="md-theme-light">
+    <h1 class="md-toolbar-tools">Recall Details</h1>
+  </md-toolbar>
+  <md-content layout-padding>
+  </md-content>
+</md-sidenav>
+</md-content> -->
+
 
 <footer align="right" style="font-size:12px;padding-right:5px;">The openFDA beta research project contents were last updated on {{recallData.meta.last_updated | date:'MMMM dd, yyyy'}}</footer>
