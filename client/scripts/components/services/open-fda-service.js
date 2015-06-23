@@ -21,11 +21,12 @@ define([ 'angular', 'app' ],
 
 			service.getData = function(params) {
 				var defer = $q.defer();
+				
+				var queryString = params ? createSearchString(params) : null;
+				var limit = (params  && params.limit ) ? params.limit : 100;
+				queryString = queryString ? queryString+'&limit='+limit : '?limit='+100;
 
-				params = params || {};
-				params.limit = params.limit || 100;
-
-				$http.get(baseUrl, { params: params })
+				$http.get(baseUrl+queryString)
 					.success(function(data) {
 
 						angular.forEach(data.results, function(result) {
@@ -34,6 +35,9 @@ define([ 'angular', 'app' ],
 						});
 
 						defer.resolve(data);
+					}).
+					error(function(err){
+						defer.reject(err);
 					});
 
 				return defer.promise;
@@ -49,6 +53,16 @@ define([ 'angular', 'app' ],
 					month = dateString.substr(6, 2);
 
 				return month + '/' + date + '/' + year;
+			};
+
+			function createSearchString(params){
+				var searchkeys = Object.keys(params),
+					paramString = null;
+
+				for (key in searchkeys) {
+					paramString = paramString ? paramString+'+AND+'+searchkeys[key]+':"'+params[searchkeys[key]]+'"' : '?search='+searchkeys[key]+':"'+params[searchkeys[key]]+'"'
+				};
+				return paramString;
 			};
 
 			return service;

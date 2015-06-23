@@ -29,30 +29,30 @@
     <form name="recall-search">
       <md-input-container>
         <label>City</label>
-        <input name="city" ng-model="search.city">
+        <input name="city" ng-model="searchParms.city">
       </md-input-container>
       <md-input-container>
         <label>State</label>
-        <input name="state" ng-model="search.state">
+        <input name="state" ng-model="searchParms.state">
       </md-input-container>
       <md-input-container>
         <label>Company Name</label>
-        <input name="companyName" ng-model="search.companyName">
+        <input name="companyName" ng-model="searchParms.companyName">
       </md-input-container>
       <md-input-container>
         <label>Recall Start Date</label>
-        <input name="recallStartDate" ng-model="search.recallStartDate">
+        <input name="recallStartDate" ng-model="searchParms.recallStartDate">
       </md-input-container>
       <md-input-container>
         <label>Recall End Date</label>
-        <input name="recallEndDate" ng-model="search.recallEndDate">
+        <input name="recallEndDate" ng-model="searchParms.recallEndDate">
       </md-input-container>
       <md-input-container>
         <label>Product Type</label>
-        <input name="productType" ng-model="search.productType">
+        <input name="productType" ng-model="searchParms.product_type">
       </md-input-container>
       <div class="md-action" layout="row" layout-sm="column" layout-align="end center">
-        <md-button class="md-raised md-primary" ng-click="searchDisclaimer(search)">Search</md-button>
+        <md-button class="md-raised md-primary" ng-click="searchDisclaimer(searchParms)">Search</md-button>
       </div>
     </form>
     <md-divider></md-divider>

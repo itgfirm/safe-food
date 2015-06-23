@@ -5,11 +5,20 @@ define([ 'angular', 'app',
 		app.controller('FoodRecallSearchController',
 			function($scope, $mdDialog, OpenFDAService) {
 				$scope.recallData = null;
+				$scope.lastDataUpdatedDate = null;
 
 				$scope.search = function(params) {
-					OpenFDAService.getData()
+					OpenFDAService.getData(params)
 						.then(function(data) {
 							$scope.recallData = data;
+						},
+						function(err){
+							if(err.error.code === 'NOT_FOUND'){
+								var searchErrorMsg = $mdDialog.alert()
+														.title('Record(s) Not Found !')
+														.content('Your search did not return any results. Please modify your search criteria and try again !').ok('Close');
+								$mdDialog.show(searchErrorMsg)
+							}
 						});
 				};
 
@@ -36,6 +45,7 @@ define([ 'angular', 'app',
 
 					return function() {
 						return metaDataPromise.then(function(meta) {
+							$scope.lastDataUpdatedDate = meta.last_updated;
 							if(!displaying) {
 								displaying = true;
 								disclaimerDialog.content(meta.disclaimer);
