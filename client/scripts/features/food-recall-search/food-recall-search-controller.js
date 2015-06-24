@@ -13,7 +13,7 @@ define([ 'angular', 'app',
 						}, function(resp) {
 							$scope.recallData = null;
 						});
-				};    
+				};
 
 				$scope.viewDetails = (function() {
 					var config = {
@@ -35,14 +35,19 @@ define([ 'angular', 'app',
 				})();
 
 				$scope.searchDisclaimer = function(params) {
-					var confirm = $mdDialog.alert()
-			      .title('Disclaimer')
-			      .content('Please note, search results prior to 2012 may be incomplete.')
-			      .ariaLabel('Disclaimer')
-			      .ok('Ok');
-			    $mdDialog.show(confirm).then(function() {
-			      $scope.search(params);
-			    });
+					var minYear = (params === undefined || params === null) ? 2012: (params.recallStartDate === undefined || params.recallStartDate === null) ? 2012:params.recallStartDate.getFullYear();
+					if (minYear < 2012) {
+						var confirm = $mdDialog.alert()
+				      .title('Disclaimer')
+				      .content('Please note, search results prior to 2012 may be incomplete.')
+				      .ariaLabel('Disclaimer')
+				      .ok('Ok');
+				    $mdDialog.show(confirm).then(function() {
+				      $scope.search(params);
+				    });
+					} else {
+						$scope.search(params);
+					}
 			  };
 
 			  $scope.searchNearMe = function() {
