@@ -1,0 +1,79 @@
+# -*- coding: utf-8 -*-
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import Select
+from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import NoAlertPresentException
+import unittest, time, re
+
+class Firsttest(unittest.TestCase):
+    def setUp(self):
+        desired_capabilities = {
+            'platform': "Mac OS X 10.9",
+            'browserName': "chrome",
+            'version': "31",
+            'name': "TESTING" 
+	}
+        sauce_url = "http://%s:%s@ondemand.saucelabs.com:80/wd/hub"
+        self.driver = webdriver.Remote(desired_capabilities=desired_capabilities, command_executor=sauce_url % (SAUCE_USERNAME, SAUCE_ACCESS_KEY))
+        self.driver.implicitly_wait(30)
+        self.base_url = "https://safe-food.herokuapp.com/"
+        self.verificationErrors = []
+        self.accept_next_alert = True
+
+    def test_first(self):
+        driver = self.driver
+        driver.get("https://safe-food.herokuapp.com")
+        for i in range(60):
+            try:
+                if self.is_element_present(By.LINK_TEXT, "View Enforcement Reports"): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
+        driver.find_element_by_link_text("View Enforcement Reports").click()
+        for i in range(60):
+            try:
+                if self.is_element_present(By.CSS_SELECTOR, "footer.ng-binding"): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
+        driver.find_element_by_id("input_0").clear()
+        driver.find_element_by_id("input_0").send_keys("Spinach MI")
+        driver.find_element_by_xpath("//div[2]/button").click()
+        # ERROR: Caught exception [Error: Dom locators are not implemented yet!]
+        driver.find_element_by_xpath("//md-dialog/div/button").click()
+        for i in range(60):
+            try:
+                if self.is_element_present(By.XPATH, "//md-card[9]/md-card-content/h2"): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
+
+    def is_element_present(self, how, what):
+        try: self.driver.find_element(by=how, value=what)
+        except NoSuchElementException, e: return False
+        return True
+
+    def is_alert_present(self):
+        try: self.driver.switch_to_alert()
+        except NoAlertPresentException, e: return False
+        return True
+
+    def close_alert_and_get_its_text(self):
+        try:
+            alert = self.driver.switch_to_alert()
+            alert_text = alert.text
+            if self.accept_next_alert:
+                alert.accept()
+            else:
+                alert.dismiss()
+            return alert_text
+        finally: self.accept_next_alert = True
+
+    def tearDown(self):
+        self.driver.quit()
+        self.assertEqual([], self.verificationErrors)
+
+if __name__ == "__main__":
+    unittest.main()
