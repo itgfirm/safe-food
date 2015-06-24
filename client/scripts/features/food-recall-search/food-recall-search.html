@@ -1,40 +1,16 @@
-  <!--
-    Move md-content and md-toolbar to main
-  -->
 <md-content>
   <md-toolbar>
     <div class="md-toolbar-tools">
       <h1>Safe Food</h1>
       <span flex></span>
-      <md-button class="md-icon-button" ng-click="showDisclaimer()"
-        aria-label="About Safe Food">
-        <md-tooltip>
-          About
-        </md-tooltip>
-        <md-icon class="fa fa-info-circle fa-2x">
-        </md-icon>
+      <md-button ng-click="advancedSearch = !advancedSearch">
+        {{advancedSearch ? 'Basic Search' : 'Advanced Search'}}
       </md-button>
     </div>
   </md-toolbar>
 
-  <form name="general-search" layout-padding>
-    <div layout="row" layout-wrap>
-      <md-input-container flex="33" flex-sm="50">
-        <label>example: Spinach MI</label>
-        <input name="generalSearch" ng-model="searchParams.generalSearch">
-      </md-input-container>
-    </div>
-    <div class="md-action" layout="row" layout-align="end center">
-      <md-button class="md-raised md-primary"
-        ng-click="searchDisclaimer(searchParams)"
-        aria-label="Search">
-        Search
-      </md-button>
-    </div>
-  </form>
-
   <form name="recall-search" layout-padding>
-    <div layout="row" layout-wrap>
+    <div ng-if="advancedSearch" layout="row" layout-wrap>
       <md-input-container flex="33" flex-sm="50">
         <label>City</label>
         <input name="city" ng-model="searchParams.city">
@@ -61,16 +37,14 @@
       </md-input-container>
     </div>
 
+    <div ng-if="!advancedSearch" layout="row" layout-wrap>
+      <md-input-container flex="33" flex-sm="50">
+        <label>example: Spinach MI</label>
+        <input name="generalSearch" ng-model="searchParams.generalSearch">
+      </md-input-container>
+    </div>
+
     <div class="md-action" layout="row" layout-align="end center">
-<!--       <md-button class="md-raised md-icon-button md-primary"
-        ng-click="searchNearMe()"
-        aria-label="Search Near Me">
-        <md-tooltip>
-          Search Near Me
-        </md-tooltip>
-        <md-icon class="fa fa-crosshairs fa-2x">
-        </md-icon>
-      </md-button> -->
       <md-button class="md-raised md-primary"
         ng-click="searchDisclaimer(searchParams)"
         aria-label="Search">
@@ -80,17 +54,16 @@
   </form>
 
   <md-divider></md-divider>
+<md-content>
+
+  <center ng-if="recallData.error.code === 'NOT_FOUND'">
+    <h4><strong>Record(s) Not Found!</strong></h4>
+    <p>Your search did not return any results. Please modify your search criteria and try again!</p>
+  </center>
 
   <section>
     <md-card ng-repeat="item in recallData.results track by $index"
       ng-click="viewDetails(item)">
-  <!--       <div ng-class="{ 'bg-danger': item.classification === 'Class I',
-                    'bg-warning': item.classification === 'Class II',
-                    'bg-success': item.classification === 'Class III' }"
-                    style="padding:16px"
-                    >
-        <span class="sr-only">item.classification</span>
-      </div> -->
       <md-card-content>
         <h2 class="md-title">{{item.recalling_firm}} ({{item.recall_number}})</h2>
         <div><strong>Recall Initiated:</strong> {{item.recall_initiation_date}} ({{item.status}})</div>
@@ -99,15 +72,6 @@
       </md-card-content>
     </md-card>
   </section>
-
-<!-- <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="recall-details">
-  <md-toolbar class="md-theme-light">
-    <h1 class="md-toolbar-tools">Recall Details</h1>
-  </md-toolbar>
-  <md-content layout-padding>
-  </md-content>
-</md-sidenav>
-</md-content> -->
-
-
+</md-content>
 <footer align="right" style="font-size:12px;padding-right:5px;">The openFDA beta research project contents were last updated on {{recallData.meta.last_updated | date:'MMMM dd, yyyy'}}</footer>
+</md-content>
