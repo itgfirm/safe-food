@@ -1,3 +1,6 @@
+<!-- should be in a base container html but for now its here -->
+<toast></toast>
+
 <md-content>
   <md-toolbar>
     <div class="md-toolbar-tools">
@@ -54,12 +57,12 @@
   </form>
 
   <md-divider></md-divider>
-  
-  <center>
-    <div class="pull-left">{{recallData.meta.results.total}} Results</div>
-    <pagination total-items="recallData.meta.results.total" ng-model="searchParams.page" ng-change="search(searchParams)" items-per-page="recallData.meta.results.limit" max-size="5"></pagination>
-  </center>
-  <center ng-if="!recallData">
+
+  <div ng-show="recallData" style="text-align:right">
+    <div class="pull-left" style="margin:20px 10px; padding-top:6px; padding-bottom:6px;">{{recallData.meta.results.total}} Results</div>
+    <pagination total-items="recallData.meta.results.total" ng-model="searchParams.page" ng-change="search(searchParams)" items-per-page="recallData.meta.results.limit" max-size="5" style="padding-right:15px"></pagination>
+  </div>
+  <center ng-if="!recallData && initialized">
     <h4>Record(s) Not Found!</h4>
     <p>Your search did not return any results. Please modify your search criteria and try again!</p>
   </center>
@@ -78,9 +81,9 @@
     </div>
   </section>
 
-  <center>
-    <pagination total-items="recallData.meta.results.total" ng-model="currentPage" ng-change="pageChanged(currentPage)" items-per-page="recallData.meta.results.limit" max-size="5"></pagination>
-  </center>
+  <div ng-show="recallData" style="text-align: right">
+    <pagination total-items="recallData.meta.results.total" ng-model="searchParams.page" items-per-page="recallData.meta.results.limit" max-size="5" style="padding-right:15px"></pagination>
+  </div>
 
   <footer align="right" style="font-size:12px;padding-right:5px;">The openFDA beta research project contents were last updated on {{recallData.meta.last_updated | date:'MMMM dd, yyyy'}}</footer>
 </md-content>

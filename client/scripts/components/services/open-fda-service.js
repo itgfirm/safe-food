@@ -3,7 +3,7 @@ define([ 'angular', 'app',
 	function(angular, app) {
 
 		
-		app.service('OpenFDAService', function($http, $q, LocationService, $filter) {
+		app.service('OpenFDAService', function($http, $q, $filter, LocationService) {
 			//TODO: These should come from the app's config file:
 			var service = { meta: null },
 				baseUrl = 'https://api.fda.gov/food/enforcement.json',
@@ -40,11 +40,12 @@ define([ 'angular', 'app',
 				var defer = $q.defer(),
 					params = params || {},
 					requestParams = {
-						search: createSearchString(params),
 						limit: params.limit || 25,
 						skip: ((params.page || 1) - 1) * 25
 					};
-
+					// console.log(params.page);
+				params.product_type = 'Food',
+				
 				requestParams.search = createSearchString(params)
 
 				$http.get(createURL(baseUrl, requestParams))

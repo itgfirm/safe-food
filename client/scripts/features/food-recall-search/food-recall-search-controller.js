@@ -3,15 +3,23 @@ define([ 'angular', 'app',
 	function(angular, app) {
 
 		app.controller('FoodRecallSearchController',
-			function($scope, $mdDialog, OpenFDAService) {
+			function($scope, $mdDialog, $stateParams, OpenFDAService) {
 				$scope.recallData = null;
+				$scope.initialized = false;
 
 				$scope.search = function(params) {
 					OpenFDAService.getData(params)
 						.then(function(resp) {
 							$scope.recallData = resp;
+							if(!$scope.initialized) {
+								$scope.initialized = true;
+								$scope.searchParams = { page: $stateParams.page };
+							}
 						}, function(resp) {
-							$scope.recallData = null;
+							console.log(resp.error);
+							if(resp.error && resp.error.code === 'NOT_FOUND') {
+								$scope.recallData = null;
+							}
 						});
 				};
 
@@ -87,8 +95,8 @@ define([ 'angular', 'app',
 					$scope.search($scope.searchParams);
 				};
 
-				$scope.search();
 				$scope.showDisclaimer();
+				$scope.search({ page: parseInt($stateParams.page) });
 
 		});
 

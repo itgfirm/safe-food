@@ -4,7 +4,7 @@ define([ 'angular', 'app',
 
     app.config(function($stateProvider) {
       $stateProvider.state('base.foodRecallSearch', {
-        url: '/food-recall-search',
+        url: '/food-recall-search?page',
         views: {
           'main@': {
             templateUrl: 'scripts/features/food-recall-search/food-recall-search.html',

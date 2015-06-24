@@ -19,6 +19,7 @@
   "trailing": true,
   "sub": true,
   "maxlen": 80,
+  "multistr": true,
   "globals": {
     "angular": true,
     "define": true
