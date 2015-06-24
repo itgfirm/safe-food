@@ -59,7 +59,7 @@
   <md-divider></md-divider>
 
   <div ng-show="recallData" style="text-align:right">
-    <div class="pull-left" style="margin:20px 10px; padding-top:6px; padding-bottom:6px;">{{recallData.meta.results.total}} Results</div>
+    <div class="pull-left" style="margin:20px 10px; padding-top:6px; padding-bottom:6px;">Showing Results {{recallData.meta.results.skip + 1}} - {{(recallData.meta.results.skip + recallData.meta.results.limit + 1) > recallData.meta.results.total ? recallData.meta.results.total : (recallData.meta.results.skip + recallData.meta.results.limit + 1)}} of {{recallData.meta.results.total}}</div>
     <pagination total-items="recallData.meta.results.total" ng-model="searchParams.page" ng-change="search(searchParams)" items-per-page="recallData.meta.results.limit" max-size="5" style="padding-right:15px"></pagination>
   </div>
   <center ng-if="!recallData && initialized">
