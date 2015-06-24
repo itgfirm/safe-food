@@ -148,6 +148,12 @@ define([ 'angular', 'app',
 				return paramVal.split(' ').join('+AND+');
 			}
 
+            /**
+             * openFDA requires specific format for query parameters in API call.
+             * This function creates and returns a query string compatible to openFDA API.
+             * @param params        parameter object from form.
+             * @returns {string}    openFDA compatible query string.
+             */
 			function createSearchString(params){
 				var searchString = '',
 					recall_StartDate = null,
@@ -157,7 +163,6 @@ define([ 'angular', 'app',
 					searchString += createAndTerms(createStateMappings(
 															stripIllegalchars(params.generalSearch)));
 				} else {
-
 					for(var key in params) {
 						if(params.hasOwnProperty(key)) {
 							if(key === 'recallStartDate'){
@@ -172,42 +177,55 @@ define([ 'angular', 'app',
 					}
 					if(recall_StartDate || recall_EndDate){
 						searchString += searchString ? 
-											'+AND+' + generateDateQueryString(recall_StartDate, 
-																													recall_EndDate) :
+										'+AND+' + generateDateQueryString(recall_StartDate, recall_EndDate) :
 											generateDateQueryString(recall_StartDate, recall_EndDate);
 					}		
 
 				}
-
-
 				console.log('search string is:'+searchString);
 				return searchString;
 			}
 
+            /**
+             * Convert report_date query parameter into a format supported by openFDA API
+             * @param startDate     recallStartDate from form input
+             * @param endDate       recallEndDate from form input
+             * @returns {string}    formatted report_date query parameter
+             */
 			function generateDateQueryString(startDate, endDate) {
 				var dateQueryString = '';
 				if(startDate){
 					if(endDate){						
-						dateQueryString += 'report_date:[' + 
-																$filter('date')(new Date(startDate), 'yyyyMMdd') +
-																'+TO+' + 
-																$filter('date')(new Date(endDate), 'yyyyMMdd')+
-																']';
+						dateQueryString += 'report_date:[' + dateToQueryString(startDate) +
+												'+TO+' + dateToQueryString(endDate) + ']';
 					}else{
-						dateQueryString += 'report_date:' + 
-															$filter('date')(new Date(startDate), 'yyyyMMdd');
+						dateQueryString += 'report_date:' +  dateToQueryString(startDate);
 					}
 				}else if(endDate){
-					dateQueryString += 'report_date:' + 
-															$filter('date')(new Date(endDate), 'yyyyMMdd');
+					dateQueryString += 'report_date:' + dateToQueryString(endDate);
 				}
 				return dateQueryString;
 			}
 
-			/*
-			 *	Needs to pass URL as a whole string otherwise AngularJS will encode '+' sign
-			 *  which is not valid url for API endpoint
-			 */
+            /**
+             * Convert date to opnFDA compatible format
+             * @param {Date}        date as Date Object.
+             * @returns {string}    string in 'YYYYMMDD' format.                                                  ˙
+             */
+			function dateToQueryString(date){
+				if(date){
+					return $filter('date')(new Date(date), "yyyyMMdd");
+				}
+				return '';
+			}
+
+            /**
+             *	Needs to pass URL as a whole string otherwise AngularJS will encode '+' sign
+             *  which is not valid url for API endpoint
+             * @param baseURL       Base URL for openFDA endpoint
+             * @param params        Query parameter to be passed for GET request
+             * @returns {string}    final openFDA API url combining baseURL and query parameters
+             */
 			function createURL(baseURL, params){
 				var url = '';
 				for(var key in params){
