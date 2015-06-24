@@ -134,7 +134,7 @@ define([ 'angular', 'app',
 					//ok to use "in" because we know that state_hash is a nice, clean obeject
 					if(result.toUpperCase() in state_hash) { //found a state term
 						//add the alternative for the state indicates as well as the "nationwide" term
-						result = '('+result+'+"'+state_hash[result.toUpperCase()]+'"+nationwide)';
+						result = '('+result+'+"'+encodeURIComponent(state_hash[result.toUpperCase()])+'"+nationwide)';
 					}
 					//add each term back into the return value
 					newTerms += newTerms ? ' '+result : result;
@@ -173,13 +173,15 @@ define([ 'angular', 'app',
 				if (params && params.generalSearch){ //Google-style search
 					searchString += createAndTerms(createStateMappings(
 															sanitizeInputs(params.generalSearch)));
-				} else {
+				} else if (params) {
 					for(var key in params) {
 						if(params.hasOwnProperty(key)) {
 							if(key === 'recallStartDate'){
-								recall_StartDate = sanitizeInputs(params[key]);
+								recall_StartDate = params[key] ? sanitizeInputs(params[key]) 
+																								: params[key];
 							}else if(key === 'recallEndDate'){
-								recall_EndDate = sanitizeInputs(params[key]);
+								recall_EndDate = params[key] ? sanitizeInputs(params[key]) 
+																								: params[key];
 							}else{
 								searchString += searchString ? '+AND+' : '';
 								searchString += key + ':"' + sanitizeInputs(params[key]) + '"';
