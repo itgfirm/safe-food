@@ -17,6 +17,22 @@
     </div>
   </md-toolbar>
 
+  <form name="general-search" layout-padding>
+    <div layout="row" layout-wrap>
+      <md-input-container flex="33" flex-sm="50">
+        <label>example: Spinach MI</label>
+        <input name="generalSearch" ng-model="searchParams.generalSearch">
+      </md-input-container>
+    </div>
+    <div class="md-action" layout="row" layout-align="end center">
+      <md-button class="md-raised md-primary"
+        ng-click="searchDisclaimer(searchParams)"
+        aria-label="Search">
+        Search
+      </md-button>
+    </div>
+  </form>
+
   <form name="recall-search" layout-padding>
     <div layout="row" layout-wrap>
       <md-input-container flex="33" flex-sm="50">
