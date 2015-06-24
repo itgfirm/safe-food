@@ -54,24 +54,28 @@
   </form>
 
   <md-divider></md-divider>
+  
   <center>
+    <div class="pull-left">{{recallData.meta.results.total}} Results</div>
     <pagination total-items="recallData.meta.results.total" ng-model="searchParams.page" ng-change="search(searchParams)" items-per-page="recallData.meta.results.limit" max-size="5"></pagination>
   </center>
   <center ng-if="!recallData">
-    <h4><strong>Record(s) Not Found!</strong></h4>
+    <h4>Record(s) Not Found!</h4>
     <p>Your search did not return any results. Please modify your search criteria and try again!</p>
   </center>
 
   <section>
-    <md-card ng-repeat="item in recallData.results track by $index"
-      ng-click="viewDetails(item)">
-      <md-card-content>
-        <h2 class="md-title">{{item.recalling_firm}} ({{item.recall_number}})</h2>
+    <div class="list-group">
+      <a ng-repeat="item in recallData.results track by $index" 
+        class="list-group-item"
+        ng-click="viewDetails(item)"
+        ng-class="{ 'active': item.active }">
+        <h4 class="list-group-item-heading">{{item.recalling_firm}} ({{item.recall_number}})</h4>
         <div><strong>Recall Initiated:</strong> {{item.recall_initiation_date}} ({{item.status}})</div>
         <div><strong>Distribution Pattern:</strong> {{item.distribution_pattern}}</div>
         <div><strong>Product Description:</strong> {{item.product_description}}</div>
-      </md-card-content>
-    </md-card>
+      </a>
+    </div>
   </section>
 
   <center>

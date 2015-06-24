@@ -25,9 +25,11 @@ define([ 'angular', 'app',
 			    	scope = $scope.$new();
 			    	scope.details = item;
 			    	config.scope = scope;
+			    	item.active = true;
 
 						scope.hideDialog = function() {
 							$mdDialog.hide(dialog);
+							item.active = false;
 						};
 
 						dialog = $mdDialog.show(config);

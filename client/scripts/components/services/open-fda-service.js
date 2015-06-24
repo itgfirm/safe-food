@@ -41,7 +41,7 @@ define([ 'angular', 'app',
 					requestParams = {
 						search: createSearchString(params),
 						limit: params.limit || 25,
-						skip: (params.page || 0) * 25
+						skip: ((params.page || 1) - 1) * 25
 					};
 
 				requestParams.search = createSearchString(params)
