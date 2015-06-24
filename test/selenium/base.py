@@ -5,11 +5,12 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
-import unittest, time, re
-
+import unittest, time, re, os
 class Firsttest(unittest.TestCase):
     def setUp(self):
-        desired_capabilities = {
+        SAUCE_USERNAME = os.environ.get('SAUCE_USERNAME')
+	SAUCE_ACCESS_KEY = os.environ.get('SAUCE_ACCESS_KEY')
+	desired_capabilities = {
             'platform': "Mac OS X 10.9",
             'browserName': "chrome",
             'version': "31",
