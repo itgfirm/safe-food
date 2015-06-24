@@ -2,8 +2,6 @@ define([ 'angular', 'app',
 	'components/services/location-service' ],
 	function(angular, app) {
 
-		
-
 		app.service('OpenFDAService', function($http, $q, LocationService, $filter) {
 			//TODO: These should come from the app's config file:
 			var service = { meta: null },
@@ -38,12 +36,17 @@ define([ 'angular', 'app',
 
 
 			service.getData = function(params) {
-				var defer = $q.defer();
-				params = { search: createSearchString(params) };
+				var defer = $q.defer(),
+					params = params || {},
+					requestParams = {
+						search: createSearchString(params),
+						limit: params.limit || 25,
+						skip: (params.page || 0) * 25
+					};
 
-				params.limit = params.limit || 25;
+				requestParams.search = createSearchString(params)
 
-				$http.get(createURL(baseUrl, params))
+				$http.get(createURL(baseUrl, requestParams))
 					.success(function(data) {
 
 						angular.forEach(data.results, function(result) {
@@ -157,7 +160,12 @@ define([ 'angular', 'app',
 			function createSearchString(params){
 				var searchString = '',
 					recall_StartDate = null,
-					recall_EndDate = null;
+					recall_EndDate = null,
+					params = angular.copy(params);
+
+				delete params.limit;
+				delete params.skip;
+				delete params.page;
 
 				if (params && params.generalSearch){ //Google-style search
 					searchString += createAndTerms(createStateMappings(

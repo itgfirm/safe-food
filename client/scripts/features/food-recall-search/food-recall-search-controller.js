@@ -8,18 +8,12 @@ define([ 'angular', 'app',
 
 				$scope.search = function(params) {
 					OpenFDAService.getData(params)
-						.then(function(data) {
-							$scope.recallData = data;
-						},
-						function(err){
-							if(err.error.code === 'NOT_FOUND'){
-								var searchErrorMsg = $mdDialog.alert()
-									.title('Record(s) Not Found !')
-									.content('Your search did not return any results. Please modify your search criteria and try again !').ok('Close');
-								$mdDialog.show(searchErrorMsg)
-							}
+						.then(function(resp) {
+							$scope.recallData = resp;
+						}, function(resp) {
+							$scope.recallData = null;
 						});
-				};
+				};    
 
 				$scope.viewDetails = (function() {
 					var config = {
@@ -41,14 +35,14 @@ define([ 'angular', 'app',
 				})();
 
 				$scope.searchDisclaimer = function(params) {
-						var confirm = $mdDialog.alert()
-				      .title('Disclaimer')
-				      .content('Please note, search results prior to 2012 may be incomplete.')
-				      .ariaLabel('Disclaimer')
-				      .ok('Ok');
-				    $mdDialog.show(confirm).then(function() {
-				      $scope.search(params);
-				    });
+					var confirm = $mdDialog.alert()
+			      .title('Disclaimer')
+			      .content('Please note, search results prior to 2012 may be incomplete.')
+			      .ariaLabel('Disclaimer')
+			      .ok('Ok');
+			    $mdDialog.show(confirm).then(function() {
+			      $scope.search(params);
+			    });
 			  };
 
 			  $scope.searchNearMe = function() {
@@ -80,8 +74,14 @@ define([ 'angular', 'app',
 					};
 				})();
 
+				$scope.toggleSearch = function() {
+					$scope.advancedSearch = !$scope.advancedSearch;
+					$scope.searchParams = null;
+					$scope.search($scope.searchParams);
+				};
+
 				$scope.search();
-				// $scope.showDisclaimer();
+				$scope.showDisclaimer();
 
 		});
 

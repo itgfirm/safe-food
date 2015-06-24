@@ -7,6 +7,7 @@ require.config({
     'angular-touch': '../vendor/angular-touch/angular-touch',
 
     'angular-ui-router': '../vendor/angular-ui-router/release/angular-ui-router', // jshint ignore:line
+    'angular-ui-bootstrap': '../vendor/angular-bootstrap/ui-bootstrap-tpls', // jshint ignore:line
     'angular-material': '../vendor/angular-material/angular-material',
 
     'app': 'app',
@@ -18,6 +19,7 @@ require.config({
     'angular-animate': [ 'angular' ],
     'angular-touch': [ 'angular' ],
     'angular-ui-router': [ 'angular-route' ],
+    'angular-ui-bootstrap': [ 'angular' ],
     'angular-material': [ 'angular', 'angular-aria' ]
   }
 });

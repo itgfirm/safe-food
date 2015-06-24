@@ -4,6 +4,7 @@ define([
     'angular-animate',
     'angular-touch',
     'angular-ui-router',
+    'angular-ui-bootstrap',
     'angular-material'
   ],
   function (angular) {
@@ -12,6 +13,7 @@ define([
       'ngAnimate',
       'ngTouch',
       'ui.router',
+      'ui.bootstrap',
       'ngMaterial'
     ]);
 

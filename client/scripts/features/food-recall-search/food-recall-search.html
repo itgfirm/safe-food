@@ -55,7 +55,7 @@
 
   <md-divider></md-divider>
   <center>
-    <pagination total-items="recallData.meta.results.total" ng-model="currentPage" ng-change="pageChanged(currentPage)" items-per-page="recallData.meta.results.limit" max-size="5"></pagination>
+    <pagination total-items="recallData.meta.results.total" ng-model="searchParams.page" ng-change="search(searchParams)" items-per-page="recallData.meta.results.limit" max-size="5"></pagination>
   </center>
   <center ng-if="!recallData">
     <h4><strong>Record(s) Not Found!</strong></h4>
