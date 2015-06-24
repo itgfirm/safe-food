@@ -14,7 +14,7 @@ class Firsttest(unittest.TestCase):
             'platform': "Mac OS X 10.9",
             'browserName': "chrome",
             'version': "31",
-            'name': "TESTING" 
+            'name': "TESTING"
 	}
         sauce_url = "http://%s:%s@ondemand.saucelabs.com:80/wd/hub"
         self.driver = webdriver.Remote(desired_capabilities=desired_capabilities, command_executor=sauce_url % (SAUCE_USERNAME, SAUCE_ACCESS_KEY))
@@ -23,26 +23,32 @@ class Firsttest(unittest.TestCase):
         self.verificationErrors = []
         self.accept_next_alert = True
 
+
     def test_first(self):
         driver = self.driver
         driver.get("https://safe-food.herokuapp.com")
         for i in range(60):
             try:
-                if self.is_element_present(By.LINK_TEXT, "View Enforcement Reports"): break
+                if self.is_element_present(By.XPATH, "//a[contains(text(),'View Enforcement Reports')]"): break
             except: pass
             time.sleep(1)
         else: self.fail("time out")
-        driver.find_element_by_link_text("View Enforcement Reports").click()
+        driver.find_element_by_xpath("//a[contains(text(),'View Enforcement Reports')]").click()
+        for i in range(60):
+            try:
+                if self.is_element_present(By.XPATH, "//input[@id='input_6']"): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
+        driver.find_element_by_xpath("//input[@id='input_6']").clear()
+        driver.find_element_by_xpath("//input[@id='input_6']").send_keys("Spinach MI")
         for i in range(60):
             try:
                 if self.is_element_present(By.XPATH, "//div[3]/button"): break
             except: pass
             time.sleep(1)
         else: self.fail("time out")
-        driver.find_element_by_id("input_0").clear()
-        driver.find_element_by_id("input_0").send_keys("Spinach MI")
         driver.find_element_by_xpath("//div[3]/button").click()
-        # ERROR: Caught exception [Error: Dom locators are not implemented yet!]
         driver.find_element_by_xpath("//md-dialog/div/button").click()
         for i in range(60):
             try:
