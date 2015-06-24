@@ -24,7 +24,7 @@ require.config({
     'angular-mocks': '../vendor/angular-mocks/angular-mocks',
 
     'angular-ui-router': '../vendor/angular-ui-router/release/angular-ui-router', // jshint ignore:line
-    'angular-ui-bootstrap': '../vendor/angular-ui-bootstrap/release/angular-ui-bootstrap', // jshint ignore:line
+    'angular-ui-bootstrap': '../vendor/angular-bootstrap/ui-bootstrap-tpls', // jshint ignore:line
     'angular-material': '../vendor/angular-material/angular-material',
 
     'app': 'app',
