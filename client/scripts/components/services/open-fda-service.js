@@ -2,6 +2,7 @@ define([ 'angular', 'app',
 	'components/services/location-service' ],
 	function(angular, app) {
 
+		
 		app.service('OpenFDAService', function($http, $q, LocationService, $filter) {
 			//TODO: These should come from the app's config file:
 			var service = { meta: null },
@@ -102,7 +103,7 @@ define([ 'angular', 'app',
 			 * @return {string}          the "cleaned" input - swapping spaces 
 			 *                               for all non-alpha-numeric characters
 			 */
-			function stripIllegalchars(paramVal) {
+			function sanitizeInputs(paramVal) {
 
 				//replacing with spaces so that it can be tokenized as words later.
 				return paramVal.replace(/[^a-zA-Z0-9 ]/g, ' ');
@@ -127,11 +128,13 @@ define([ 'angular', 'app',
 				var terms =  paramVal.split(' ');
 				var newTerms = '';
 
+				//ISSUES: need to deal with case where user enters state name with spaces (i.e. new york)
+
 				angular.forEach(terms, function(result) {
 					//ok to use "in" because we know that state_hash is a nice, clean obeject
 					if(result.toUpperCase() in state_hash) { //found a state term
 						//add the alternative for the state indicates as well as the "nationwide" term
-						result = '('+result+'+'+state_hash[result.toUpperCase()]+'+nationwide)';
+						result = '('+result+'+"'+encodeURIComponent(state_hash[result.toUpperCase()])+'"+nationwide)';
 					}
 					//add each term back into the return value
 					newTerms += newTerms ? ' '+result : result;
@@ -169,26 +172,29 @@ define([ 'angular', 'app',
 
 				if (params && params.generalSearch){ //Google-style search
 					searchString += createAndTerms(createStateMappings(
-															stripIllegalchars(params.generalSearch)));
-				} else {
+															sanitizeInputs(params.generalSearch)));
+				} else if (params) {
 					for(var key in params) {
 						if(params.hasOwnProperty(key)) {
 							if(key === 'recallStartDate'){
-								recall_StartDate = params[key];
+								recall_StartDate = params[key] ? sanitizeInputs(params[key]) 
+																								: params[key];
 							}else if(key === 'recallEndDate'){
-								recall_EndDate = params[key];
+								recall_EndDate = params[key] ? sanitizeInputs(params[key]) 
+																								: params[key];
 							}else{
-								searchString += searchString ? '+AND+' : '';				
-								searchString += key + ':"' + params[key] + '"';
-							}							
+								searchString += searchString ? '+AND+' : '';
+								searchString += key + ':"' + sanitizeInputs(params[key]) + '"';
+							}
 						}
 					}
 					if(recall_StartDate || recall_EndDate){
 						searchString += searchString ? 
-										'+AND+' + generateDateQueryString(recall_StartDate, recall_EndDate) :
-											generateDateQueryString(recall_StartDate, recall_EndDate);
-					}		
-
+										'+AND+' + generateDateQueryString(
+																recall_StartDate, recall_EndDate) :
+											generateDateQueryString(
+																recall_StartDate, recall_EndDate);
+					}
 				}
 				console.log('search string is:'+searchString);
 				return searchString;
