@@ -38,8 +38,8 @@ define([ 'angular', 'app',
 
 
 			service.getData = function(params) {
-				var defer = $q.defer(),
-					params = { search: createSearchString(params) };
+				var defer = $q.defer();
+				params = { search: createSearchString(params) };
 
 				params.limit = params.limit || 25;
 
@@ -85,18 +85,19 @@ define([ 'angular', 'app',
 				}
 
 				var year = dateString.substr(0, 4),
-					month = dateString.substr(4, 2)
+					month = dateString.substr(4, 2),
 					date = dateString.substr(6, 2);
 
 				return  month + '/' + date + '/' + year;
-			};
+			}
 
 			/**
 			 * This function is required because the OpenFDA API queries throw errors 
 			 * when they get certain characters 
 			 * and they do NOT support URL encoding of said characters
 			 * @param  {string} paramVal the raw input from the form
-			 * @return {string}          the "cleaned" input - swapping spaces for all non-alpha-numeric characters
+			 * @return {string}          the "cleaned" input - swapping spaces 
+			 *                               for all non-alpha-numeric characters
 			 */
 			function stripIllegalchars(paramVal) {
 
@@ -105,13 +106,19 @@ define([ 'angular', 'app',
 
 				//rather than whitelist we can try a blacklist:
 				// return paramVal.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, ' ');
-			};
+			}
 
 
 			/**
-			 * [createStateMap description]
-			 * @param  {[type]} paramVal [description]
-			 * @return {[type]}          [description]
+			 * looks up state names and includes an "OR" term that includes the 
+			 * 		entered term, the alternate state name/abbreviation and the 
+			 * 		"nationwide" keyword.
+			 * @param  {string} paramVal the cleaned input that may or may not include
+			 *                           state names/abbreviations
+			 * @return {string}          a string with any state terms replaced by a 
+			 *                             compound term encompasing all possible 
+			 *                             coverage terms for the indicated state 
+			 *                             for all non-alpha-numeric characters
 			 */
 			function createStateMappings(paramVal) {
 				var terms =  paramVal.split(' ');
@@ -121,13 +128,13 @@ define([ 'angular', 'app',
 					//ok to use "in" because we know that state_hash is a nice, clean obeject
 					if(result.toUpperCase() in state_hash) { //found a state term
 						//add the alternative for the state indicates as well as the "nationwide" term
-						var result = '('+result+'+'+state_hash[result.toUpperCase()]+'+nationwide)';
+						result = '('+result+'+'+state_hash[result.toUpperCase()]+'+nationwide)';
 					}
 					//add each term back into the return value
 					newTerms += newTerms ? ' '+result : result;
 				});
 				return newTerms;
-			};
+			}
 
 
 
@@ -139,7 +146,7 @@ define([ 'angular', 'app',
 			 */
 			function createAndTerms(paramVal) {
 				return paramVal.split(' ').join('+AND+');
-			};
+			}
 
 			function createSearchString(params){
 				var searchString = '',
@@ -147,10 +154,11 @@ define([ 'angular', 'app',
 					recall_EndDate = null;
 
 				if (params && params.generalSearch){ //Google-style search
-					searchString += createAndTerms(createStateMappings(stripIllegalchars(params.generalSearch)));
+					searchString += createAndTerms(createStateMappings(
+															stripIllegalchars(params.generalSearch)));
 				} else {
 
-					for(key in params) {
+					for(var key in params) {
 						if(params.hasOwnProperty(key)) {
 							if(key === 'recallStartDate'){
 								recall_StartDate = params[key];
@@ -163,7 +171,9 @@ define([ 'angular', 'app',
 						}
 					}
 					if(recall_StartDate || recall_EndDate){
-						searchString += searchString ? '+AND+' + generateDateQueryString(recall_StartDate, recall_EndDate) :
+						searchString += searchString ? 
+											'+AND+' + generateDateQueryString(recall_StartDate, 
+																													recall_EndDate) :
 											generateDateQueryString(recall_StartDate, recall_EndDate);
 					}		
 
@@ -172,19 +182,24 @@ define([ 'angular', 'app',
 
 				console.log('search string is:'+searchString);
 				return searchString;
-			};
+			}
 
 			function generateDateQueryString(startDate, endDate) {
 				var dateQueryString = '';
 				if(startDate){
 					if(endDate){						
-						dateQueryString += 'report_date:[' + $filter('date')(new Date(startDate), "yyyyMMdd")
-										+ '+TO+' + $filter('date')(new Date(endDate), "yyyyMMdd") + ']';  
+						dateQueryString += 'report_date:[' + 
+																$filter('date')(new Date(startDate), 'yyyyMMdd') +
+																'+TO+' + 
+																$filter('date')(new Date(endDate), 'yyyyMMdd')+
+																']';
 					}else{
-						dateQueryString += 'report_date:' + $filter('date')(new Date(startDate), "yyyyMMdd");
+						dateQueryString += 'report_date:' + 
+															$filter('date')(new Date(startDate), 'yyyyMMdd');
 					}
 				}else if(endDate){
-					dateQueryString += 'report_date:' + $filter('date')(new Date(endDate), "yyyyMMdd");
+					dateQueryString += 'report_date:' + 
+															$filter('date')(new Date(endDate), 'yyyyMMdd');
 				}
 				return dateQueryString;
 			}
@@ -195,7 +210,7 @@ define([ 'angular', 'app',
 			 */
 			function createURL(baseURL, params){
 				var url = '';
-				for(key in params){
+				for(var key in params){
 					if(params.hasOwnProperty(key)){
 						//url += ( url ? '&' : '?' ) + key + '=' + params[key];
 						//simplified now that we always have the api_key before these params
