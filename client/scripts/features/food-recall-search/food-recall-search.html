@@ -3,14 +3,14 @@
     <div class="md-toolbar-tools">
       <h1>Safe Food</h1>
       <span flex></span>
-      <md-button ng-click="advancedSearch = !advancedSearch">
+      <md-button ng-click="toggleSearch()">
         {{advancedSearch ? 'Basic Search' : 'Advanced Search'}}
       </md-button>
     </div>
   </md-toolbar>
 
   <form name="recall-search" layout-padding>
-    <div ng-if="advancedSearch" layout="row" layout-wrap>
+    <div ng-show="advancedSearch" layout="row" layout-wrap>
       <md-input-container flex="33" flex-sm="50">
         <label>City</label>
         <input name="city" ng-model="searchParams.city">
@@ -37,8 +37,8 @@
       </md-input-container>
     </div>
 
-    <div ng-if="!advancedSearch" layout="row" layout-wrap>
-      <md-input-container flex="33" flex-sm="50">
+    <div ng-show="!advancedSearch" layout="row" layout-wrap>
+      <md-input-container flex="100">
         <label>example: Spinach MI</label>
         <input name="generalSearch" ng-model="searchParams.generalSearch">
       </md-input-container>
@@ -54,9 +54,10 @@
   </form>
 
   <md-divider></md-divider>
-<md-content>
-
-  <center ng-if="recallData.error.code === 'NOT_FOUND'">
+  <center>
+    <pagination total-items="recallData.meta.results.total" ng-model="currentPage" ng-change="pageChanged(currentPage)" items-per-page="recallData.meta.results.limit" max-size="5"></pagination>
+  </center>
+  <center ng-if="!recallData">
     <h4><strong>Record(s) Not Found!</strong></h4>
     <p>Your search did not return any results. Please modify your search criteria and try again!</p>
   </center>
@@ -72,6 +73,10 @@
       </md-card-content>
     </md-card>
   </section>
-</md-content>
-<footer align="right" style="font-size:12px;padding-right:5px;">The openFDA beta research project contents were last updated on {{recallData.meta.last_updated | date:'MMMM dd, yyyy'}}</footer>
+
+  <center>
+    <pagination total-items="recallData.meta.results.total" ng-model="currentPage" ng-change="pageChanged(currentPage)" items-per-page="recallData.meta.results.limit" max-size="5"></pagination>
+  </center>
+
+  <footer align="right" style="font-size:12px;padding-right:5px;">The openFDA beta research project contents were last updated on {{recallData.meta.last_updated | date:'MMMM dd, yyyy'}}</footer>
 </md-content>
