@@ -35,13 +35,13 @@ define([ 'angular', 'app',
 						scope.hideDialog = function() {
 							$mdDialog.hide(dialog);
 						};
-						
+
 						dialog = $mdDialog.show(config);
 			    };
 				})();
 
 				$scope.searchDisclaimer = function(params) {
-						var confirm = $mdDialog.confirm()
+						var confirm = $mdDialog.alert()
 				      .title('Disclaimer')
 				      .content('Please note, search results prior to 2012 may be incomplete.')
 				      .ariaLabel('Disclaimer')
