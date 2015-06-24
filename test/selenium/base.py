@@ -35,13 +35,13 @@ class Firsttest(unittest.TestCase):
         driver.find_element_by_link_text("View Enforcement Reports").click()
         for i in range(60):
             try:
-                if self.is_element_present(By.CSS_SELECTOR, "footer.ng-binding"): break
+                if self.is_element_present(By.XPATH, "//div[3]/button"): break
             except: pass
             time.sleep(1)
         else: self.fail("time out")
         driver.find_element_by_id("input_0").clear()
         driver.find_element_by_id("input_0").send_keys("Spinach MI")
-        driver.find_element_by_xpath("//div[2]/button").click()
+        driver.find_element_by_xpath("//div[3]/button").click()
         # ERROR: Caught exception [Error: Dom locators are not implemented yet!]
         driver.find_element_by_xpath("//md-dialog/div/button").click()
         for i in range(60):
