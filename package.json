@@ -75,7 +75,7 @@
     "url": "git://github.com/itgfirm/safe-food"
   },
   "scripts": {
-    "test": "grunt test && python test/selenium/*.py",
+    "test": "grunt test",
     "start": "node server/server.js",
     "postinstall": "./node_modules/bower/bin/bower cache clean && ./node_modules/bower/bin/bower install"
   }
