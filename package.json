@@ -10,7 +10,8 @@
   },
   "homepage": "",
   "contributors": [
-    "Phil Armour <phillip.armour@itgfirm.com>"
+    "Phil Armour <phillip.armour@itgfirm.com>",
+    "Hitesh Patel <hitesh.patel@itgfirm.com>"
   ],
   "dependencies": {
     "bower": "^1.4.1",
