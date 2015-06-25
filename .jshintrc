@@ -23,5 +23,6 @@
   "globals": {
     "angular": true,
     "define": true
-  }
+  },
+  "jasmine": true
 }
