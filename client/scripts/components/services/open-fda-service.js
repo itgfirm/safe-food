@@ -155,17 +155,17 @@ define([ 'angular', 'app',
 				return paramVal.split(' ').join('+AND+');
 			}
 
-            /**
-             * openFDA requires specific format for query parameters in API call.
-             * This function creates and returns a query string compatible to openFDA API.
-             * @param params        parameter object from form.
-             * @returns {string}    openFDA compatible query string.
-             */
+			/**
+			 * openFDA requires specific format for query parameters in API call.
+			 * This function creates and returns a query string compatible to openFDA API.
+			 * @param params        parameter object from form.
+			 * @returns {string}    openFDA compatible query string.
+			 */
 			function createSearchString(params){
-				var searchString = '',
-					recall_StartDate = null,
-					recall_EndDate = null,
-					params = angular.copy(params);
+			var	searchString = '',
+				recallInitiationDate = null,
+				statusList = null,
+				params = angular.copy(params);
 
 				delete params.limit;
 				delete params.skip;
@@ -177,56 +177,63 @@ define([ 'angular', 'app',
 				} else if (params) {
 					for(var key in params) {
 						if(params.hasOwnProperty(key)) {
-							if(key === 'recallStartDate'){
-								recall_StartDate = params[key] ? sanitizeInputs(params[key]) 
-																								: params[key];
-							}else if(key === 'recallEndDate'){
-								recall_EndDate = params[key] ? sanitizeInputs(params[key]) 
-																								: params[key];
+							if(key === 'recall_initiation_date'){
+			                    recallInitiationDate = params[key];
+							}else if(key === 'status'){
+			                    statusList = params[key];
 							}else{
 								searchString += searchString ? '+AND+' : '';
 								searchString += key + ':"' + sanitizeInputs(params[key]) + '"';
 							}
 						}
 					}
-					if(recall_StartDate || recall_EndDate){
-						searchString += searchString ? 
-										'+AND+' + generateDateQueryString(
-																recall_StartDate, recall_EndDate) :
-											generateDateQueryString(
-																recall_StartDate, recall_EndDate);
+					if(recallInitiationDate){
+			            var recallDateQuery = generateDateQueryString(recallInitiationDate);
+			            if(recallDateQuery){
+			                searchString += searchString ? '+AND+'+recallDateQuery : recallDateQuery;
+			            }
 					}
+			        if(statusList){
+			            var statusQueryString = '';
+			            angular.forEach(statusList, function(list){
+			                statusQueryString += statusQueryString ? '+': '';
+			                statusQueryString += '"' + list + '"';
+			            });
+			            searchString += searchString ? '+AND+' : '';
+			            searchString += 'status:(' + statusQueryString + ')';
+			        }
+
 				}
 				console.log('search string is:'+searchString);
 				return searchString;
 			}
 
-            /**
-             * Convert report_date query parameter into a format supported by openFDA API
-             * @param startDate     recallStartDate from form input
-             * @param endDate       recallEndDate from form input
-             * @returns {string}    formatted report_date query parameter
-             */
-			function generateDateQueryString(startDate, endDate) {
-				var dateQueryString = '';
-				if(startDate){
-					if(endDate){						
-						dateQueryString += 'report_date:[' + dateToQueryString(startDate) +
-												'+TO+' + dateToQueryString(endDate) + ']';
-					}else{
-						dateQueryString += 'report_date:' +  dateToQueryString(startDate);
-					}
-				}else if(endDate){
-					dateQueryString += 'report_date:' + dateToQueryString(endDate);
-				}
+			/**
+			 * Convert report_date query parameter into a format supported by openFDA API
+			 * @param initiationDate    Number Of days to search back in past
+			 * @returns {string}        formatted report_date query parameter
+			 */
+			function generateDateQueryString(initiationDate) {
+				var dateQueryString = '',
+                    endDate = null,
+                    startDate = null;
+                if(initiationDate){
+                    if(initiationDate['dateOffset']){
+                        endDate = new Date();
+                        startDate = new Date();
+                        startDate.setDate(startDate.getDate()-initiationDate['dateOffset']);
+                        dateQueryString += 'report_date:[' + dateToQueryString(startDate)
+                                            + '+TO+' + dateToQueryString(endDate) + ']';
+                    }
+                }
 				return dateQueryString;
 			}
 
-            /**
-             * Convert date to opnFDA compatible format
-             * @param {Date}        date as Date Object.
-             * @returns {string}    string in 'YYYYMMDD' format.                                                  ˙
-             */
+			/**
+			 * Convert date to opnFDA compatible format
+			 * @param {Date}        date as Date Object.
+			 * @returns {string}    string in 'YYYYMMDD' format.                                                  ˙
+			 */
 			function dateToQueryString(date){
 				if(date){
 					return $filter('date')(new Date(date), "yyyyMMdd");
@@ -234,13 +241,13 @@ define([ 'angular', 'app',
 				return '';
 			}
 
-            /**
-             *	Needs to pass URL as a whole string otherwise AngularJS will encode '+' sign
-             *  which is not valid url for API endpoint
-             * @param baseURL       Base URL for openFDA endpoint
-             * @param params        Query parameter to be passed for GET request
-             * @returns {string}    final openFDA API url combining baseURL and query parameters
-             */
+			/**
+			 *	Needs to pass URL as a whole string otherwise AngularJS will encode '+' sign
+			 *  which is not valid url for API endpoint
+			 * @param baseURL       Base URL for openFDA endpoint
+			 * @param params        Query parameter to be passed for GET request
+			 * @returns {string}    final openFDA API url combining baseURL and query parameters
+			 */
 			function createURL(baseURL, params){
 				var url = '';
 				for(var key in params){

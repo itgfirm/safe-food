@@ -6,6 +6,15 @@ define([ 'angular', 'app',
 			function($scope, $mdDialog, $stateParams, OpenFDAService) {
 				$scope.recallData = null;
 				$scope.initialized = false;
+                //TODO Move arrays to config file.
+                $scope.healthHazardLevels = ['Class I', 'Class II', 'Class III'];
+                $scope.dateRange = [
+                    {'id':0, 'name':'Last 7 Days', 'dateOffset':6},
+                    {'id':1, 'name':'Last 30 Days','dateOffset':29},
+                    {'id':2, 'name':'Last 1 Year', 'dateOffset':364},
+                    {'id':3, 'name':'All Records', 'dateOffset':null}
+                ];
+                $scope.statusList = ['Ongoing', 'Pending', 'Completed', 'Terminated'];
 
 				$scope.search = function(params) {
 					OpenFDAService.getData(params)
