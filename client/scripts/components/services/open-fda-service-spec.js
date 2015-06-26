@@ -61,6 +61,14 @@ define(
           }]
       };
 
+      var params = {
+        distribution_pattern: 'VA',
+        recalling_firm: 'Foods',
+        classification: 'Class II',
+        product_type: 'Food'
+      },
+      statusParams = ['Status0', 'Status1', 'Status2', 'Status3'];
+
       var fakeResponseProcessed = angular.copy(fakeResponse);
       fakeResponseProcessed.results[0].recall_initiation_date = '09/10/2012';
       fakeResponseProcessed.results[0].report_date = '10/24/2012';
@@ -137,5 +145,18 @@ define(
           .toBe('http://safe-food.gov?api_key='+OpenFDAService.apiKey+'&limit=25&skip=30');
       });
 
+      it('Should generate correct query string', function(){
+        expect(OpenFDAService.createSearchString(params))
+          .toBe('distribution_pattern:"VA"+AND+recalling_firm:"Foods"+AND+classification:"Class II"+AND+product_type:"Food"');
+      });
+
+      it('should generate correct query string for status parameters', function(){
+        expect(OpenFDAService.createSearchString({status: [statusParams[0]]}))
+          .toBe('status:("Status0")');
+        expect(OpenFDAService.createSearchString({status: [statusParams[0], statusParams[2]]}))
+          .toBe('status:("Status0"+"Status2")');
+        expect(OpenFDAService.createSearchString({recall_initiation_date:{name:'All Records',dateOffset:null}}))
+          .toBe('');
+      })
     });
 });

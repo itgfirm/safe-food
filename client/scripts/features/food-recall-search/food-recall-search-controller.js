@@ -45,11 +45,14 @@ define([ 'angular', 'app',
 			    	item.active = true;
 
 						scope.hideDialog = function() {
-							$mdDialog.hide(dialog);
-							item.active = false;
+							$mdDialog.cancel(dialog);
 						};
 
-						dialog = $mdDialog.show(config);
+						dialog = $mdDialog.show(config)
+							.finally(function(){
+								item.active = false;
+							});
+
 			    };
 				})();
 

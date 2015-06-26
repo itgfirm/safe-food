@@ -30,7 +30,7 @@ define([ 'angular', 'app',
 			service.getMeta = function() {
 				var defer = $q.defer();
 					
-				$http.get(service.baseUrl, { params : { limit: 1 } })
+				$http.get(baseUrl, { params : { limit: 1 } })
 					.success(function(data) {
 						delete data.meta.results;
 						service.meta = data.meta;
@@ -51,7 +51,7 @@ define([ 'angular', 'app',
 					// console.log(params.page);
 				params.product_type = 'Food',
 				
-				requestParams.search = createSearchString(params)
+				requestParams.search = service.createSearchString(params)
 
 				$http.get(service.createURL(baseUrl, requestParams))
 					.success(function(data) {
@@ -169,7 +169,7 @@ define([ 'angular', 'app',
 			 * @param params        parameter object from form.
 			 * @returns {string}    openFDA compatible query string.
 			 */
-			function createSearchString(params){
+			service.createSearchString = function(params){
 			var	searchString = '',
 				recallInitiationDate = null,
 				statusList = null,
@@ -230,7 +230,7 @@ define([ 'angular', 'app',
 			          endDate = new Date();
 			          startDate = new Date();
 			          startDate.setDate(startDate.getDate()-initiationDate['dateOffset']);
-			          dateQueryString += 'report_date:[' + service.dateToQueryString(startDate) +
+			          dateQueryString += 'recall_initiation_date:[' + service.dateToQueryString(startDate) +
 			                             '+TO+' + service.dateToQueryString(endDate) + ']';
 	        		}
 	    		}
