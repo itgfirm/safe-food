@@ -30,7 +30,7 @@ define([ 'angular', 'app',
 			service.getMeta = function() {
 				var defer = $q.defer();
 					
-				$http.get(service.baseUrl, { params : { limit: 1 } })
+				$http.get(baseUrl, { params : { limit: 1 } })
 					.success(function(data) {
 						delete data.meta.results;
 						service.meta = data.meta;
