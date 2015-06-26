@@ -9,17 +9,20 @@ define([ 'angular', 'app',
 				baseUrl = 'https://api.fda.gov/food/enforcement.json',
 				apiKey = 'RQklIryrO1GobRvtpSV6W3gE6z3IXIinmqxiIiuB';
 
-
 			var state_hash;
-			//not using a promise here, so it's just assumed this will load prior to it's first use.
-			$http.get('./states_hash.json')
-			    .success(function(data) {
-			        state_hash = data;
-			        console.log('States JSON Loaded');
-			    })
-			    .error(function() {
-			        console.error('could not find state_hash.json');
-			    });
+
+
+			// service.configure = function() {
+				//not using a promise here, so it's just assumed this will load prior to it's first use.
+				$http.get('./states_hash.json')
+				    .success(function(data) {
+				        state_hash = data;
+				        console.log('States JSON Loaded');
+				    })
+				    .error(function() {
+				        console.error('could not find state_hash.json');
+				    });
+			// };
 
 
 			service.getMeta = function() {
@@ -104,14 +107,17 @@ define([ 'angular', 'app',
 			 * @return {string}          the "cleaned" input - swapping spaces 
 			 *                               for all non-alpha-numeric characters
 			 */
-			function sanitizeInputs(paramVal) {
-
+			service.sanitizeInputs = function(paramVal) {
+			
+				if (!paramVal) return paramVal;
+				
 				//replacing with spaces so that it can be tokenized as words later.
-				return paramVal.replace(/[^a-zA-Z0-9 ]/g, ' ');
-
+				var result = paramVal.replace(/[^a-zA-Z0-9 ]/g, ' ');
+				result = result.trim().replace(/\s+/g, ' ');
+				return result;
 				//rather than whitelist we can try a blacklist:
 				// return paramVal.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, ' ');
-			}
+			};
 
 
 			/**
@@ -173,7 +179,7 @@ define([ 'angular', 'app',
 
 				if (params && params.generalSearch){ //Google-style search
 					searchString += createAndTerms(createStateMappings(
-															sanitizeInputs(params.generalSearch)));
+															service.sanitizeInputs(params.generalSearch)));
 				} else if (params) {
 					for(var key in params) {
 						if(params.hasOwnProperty(key)) {
@@ -183,7 +189,7 @@ define([ 'angular', 'app',
 			                    statusList = params[key];
 							}else{
 								searchString += searchString ? '+AND+' : '';
-								searchString += key + ':"' + sanitizeInputs(params[key]) + '"';
+								searchString += key + ':"' + service.sanitizeInputs(params[key]) + '"';
 							}
 						}
 					}
@@ -215,28 +221,28 @@ define([ 'angular', 'app',
 			 */
 			function generateDateQueryString(initiationDate) {
 				var dateQueryString = '',
-                    endDate = null,
-                    startDate = null;
-                if(initiationDate){
-                    if(initiationDate['dateOffset']){
-                        endDate = new Date();
-                        startDate = new Date();
-                        startDate.setDate(startDate.getDate()-initiationDate['dateOffset']);
-                        dateQueryString += 'report_date:[' + dateToQueryString(startDate)
-                                            + '+TO+' + dateToQueryString(endDate) + ']';
-                    }
-                }
+	        endDate = null,
+	        startDate = null;
+	    	if(initiationDate){
+	        if(initiationDate['dateOffset']){
+	          endDate = new Date();
+	          startDate = new Date();
+	          startDate.setDate(startDate.getDate()-initiationDate['dateOffset']);
+	          dateQueryString += 'report_date:[' + dateToQueryString(startDate) +
+	                             '+TO+' + dateToQueryString(endDate) + ']';
+	        }
+	    }
 				return dateQueryString;
 			}
 
 			/**
 			 * Convert date to opnFDA compatible format
 			 * @param {Date}        date as Date Object.
-			 * @returns {string}    string in 'YYYYMMDD' format.                                                  ˙
+			 * @returns {string}    string in 'YYYYMMDD' format.
 			 */
 			function dateToQueryString(date){
 				if(date){
-					return $filter('date')(new Date(date), "yyyyMMdd");
+					return $filter('date')(new Date(date), 'yyyyMMdd');
 				}
 				return '';
 			}
