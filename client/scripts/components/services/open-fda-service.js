@@ -5,9 +5,11 @@ define([ 'angular', 'app',
 		
 		app.service('OpenFDAService', function($http, $q, $filter, LocationService) {
 			//TODO: These should come from the app's config file:
-			var service = { meta: null },
-				baseUrl = 'https://api.fda.gov/food/enforcement.json',
-				apiKey = 'RQklIryrO1GobRvtpSV6W3gE6z3IXIinmqxiIiuB';
+			var service = { 
+					meta: null,
+					apiKey: 'RQklIryrO1GobRvtpSV6W3gE6z3IXIinmqxiIiuB'
+				},
+				baseUrl = 'https://api.fda.gov/food/enforcement.json';
 
 			var state_hash;
 
@@ -28,7 +30,7 @@ define([ 'angular', 'app',
 			service.getMeta = function() {
 				var defer = $q.defer();
 					
-				$http.get(baseUrl, { params : { limit: 1 } })
+				$http.get(service.baseUrl, { params : { limit: 1 } })
 					.success(function(data) {
 						delete data.meta.results;
 						service.meta = data.meta;
@@ -51,7 +53,7 @@ define([ 'angular', 'app',
 				
 				requestParams.search = createSearchString(params)
 
-				$http.get(createURL(baseUrl, requestParams))
+				$http.get(service.createURL(baseUrl, requestParams))
 					.success(function(data) {
 
 						angular.forEach(data.results, function(result) {
@@ -194,7 +196,7 @@ define([ 'angular', 'app',
 						}
 					}
 					if(recallInitiationDate){
-			            var recallDateQuery = generateDateQueryString(recallInitiationDate);
+			            var recallDateQuery = service.generateDateQueryString(recallInitiationDate);
 			            if(recallDateQuery){
 			                searchString += searchString ? '+AND+'+recallDateQuery : recallDateQuery;
 			            }
@@ -219,19 +221,19 @@ define([ 'angular', 'app',
 			 * @param initiationDate    Number Of days to search back in past
 			 * @returns {string}        formatted report_date query parameter
 			 */
-			function generateDateQueryString(initiationDate) {
+			service.generateDateQueryString = function(initiationDate) {
 				var dateQueryString = '',
-	        endDate = null,
-	        startDate = null;
-	    	if(initiationDate){
-	        if(initiationDate['dateOffset']){
-	          endDate = new Date();
-	          startDate = new Date();
-	          startDate.setDate(startDate.getDate()-initiationDate['dateOffset']);
-	          dateQueryString += 'report_date:[' + dateToQueryString(startDate) +
-	                             '+TO+' + dateToQueryString(endDate) + ']';
-	        }
-	    }
+	        	endDate = null,
+		        startDate = null;
+		    	if(initiationDate){
+			        if(initiationDate['dateOffset']){
+			          endDate = new Date();
+			          startDate = new Date();
+			          startDate.setDate(startDate.getDate()-initiationDate['dateOffset']);
+			          dateQueryString += 'report_date:[' + service.dateToQueryString(startDate) +
+			                             '+TO+' + service.dateToQueryString(endDate) + ']';
+	        		}
+	    		}
 				return dateQueryString;
 			}
 
@@ -240,7 +242,7 @@ define([ 'angular', 'app',
 			 * @param {Date}        date as Date Object.
 			 * @returns {string}    string in 'YYYYMMDD' format.
 			 */
-			function dateToQueryString(date){
+			service.dateToQueryString = function(date){
 				if(date){
 					return $filter('date')(new Date(date), 'yyyyMMdd');
 				}
@@ -254,16 +256,14 @@ define([ 'angular', 'app',
 			 * @param params        Query parameter to be passed for GET request
 			 * @returns {string}    final openFDA API url combining baseURL and query parameters
 			 */
-			function createURL(baseURL, params){
+			service.createURL = function(baseURL, params){
 				var url = '';
 				for(var key in params){
 					if(params.hasOwnProperty(key)){
-						//url += ( url ? '&' : '?' ) + key + '=' + params[key];
-						//simplified now that we always have the api_key before these params
 						url += '&' + key + '=' + params[key];
 					}
 				}
-				return baseURL + '?api_key=' + apiKey + url;
+				return baseURL + '?api_key=' + service.apiKey + url;
 			}
 
 			return service;

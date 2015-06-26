@@ -2,9 +2,9 @@
 <toast></toast>
 
 <md-content>
-  <md-toolbar>
+  <md-toolbar class="sf-header">
     <div class="md-toolbar-tools">
-      <h1>Safe Food</h1>
+      <img src="../../../assets/images/logo.jpg" class="logo"/>
       <span flex></span>
       <md-button ng-click="toggleSearch()">
         {{advancedSearch ? 'Basic Search' : 'Advanced Search'}}
@@ -58,9 +58,9 @@
     </div>
 
     <div class="row" ng-show="!advancedSearch">
-      <div class="form-group col-md-10">
+      <div class="search-bg">
         <!--<label>example: Spinach MI</label>-->
-        <input type="text" class="form-control" name="generalSearch" ng-model="searchParams.generalSearch" placeholder="example: Spinach MI">
+        <input type="text" class="form-control inner" name="generalSearch" ng-model="searchParams.generalSearch" placeholder="example: Spinach MI">
       </div>
     </div>
 

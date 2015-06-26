@@ -8,6 +8,11 @@ define(
     describe('OpenFDA Service Unit Tests', function() {
 
       var OpenFDAService, $q, $timeout, $httpBackend; 
+      var baseUrl = 'http://safe-food.gov',
+          limitParams = {
+            limit : 25, 
+            skip  : 30   
+          };
 
       //These should probably be loaded from JSON files in a directory for "mocks"
       var fakeResponse = {
@@ -118,6 +123,18 @@ define(
         .finally(done);
 
         $httpBackend.flush(); // Force digest cycle to resolve promises
+      });
+
+      // it('Should convert date to correct openFDA API format', function(){
+      //   expect(OpenFDAService.dateToQueryString(new Date('Thu Jun 25 00:00:00 2015')))
+      //     .toBe('20150625');
+      //   expect(OpenFDAService.dateToQueryString(new Date('2014-03-27T12:00:00')))
+      //     .toBe('20140327');
+      // });
+
+      it('Should create correct URL using records limit constraints', function(){
+        expect(OpenFDAService.createURL(baseUrl, limitParams))
+          .toBe('http://safe-food.gov?api_key='+OpenFDAService.apiKey+'&limit=25&skip=30');
       });
 
     });

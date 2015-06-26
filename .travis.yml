@@ -19,3 +19,8 @@ deploy:
   provider: heroku
   api_key:
     secure: aDqCO5OwWCj6Aq4TGz5AK7mkACJMHreVAu7ixWsVtmLPz0i+3aWu8yNN+Fc8OpmiMCgdstM10WjDkJOfj8CXMvuOMXVaND46EMp7xgR4kHRW8LCFvZAIOKjvy2uf6IHXK8IiMCTZfWyjDOlN61/FAX/6TkqG4I2NJ/wqPtelFpV9VM8bBD3QT0POGN6MN9TfWd/wgKnW4wVhvMfNJjhHVvKKtROnHFggPDCj/P2a+N6N+oXMOTxVtbyTcoER+V+8Oe0i4BojaKNXQVvEH/C5DV32pWJPxyP6VwQGm7VUo+YFi7AdttL1um19o/dpax2H8U6tjVQi0LA0b528p21py0ctNns/HqP8eBuhrwYoFQqENdMKGVB5/2k5f8MPObYgr/JdlhOcbsCEBW4zm5jBvmJML2BfkssRm0vlcYtg4oIKgXRmVdGvmxMwiokP6K22VqOIyXTyVkLDYtSHeFhAbfx3twTpWyMHAyoD23yDc0JDGvYFYbLBI8dXdw8ptldbo0g8PhwTdQHZRG5Q9+phVC+Qwt7z9l0W4ERMd1Sf/8BjL+TfucbPz8iPat8h//yIo39uyGiq1QIzun4NO1BhnoX+T1HJseHAF4FwbBgPLQFHnavyfNfEuCom7ECXDFxlyO94/XK02F9PYXINyoKqzSDFQ1tOfIYomLT0S20QwgM=
+cache:
+  directories:
+    - $HOME/.cache/pip
+    - node_modules
+    - client/vendor

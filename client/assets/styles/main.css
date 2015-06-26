@@ -1,0 +1,45 @@
+body {color:#575A5C;}
+.logo {width:20%;padding:10px;}
+a.md-button:hover:not([disabled]), .md-button:hover:not([disabled]) {
+	background-color:#66a523  !important;
+	color:#fff;
+}
+.fa-search{
+	color:#fff;
+	background-color:#80b636;
+	height:45px;
+}
+.sf-header {
+	background-color:#fff !important;
+}
+.search-bg {
+	background-image: url('http://itgfirm.com/email/images/fruit.gif');
+	height:300px;
+	background-size:100%;
+	background-repeat:no-repeat;
+}
+.searchbar {
+	border:none;
+	border-radius:4px;
+	height:45px;
+	float:left;
+	margin:6px 8px;
+	width:500px;
+	background-color:#fff;
+}
+.searchbar label {
+	font-size:20px;
+	margin-top:-20px;
+}
+.md-button {background-color:#80b636;}
+.inner {margin:0 auto;position:relative;top:100px;width:500px}
+.outer {width:100%;margin-top:100px;}
+.md-input-container.md-input-focused:not(.md-input-invalid) .md-input {
+	border: none !important;
+}
+section h4 {
+	color:#80b636 !important;
+}
+
+.search-results {background-color:#EFEFEF;}
+[layout-padding], [layout-padding] > [flex], [layout-padding] > [flex-gt-sm], [layout-padding] > [flex-md], [layout-padding] > [flex-lt-lg] {padding:0;}
