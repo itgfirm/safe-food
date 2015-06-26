@@ -1,0 +1,67 @@
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+body {color:#575A5C;}
+div#slider { overflow: hidden; max-height:300px;}
+div#slider figure img { width: 20%; float: left; }
+div#slider figure { 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite; 
+}
+.logo {width:75%;padding:10px;}
+a.md-button:hover:not([disabled]), .md-button:hover:not([disabled]) {
+	background-color:#66a523  !important;
+	color:#fff;
+}
+.fa-search{
+	color:#fff;
+	background-color:#80b636;
+	height:45px;
+}
+.sf-header {
+	background-color:#fff !important;
+}
+.search-bg {
+	background-image: url('http://itgfirm.com/email/images/fruit.gif');
+	height:300px;
+	background-size:100%;
+	background-repeat:no-repeat;
+}
+.searchbar {
+	border:none;
+	border-radius:4px;
+	height:45px;
+	float:left;
+	margin:6px 8px;
+	width:500px;
+	background-color:#fff;
+}
+.searchbar label {
+	font-size:20px;
+	margin-top:-20px;
+}
+.md-button {background-color:#80b636;}
+.inner {margin:0 auto;position:relative;top:100px;}
+.outer {width:100%;margin-top:100px;}
+.md-input-container.md-input-focused:not(.md-input-invalid) .md-input {
+	border: none !important;
+}
+section h2 {
+	color:#80b636;
+}
+
+.search-results {background-color:#EFEFEF;}
+[layout-padding], [layout-padding] > [flex], [layout-padding] > [flex-gt-sm], [layout-padding] > [flex-md], [layout-padding] > [flex-lt-lg] {padding:0;}
