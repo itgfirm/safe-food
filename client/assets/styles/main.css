@@ -13,7 +13,7 @@ a.md-button:hover:not([disabled]), .md-button:hover:not([disabled]) {
 	background-color:#fff !important;
 }
 .search-bg {
-	background-image: url('http://itgfirm.com/email/images/fruit.gif');
+	background-image: url('../images/fruti.gif');
 	height:300px;
 	background-size:100%;
 	background-repeat:no-repeat;
@@ -43,3 +43,4 @@ section h4 {
 
 .search-results {background-color:#EFEFEF;}
 [layout-padding], [layout-padding] > [flex], [layout-padding] > [flex-gt-sm], [layout-padding] > [flex-md], [layout-padding] > [flex-lt-lg] {padding:0;}
+.green {background-color:}
