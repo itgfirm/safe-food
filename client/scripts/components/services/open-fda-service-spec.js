@@ -73,6 +73,8 @@ define(
       fakeResponseProcessed.meta.results.total = NaN;
       fakeResponseProcessed.results[0].recall_initiation_date = '09/10/2012';
       fakeResponseProcessed.results[0].report_date = '10/24/2012';
+      fakeResponseProcessed.results[0].last_updated= '2015-05-31';
+
 
       beforeEach(function(){
           module('safeFoodApp');
