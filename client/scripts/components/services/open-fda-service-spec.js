@@ -70,6 +70,7 @@ define(
       statusParams = ['Status0', 'Status1', 'Status2', 'Status3'];
 
       var fakeResponseProcessed = angular.copy(fakeResponse);
+      fakeResponseProcessed.meta.results.total = NaN;
       fakeResponseProcessed.results[0].recall_initiation_date = '09/10/2012';
       fakeResponseProcessed.results[0].report_date = '10/24/2012';
 

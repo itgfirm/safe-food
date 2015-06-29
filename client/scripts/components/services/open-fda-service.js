@@ -5,32 +5,30 @@ define([ 'angular', 'app',
 		
 		app.service('OpenFDAService', function($http, $q, $filter, LocationService) {
 			//TODO: These should come from the app's config file:
-			var service = { 
-					meta: null,
-					apiKey: 'RQklIryrO1GobRvtpSV6W3gE6z3IXIinmqxiIiuB'
+			var service = {
+					apiKey: 'RQklIryrO1GobRvtpSV6W3gE6z3IXIinmqxiIiuB',
+					baseUrl: 'https://api.fda.gov/food/enforcement.json'
 				},
-				baseUrl = 'https://api.fda.gov/food/enforcement.json';
-
-			var state_hash;
-
+				limit = 25,
+				state_hash;
 
 			// service.configure = function() {
 				//not using a promise here, so it's just assumed this will load prior to it's first use.
 				$http.get('./states_hash.json')
-				    .success(function(data) {
-				        state_hash = data;
-				        console.log('States JSON Loaded');
-				    })
-				    .error(function() {
-				        console.error('could not find state_hash.json');
-				    });
+			    .success(function(data) {
+		        state_hash = data;
+		        console.log('States JSON Loaded');
+			    })
+			    .error(function() {
+		        console.error('could not find state_hash.json');
+			    });
 			// };
 
 
 			service.getMeta = function() {
 				var defer = $q.defer();
 					
-				$http.get(baseUrl, { params : { limit: 1 } })
+				$http.get(service.baseUrl, { params : { limit: 1 } })
 					.success(function(data) {
 						delete data.meta.results;
 						service.meta = data.meta;
@@ -41,29 +39,195 @@ define([ 'angular', 'app',
 			};
 
 
+			function sortQueryBuilder(params) {
+				var defer = $q.defer(),
+					countRequestParams = {
+						search: service.createSearchString(params),
+						count: 'recall_initiation_date'
+					};
+
+				$http.get(service.createURL(service.baseUrl, countRequestParams))
+					.success(function(data) {
+						var counts = data.results,
+							dates = createDateSegments(counts, params.page, true),
+							requiredRequests = {
+								meta: {},
+								requests: []
+							},
+							baseRequestParams = angular.copy(params),
+							tempRequest;
+
+						console.log('range for page: ', dates);
+
+						delete baseRequestParams.skip;
+						delete baseRequestParams.limit;
+						delete baseRequestParams.count;
+						delete baseRequestParams.recall_initiation_date;
+
+						requiredRequests.meta = dates.meta;
+						requiredRequests.meta.total = counts.reduce(function(prev, curr){
+							return prev + curr.count;
+						}, 0);
+
+						if(dates.start.date === dates.start.end) {
+							tempRequest = angular.copy(baseRequestParams);
+
+							tempRequest.recall_initiation_date = dates.start.date;
+							tempRequest.skip = dates.start.skip || 0;
+							tempRequest.limit = limit;
+
+							requiredRequests.push(tempRequest);
+						} else {
+							delete dates.meta;
+
+							for(var key in dates) {
+								if(dates.hasOwnProperty(key)) {
+									tempRequest = angular.copy(baseRequestParams);
+									tempRequest.skip = dates[key].skip || 0;
+									tempRequest.limit = dates[key].limit || limit;
+									tempRequest.recall_initiation_date = dates[key].date;
+									requiredRequests.requests.push(tempRequest);
+								}
+							}
+
+						}
+
+						defer.resolve(requiredRequests);
+
+					})
+					.error(function(err) {
+						defer.reject(err);
+					});
+
+				return defer.promise;
+
+				function createDateSegments(counts, num, reverse) {
+					if(counts.length === 0) {
+						return;
+					}
+
+					if (reverse) {
+						counts.reverse();
+					}
+
+					var requiredSkip = ((num || 1) - 1) * limit,
+						currentSkip = 0,
+						currentLimit = 0,
+						startSkip = 0,
+						endLimit = 0,
+						startIndex = -1,
+						endIndex = -1,
+						middleMin = null,
+						middleMax = null,
+						dates = {
+							meta: {
+								limit: limit,
+								skip: requiredSkip
+							}
+						},
+						i = 0,
+						iterComp = counts.length;
+
+					for(;i < iterComp && currentSkip <= requiredSkip; i++) {
+						currentSkip += counts[i].count;
+						startIndex = i;
+					}
+
+					startSkip = currentSkip > requiredSkip  ?
+						counts[startIndex].count - (currentSkip - requiredSkip) : 0;
+
+					currentLimit = currentSkip - requiredSkip;
+
+					if(currentLimit < limit) {
+						for(;i < iterComp && currentLimit < limit; i++) {
+							currentLimit += counts[i].count;
+							endIndex = i;
+						}
+	
+						endLimit = currentLimit > limit ?
+							counts[endIndex].count - (currentLimit - limit) :
+							limit;
+					}
+
+					startIndex = startIndex !== -1 ? startIndex : 0;
+
+					dates.start = {
+						date: new Date(convertFDADateString(counts[startIndex].time)),
+						skip: startSkip
+					};
+
+					if(endIndex !== -1) {
+						dates.end = {
+							date: new Date(convertFDADateString(counts[endIndex].time)),
+							limit: endLimit
+						};
+
+						if(endIndex - startIndex > 1) {
+							middleMin = new Date(reverse ? dates.end.date : dates.start.date);
+							middleMax = new Date(reverse ? dates.start.date : dates.end.date);
+
+							dates.middle = {
+								date: [ middleMin.setDate(middleMin.getDate() + 1),
+									middleMax.setDate(middleMax.getDate() - 1) ]
+							};
+						}
+					}
+					return dates;
+				}
+			}
+
+
 			service.getData = function(params) {
 				var defer = $q.defer(),
-					params = params || {},
-					requestParams = {
-						limit: params.limit || 25,
-						skip: ((params.page || 1) - 1) * 25
-					};
-					// console.log(params.page);
-				params.product_type = 'Food',
+					params = angular.copy(params || {});
+
+				params.product_type = 'Food';
 				
-				requestParams.search = service.createSearchString(params)
+				sortQueryBuilder(params)
+					.then(function(requiredRequests) {
+						var requests = [];
 
-				$http.get(service.createURL(baseUrl, requestParams))
-					.success(function(data) {
+						angular.forEach(requiredRequests.requests,
+							function(requiredRequest, i) {
+								var requestParams = {
+									limit: requiredRequest.limit,
+									skip: requiredRequest.skip
+								};
 
-						angular.forEach(data.results, function(result) {
-							result.recall_initiation_date = convertFDADateString(result.recall_initiation_date);
-							result.report_date = convertFDADateString(result.report_date);
-						});
+								requestParams.search = service.createSearchString(requiredRequest);
+								console.log(requiredRequest);
 
-						defer.resolve(data);
-					}).
-					error(function(err){
+								requests.push($http.get(service.createURL(service.baseUrl, requestParams)));
+							});
+
+						$q.all(requests)
+							.then(function(resolves) {
+								var response = {
+									meta: resolves[0].data.meta,
+									results: []
+								};
+
+								response.meta.results = requiredRequests.meta;
+
+								angular.forEach(resolves, function(resolve) {
+									response.results = response.results.concat(resolve.data.results);
+								});
+
+								response.results = $filter('orderBy')(response.results, 'recall_initiation_date', true);
+
+								console.log(response);
+
+								angular.forEach(response.results, function(result) {
+									result.recall_initiation_date = convertFDADateString(result.recall_initiation_date);
+									result.report_date = convertFDADateString(result.report_date);
+								});
+								defer.resolve(response)
+							}, function(err){
+								defer.reject(err);
+							})
+
+
+					}, function(err) {
 						defer.reject(err);
 					});
 
@@ -217,23 +381,37 @@ define([ 'angular', 'app',
 			}
 
 			/**
-			 * Convert report_date query parameter into a format supported by openFDA API
+			 * Convert recall_initiation_date query parameter into a format supported by openFDA API
 			 * @param initiationDate    Number Of days to search back in past
 			 * @returns {string}        formatted report_date query parameter
 			 */
 			service.generateDateQueryString = function(initiationDate) {
-				var dateQueryString = '',
-	        	endDate = null,
-		        startDate = null;
-		    	if(initiationDate){
-			        if(initiationDate['dateOffset']){
-			          endDate = new Date();
-			          startDate = new Date();
-			          startDate.setDate(startDate.getDate()-initiationDate['dateOffset']);
-			          dateQueryString += 'recall_initiation_date:[' + service.dateToQueryString(startDate) +
-			                             '+TO+' + service.dateToQueryString(endDate) + ']';
-	        		}
-	    		}
+				var dateQueryString = '';
+
+	    	if(initiationDate){
+	        if(initiationDate['dateOffset']){
+	        	var endDate = new Date(),
+		          startDate = new Date();
+	          startDate.setDate(startDate.getDate()-initiationDate['dateOffset']);
+	          initiationDate = [ startDate, endDate ];
+      		}
+
+      		if(angular.isArray(initiationDate)) {
+      			//assumes date array
+	          dateQueryString += '['
+	          	+ service.dateToQueryString(new Date(initiationDate[0]))
+	          	+ '+TO+' + service.dateToQueryString(new Date(initiationDate[1])) + ']';
+      		} else if(angular.isDate(initiationDate)) {
+      			dateQueryString += service.dateToQueryString(initiationDate);
+      		} else if(angular.isString(initiationDate)) {
+      			//assumes proper formatting
+      			dateQueryString += initiationDate;
+      		}
+
+      		if(dateQueryString) {
+      			dateQueryString = 'recall_initiation_date:' + dateQueryString;
+      		}
+    		}
 				return dateQueryString;
 			}
 
