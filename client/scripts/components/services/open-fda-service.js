@@ -208,6 +208,7 @@ define([ 'angular', 'app',
 								angular.forEach(response.results, function(result) {
 									result.recall_initiation_date = convertFDADateString(result.recall_initiation_date);
 									result.report_date = convertFDADateString(result.report_date);
+									result.last_updated = response.meta.last_updated;
 								});
 								defer.resolve(response)
 							}, function(err){
