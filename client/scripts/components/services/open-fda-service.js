@@ -70,27 +70,17 @@ define([ 'angular', 'app',
 							return prev + curr.count;
 						}, 0);
 
-						if(dates.start.date === dates.start.end) {
-							tempRequest = angular.copy(baseRequestParams);
 
-							tempRequest.recall_initiation_date = dates.start.date;
-							tempRequest.skip = dates.start.skip || 0;
-							tempRequest.limit = limit;
+						delete dates.meta;
 
-							requiredRequests.push(tempRequest);
-						} else {
-							delete dates.meta;
-
-							for(var key in dates) {
-								if(dates.hasOwnProperty(key)) {
-									tempRequest = angular.copy(baseRequestParams);
-									tempRequest.skip = dates[key].skip || 0;
-									tempRequest.limit = dates[key].limit || limit;
-									tempRequest.recall_initiation_date = dates[key].date;
-									requiredRequests.requests.push(tempRequest);
-								}
+						for(var key in dates) {
+							if(dates.hasOwnProperty(key)) {
+								tempRequest = angular.copy(baseRequestParams);
+								tempRequest.skip = dates[key].skip || 0;
+								tempRequest.limit = dates[key].limit || limit;
+								tempRequest.recall_initiation_date = dates[key].date;
+								requiredRequests.requests.push(tempRequest);
 							}
-
 						}
 
 						defer.resolve(requiredRequests);
