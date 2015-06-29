@@ -11,10 +11,12 @@ define([ 'angular', 'app',
 		    		OpenFDAService.getData(params)
 						.then(function(resp) {
 							FoodDataService.setFoodSearchData(resp);
+							FoodDataService.setInitialized(true);
 							$location.path('/food-recall-search');
 						}, function(resp) {
 							if(resp.error && resp.error.code === 'NOT_FOUND') {
-								FoodDataService.setFoodSearchData(null);								
+								FoodDataService.setFoodSearchData(null);
+								FoodDataService.setInitialized(true);								
 							}
 							$location.path('/food-recall-search');
 						});		    		

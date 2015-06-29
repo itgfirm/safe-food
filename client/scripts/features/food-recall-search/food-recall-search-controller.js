@@ -6,7 +6,7 @@ define([ 'angular', 'app',
 		app.controller('FoodRecallSearchController',
 			function($scope, $mdDialog, $stateParams, OpenFDAService, FoodDataService) {
 				$scope.recallData = FoodDataService.getFoodSearchData();
-				$scope.initialized = true;
+				$scope.initialized = FoodDataService.isInitialized();
                 //TODO Move arrays to config file.
                 $scope.healthHazardLevels = ['Class I', 'Class II', 'Class III'];
                 $scope.dateRange = [
