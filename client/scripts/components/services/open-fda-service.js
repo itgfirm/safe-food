@@ -9,9 +9,8 @@ define([ 'angular', 'app',
 					apiKey: 'RQklIryrO1GobRvtpSV6W3gE6z3IXIinmqxiIiuB',
 					baseUrl: 'https://api.fda.gov/food/enforcement.json'
 				},
-				limit = 25,
+				LIMIT = 25,
 				state_hash;
-
 			// service.configure = function() {
 				//not using a promise here, so it's just assumed this will load prior to it's first use.
 				$http.get('./states_hash.json')
@@ -24,6 +23,9 @@ define([ 'angular', 'app',
 			    });
 			// };
 
+			service.getStateHash = function() {
+				return state_hash;
+			};
 
 			service.getMeta = function() {
 				var defer = $q.defer();
@@ -44,7 +46,8 @@ define([ 'angular', 'app',
 					countRequestParams = {
 						search: service.createSearchString(params),
 						count: 'recall_initiation_date'
-					};
+					},
+					limit = params.limit || LIMIT;
 
 				$http.get(service.createURL(service.baseUrl, countRequestParams))
 					.success(function(data) {
@@ -56,8 +59,6 @@ define([ 'angular', 'app',
 							},
 							baseRequestParams = angular.copy(params),
 							tempRequest;
-
-						console.log('range for page: ', dates);
 
 						delete baseRequestParams.skip;
 						delete baseRequestParams.limit;
@@ -195,7 +196,6 @@ define([ 'angular', 'app',
 								};
 
 								requestParams.search = service.createSearchString(requiredRequest);
-								console.log(requiredRequest);
 
 								requests.push($http.get(service.createURL(service.baseUrl, requestParams)));
 							});
@@ -215,8 +215,6 @@ define([ 'angular', 'app',
 
 								response.results = $filter('orderBy')(response.results, 'recall_initiation_date', true);
 
-								console.log(response);
-
 								angular.forEach(response.results, function(result) {
 									result.recall_initiation_date = convertFDADateString(result.recall_initiation_date);
 									result.report_date = convertFDADateString(result.report_date);
@@ -234,14 +232,16 @@ define([ 'angular', 'app',
 				return defer.promise;
 			};
 
-			service.searchNearMe = function() {
+			service.searchNearMe = function(params) {
 				var defer = $q.defer();
 
 				LocationService.getGeolocation()
 					.then(function(data) {
 						LocationService.getStateFromCoords(data.coords)
 							.then(function(data) {
-								service.getData({ distribution_pattern: data.short_name })
+								params.distribution_pattern = data.short_name;
+
+								service.getData(params)
 									.then(function(data) {
 										defer.resolve(data);
 									});
@@ -307,7 +307,7 @@ define([ 'angular', 'app',
 					//ok to use "in" because we know that state_hash is a nice, clean obeject
 					if(result.toUpperCase() in state_hash) { //found a state term
 						//add the alternative for the state indicates as well as the "nationwide" term
-						result = '('+result+'+"'+encodeURIComponent(state_hash[result.toUpperCase()])+'"+nationwide)';
+						result = '('+result+'+'+encodeURIComponent(state_hash[result.toUpperCase()])+'+nationwide)';
 					}
 					//add each term back into the return value
 					newTerms += newTerms ? ' '+result : result;
@@ -350,12 +350,18 @@ define([ 'angular', 'app',
 					for(var key in params) {
 						if(params.hasOwnProperty(key)) {
 							if(key === 'recall_initiation_date'){
-			                    recallInitiationDate = params[key];
-							}else if(key === 'status'){
-			                    statusList = params[key];
+			          recallInitiationDate = params[key];
+			        }else if(key === 'status'){
+			          statusList = params[key];
 							}else{
+								var value = service.sanitizeInputs(params[key]);
 								searchString += searchString ? '+AND+' : '';
-								searchString += key + ':"' + service.sanitizeInputs(params[key]) + '"';
+								if(key === 'distribution_pattern') {
+									value = createAndTerms(createStateMappings(value));
+									searchString += key + ':' + value;
+								} else {
+									searchString += key + ':"' + value + '"';
+								}
 							}
 						}
 					}

@@ -98,9 +98,25 @@
     </div>
   </section>
 
-  <div ng-show="recallData" style="text-align: right">
+<!--   <div ng-show="recallData" style="text-align: right">
     <pagination total-items="recallData.meta.results.total" ng-model="searchParams.page" items-per-page="recallData.meta.results.limit" max-size="5" style="padding-right:15px"></pagination>
-  </div>
+  </div> -->
+
+
+  <section>
+    <h3>Recalls Near Me</h3>
+    <div class="list-group">
+      <a ng-repeat="item in recallsNearMe.results track by $index" 
+        class="list-group-item"
+        ng-click="viewDetails(item)"
+        ng-class="{ 'active': item.active }">
+        <h4 class="list-group-item-heading">{{item.recalling_firm}} ({{item.recall_number}})</h4>
+        <div><strong>Recall Initiated:</strong> {{item.recall_initiation_date}} ({{item.status}})</div>
+        <div><strong>Distribution Pattern:</strong> {{item.distribution_pattern}}</div>
+        <div><strong>Product Description:</strong> {{item.product_description}}</div>
+      </a>
+    </div>
+  </section>
 
   <footer align="right" style="font-size:12px;padding-right:5px;">The openFDA beta research project contents were last updated on {{recallData.meta.last_updated | date:'MMMM dd, yyyy'}}</footer>
 </md-content>

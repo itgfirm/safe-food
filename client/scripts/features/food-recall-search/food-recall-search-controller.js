@@ -72,10 +72,10 @@ define([ 'angular', 'app',
 					}
 			  };
 
-			  $scope.searchNearMe = function() {
-			  	OpenFDAService.searchNearMe()
+			  $scope.searchNearMe = function(params) {
+			  	OpenFDAService.searchNearMe(params)
 			  		.then(function(data) {
-			  			$scope.recallData = data;
+			  			$scope.recallsNearMe = data;
 			  		});
 			  };
 
@@ -109,7 +109,7 @@ define([ 'angular', 'app',
 
 				$scope.showDisclaimer();
 				$scope.search({ page: parseInt($stateParams.page) });
-
+				$scope.searchNearMe({ limit: 5 });
 		});
 
 });
