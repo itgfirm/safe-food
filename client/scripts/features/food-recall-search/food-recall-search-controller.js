@@ -1,11 +1,12 @@
 define([ 'angular', 'app',
-	'components/services/open-fda-service' ],
+	'components/services/open-fda-service',
+	'components/services/food-data-service'],
 	function(angular, app) {
 
 		app.controller('FoodRecallSearchController',
-			function($scope, $mdDialog, $stateParams, OpenFDAService) {
-				$scope.recallData = null;
-				$scope.initialized = false;
+			function($scope, $mdDialog, $stateParams, OpenFDAService, FoodDataService) {
+				$scope.recallData = FoodDataService.getFoodSearchData();
+				$scope.initialized = true;
                 //TODO Move arrays to config file.
                 $scope.healthHazardLevels = ['Class I', 'Class II', 'Class III'];
                 $scope.dateRange = [
@@ -108,7 +109,7 @@ define([ 'angular', 'app',
 				};
 
 				$scope.showDisclaimer();
-				$scope.search({ page: parseInt($stateParams.page) });
+				// $scope.search({ page: parseInt($stateParams.page) });
 				$scope.searchNearMe({ limit: 5 });
 		});
 
