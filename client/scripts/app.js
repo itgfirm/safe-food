@@ -21,12 +21,13 @@ define([
 
     app.config(function($stateProvider, $urlRouterProvider,
       $httpProvider, ngToastProvider) {
-      $stateProvider.state('base', { abstract: true });
+      // $stateProvider.state('base', { abstract: true });
       $urlRouterProvider.otherwise('/');
 
       ngToastProvider.configure({
         verticalPosition: 'bottom',
-        maxNumber: 3,
+        horizontalPosition: 'left',
+        maxNumber: 1,
         className: 'danger',
         animation: 'slide'
       });

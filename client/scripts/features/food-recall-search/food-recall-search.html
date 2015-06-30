@@ -1,39 +1,38 @@
-<div ng-include="'/scripts/features/commons/header.html'"></div>
 <form name="recall-search" class="form-margin">
   <div class="row">
     <div class="form-group col-md-6">
       <label for="affectedArea">Affected Area</label>
-      <input type="text" class="form-control" name="affectedArea" ng-model="searchParams.distribution_pattern" >
+      <input type="text" class="form-control" name="affectedArea" ng-model="base.searchParams.distribution_pattern" >
     </div>
     <div class="form-group col-md-6">
       <label for="affectedProduct">Affected Product</label>
-      <input type="text" class="form-control" name="affectedProduct" ng-model="searchParams.product_description">
+      <input type="text" class="form-control" name="affectedProduct" ng-model="base.searchParams.product_description">
     </div>
   </div>
   <div class="row">
     <div class="form-group col-md-6">
       <label for="companyName">Company Name</label>
-      <input type="text" class="form-control" name="companyName" ng-model="searchParams.recalling_firm">
+      <input type="text" class="form-control" name="companyName" ng-model="base.searchParams.recalling_firm">
     </div>
     <div class="form-group col-md-6">
       <label for="healthHazardLevel">Health Hazard Level</label>
-      <select class="form-control" name="healthHazardLevel" id="healthHazardLevel" ng-model="searchParams.classification" ng-options="healthHazardLevel for healthHazardLevel in healthHazardLevels"></select>
+      <select class="form-control" name="healthHazardLevel" id="healthHazardLevel" ng-model="base.searchParams.classification" ng-options="healthHazardLevel for healthHazardLevel in healthHazardLevels"></select>
     </div>
   </div>
   <div class="row">
     <div class="col-md-6">
       <div class="form-group">
         <label for="currentStatus">Current Status</label>
-        <select class="form-control" name="currentStatus" id="currentStatus" ng-model="searchParams.status" ng-options="status for status in statusList" multiple></select>
+        <select class="form-control" name="currentStatus" id="currentStatus" ng-model="base.searchParams.status" ng-options="status for status in statusList" multiple></select>
       </div>
     </div>
     <div class="col-md-6">
       <div class="form-group">
         <label for="dateRange">Date Range</label>
-        <select class="form-control" name="dateRange" id="dateRange" ng-model="searchParams.recall_initiation_date" ng-options="date.name for date in dateRange"></select>
+        <select class="form-control" name="dateRange" id="dateRange" ng-model="base.searchParams.recall_initiation_date" ng-options="date.name for date in dateRange"></select>
       </div>
       <div class="form-group">
-        <button class="btn btn-primary pull-right" ng-click="searchDisclaimer(searchParams)">Advance Search</button>
+        <button class="btn btn-primary pull-right" ng-click="base.search(base.searchParams)">Advance Search</button>
       </div>
     </div>
   </div>
@@ -43,7 +42,7 @@
 
 <div ng-show="recallData" style="text-align:right">
   <div class="pull-left" style="margin:20px 10px; padding-top:6px; padding-bottom:6px;">{{recallData.meta.results.skip + 1}} - {{(recallData.meta.results.skip + recallData.results.length)}} of {{recallData.meta.results.total}} Results</div>
-  <pagination total-items="recallData.meta.results.total" ng-model="searchParams.page" ng-change="search(searchParams)" items-per-page="recallData.meta.results.limit" max-size="5" style="padding-right:15px"></pagination>
+  <pagination total-items="recallData.meta.results.total" ng-model="base.searchParams.page" ng-change="search(base.searchParams)" items-per-page="recallData.meta.results.limit" max-size="5" style="padding-right:15px"></pagination>
 </div>
 <center ng-if="!recallData && initialized">
   <h4>Record(s) Not Found!</h4>
@@ -63,25 +62,3 @@
     </a>
   </div>
 </section>
-
-<!--   <div ng-show="recallData" style="text-align: right">
-    <pagination total-items="recallData.meta.results.total" ng-model="searchParams.page" items-per-page="recallData.meta.results.limit" max-size="5" style="padding-right:15px"></pagination>
-  </div> -->
-
-
-<section>
-  <h3>Recalls Near Me</h3>
-  <div class="list-group">
-    <a ng-repeat="item in recallsNearMe.results track by $index" 
-      class="list-group-item"
-      ng-click="viewDetails(item)"
-      ng-class="{ 'active': item.active }">
-      <h4 class="list-group-item-heading">{{item.recalling_firm}} ({{item.recall_number}})</h4>
-      <div><strong>Recall Initiated:</strong> {{item.recall_initiation_date}} ({{item.status}})</div>
-      <div><strong>Distribution Pattern:</strong> {{item.distribution_pattern}}</div>
-      <div><strong>Product Description:</strong> {{item.product_description}}</div>
-    </a>
-  </div>
-</section>
-
-<footer align="right" style="font-size:12px;padding-right:5px;">The openFDA beta research project contents were last updated on {{recallData.meta.last_updated | date:'MMMM dd, yyyy'}}</footer>

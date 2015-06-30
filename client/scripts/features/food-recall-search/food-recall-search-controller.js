@@ -1,6 +1,6 @@
 define([ 'angular', 'app',
 	'components/services/open-fda-service',
-	'components/services/food-data-service'],
+	'components/services/food-data-service' ],
 	function(angular, app) {
 
 		app.controller('FoodRecallSearchController',
@@ -24,7 +24,7 @@ define([ 'angular', 'app',
 							$scope.recallData = resp;
 							if(!$scope.initialized) {
 								$scope.initialized = true;
-								$scope.searchParams = { page: $stateParams.page };
+								$scope.base.searchParams = { page: $stateParams.page };
 							}
 						}, function(resp) {
 							console.log(resp.error);
@@ -60,7 +60,7 @@ define([ 'angular', 'app',
 			    };
 				})();
 
-				$scope.searchDisclaimer = function(params) {
+				$scope.base.search = function(params) {
 					if (params && params.recallStartDate &&
 						params.recallStartDate.getFullYear() < 2012) {
 						var confirm = $mdDialog.alert()
@@ -75,13 +75,6 @@ define([ 'angular', 'app',
 					} else {
 						$scope.search(params);
 					}
-			  };
-
-			  $scope.searchNearMe = function(params) {
-			  	OpenFDAService.searchNearMe(params)
-			  		.then(function(data) {
-			  			$scope.recallsNearMe = data;
-			  		});
 			  };
 
 				$scope.showDisclaimer = (function() {
@@ -106,15 +99,8 @@ define([ 'angular', 'app',
 					};
 				})();
 
-				$scope.toggleSearch = function() {
-					$scope.advancedSearch = !$scope.advancedSearch;
-					$scope.searchParams = null;
-					$scope.search($scope.searchParams);
-				};
-
 				$scope.showDisclaimer();
 				// $scope.search({ page: parseInt($stateParams.page) });
-				$scope.searchNearMe({ limit: 5 });
 		});
 
 });
