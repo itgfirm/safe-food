@@ -334,10 +334,13 @@ define([ 'angular', 'app',
 				delete params.skip;
 				delete params.page;
 
-				if (params && params.generalSearch){ //Google-style search
-					searchString += createAndTerms(createStateMappings(
+				if (params) {
+					if(params.generalSearch){ //Google-style search
+						searchString += createAndTerms(createStateMappings(
 															service.sanitizeInputs(params.generalSearch)));
-				} else if (params) {
+						delete params.generalSearch;
+					}
+
 					for(var key in params) {
 						if(params.hasOwnProperty(key)) {
 							if(key === 'recall_initiation_date'){
