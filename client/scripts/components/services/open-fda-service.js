@@ -5,10 +5,9 @@ define([ 'angular', 'app',
 		app.service('OpenFDAService',
 			function($http, $q, $filter, LocationService) {
 			//TODO: These should come from the app's config file:
-			var service = {
-					apiKey: 'RQklIryrO1GobRvtpSV6W3gE6z3IXIinmqxiIiuB',
-					baseUrl: 'https://api.fda.gov/food/enforcement.json'
-				},
+			var service = {},
+				APIKEY = 'RQklIryrO1GobRvtpSV6W3gE6z3IXIinmqxiIiuB',
+				BASEURL = 'https://api.fda.gov/food/enforcement.json',
 				LIMIT = 25,
 				STATEHASH;
 
@@ -29,11 +28,94 @@ define([ 'angular', 'app',
 			service.getMeta = function() {
 				var defer = $q.defer();
 					
-				$http.get(service.baseUrl, { params : { limit: 1 } })
+				$http.get(BASEURL, { params : { limit: 1 } })
 					.success(function(data) {
 						delete data.meta.results;
-						service.meta = data.meta;
-						defer.resolve(angular.copy(service.meta));
+						defer.resolve(data.meta);
+					});
+
+				return defer.promise;
+			};
+
+
+			service.getData = function(params) {
+				var defer = $q.defer();
+				
+				params = angular.copy(params || {});
+				params.product_type = 'Food';
+				
+				sortQueryBuilder(params)
+					.then(function(requiredRequests) {
+						var requests = [];
+
+						angular.forEach(requiredRequests.requests,
+							function(requiredRequest) {
+								var requestParams = {
+									limit: requiredRequest.limit,
+									skip: requiredRequest.skip
+								};
+
+								requestParams.search = createSearchString(requiredRequest);
+
+								requests.push(
+									$http.get(createURL(BASEURL, requestParams))
+								);
+							});
+
+						$q.all(requests)
+							.then(function(resolves) {
+								var response = {
+									meta: resolves[0].data.meta,
+									results: []
+								};
+
+								response.meta.results = requiredRequests.meta;
+
+								angular.forEach(resolves, function(resolve) {
+									response.results = response.results
+										.concat(resolve.data.results);
+								});
+
+								response.results = $filter('orderBy')
+										(response.results, 'recall_initiation_date', true);
+
+								angular.forEach(response.results, function(result) {
+									result.recall_initiation_date = 
+										convertFDADateString(result.recall_initiation_date);
+									result.report_date = 
+										convertFDADateString(result.report_date);
+									//kinda false information and unnecessary
+									result.last_updated = response.meta.last_updated;
+								});
+								defer.resolve(response);
+							}, function(err){
+								defer.reject(err);
+							});
+
+					}, function(err) {
+						defer.reject(err);
+					});
+
+				return defer.promise;
+			};
+
+			service.searchNearMe = function(params) {
+				var defer = $q.defer();
+
+				LocationService.getGeolocation()
+					.then(function(coords) {
+						LocationService.getStateFromCoords(coords.coords)
+							.then(function(state) {
+								params = params || {};
+								params.distribution_pattern = state.short_name;
+
+								service.getData(params)
+									.then(function(recalls) {
+										defer.resolve(recalls);
+									});
+							});
+					}, function(error) {
+						defer.reject(error);
 					});
 
 				return defer.promise;
@@ -50,7 +132,7 @@ define([ 'angular', 'app',
 					},
 					limit = params.limit || LIMIT;
 
-				$http.get(service.createURL(service.baseUrl, countRequestParams))
+				$http.get(createURL(BASEURL, countRequestParams))
 					.success(function(data) {
 						var counts = data.results,
 							dates = createDateSegments(counts, params.page, true),
@@ -169,87 +251,6 @@ define([ 'angular', 'app',
 			}
 
 
-			service.getData = function(params) {
-				var defer = $q.defer();
-				
-				params = angular.copy(params || {});
-				params.product_type = 'Food';
-				
-				sortQueryBuilder(params)
-					.then(function(requiredRequests) {
-						var requests = [];
-
-						angular.forEach(requiredRequests.requests,
-							function(requiredRequest) {
-								var requestParams = {
-									limit: requiredRequest.limit,
-									skip: requiredRequest.skip
-								};
-
-								requestParams.search = createSearchString(requiredRequest);
-
-								requests.push(
-									$http.get(service.createURL(service.baseUrl, requestParams))
-								);
-							});
-
-						$q.all(requests)
-							.then(function(resolves) {
-								var response = {
-									meta: resolves[0].data.meta,
-									results: []
-								};
-
-								response.meta.results = requiredRequests.meta;
-
-								angular.forEach(resolves, function(resolve) {
-									response.results = response.results
-										.concat(resolve.data.results);
-								});
-
-								response.results = $filter('orderBy')
-										(response.results, 'recall_initiation_date', true);
-
-								angular.forEach(response.results, function(result) {
-									result.recall_initiation_date = 
-										convertFDADateString(result.recall_initiation_date);
-									result.report_date = 
-										convertFDADateString(result.report_date);
-									//kinda false information and unnecessary
-									result.last_updated = response.meta.last_updated;
-								});
-								defer.resolve(response);
-							}, function(err){
-								defer.reject(err);
-							});
-
-					}, function(err) {
-						defer.reject(err);
-					});
-
-				return defer.promise;
-			};
-
-			service.searchNearMe = function(params) {
-				var defer = $q.defer();
-
-				LocationService.getGeolocation()
-					.then(function(data) {
-						LocationService.getStateFromCoords(data.coords)
-							.then(function(data) {
-								params.distribution_pattern = data.short_name;
-
-								service.getData(params)
-									.then(function(data) {
-										defer.resolve(data);
-									});
-							});
-					}, function(error) {
-						defer.reject(error);
-					});
-
-				return defer.promise;
-			};
 
 			function convertFDADateString(dateString) {
 				if(!dateString) {
@@ -271,7 +272,7 @@ define([ 'angular', 'app',
 			 * @return {string}          the "cleaned" input - swapping spaces 
 			 *                               for all non-alpha-numeric characters
 			 */
-			service.sanitizeInputs = function(paramVal) {
+			function sanitizeInputs(paramVal) {
 			
 				if (!paramVal) return paramVal;
 				
@@ -281,7 +282,7 @@ define([ 'angular', 'app',
 				return result;
 				//rather than whitelist we can try a blacklist:
 				// return paramVal.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, ' ');
-			};
+			}
 
 
 			/**
@@ -350,7 +351,7 @@ define([ 'angular', 'app',
 				if (params) {
 					if(params.generalSearch){ //Google-style search
 						searchString += createAndTerms(createStateMappings(
-															service.sanitizeInputs(params.generalSearch)));
+															sanitizeInputs(params.generalSearch)));
 						delete params.generalSearch;
 					}
 
@@ -361,7 +362,7 @@ define([ 'angular', 'app',
 			        }else if(key === 'status'){
 			          statusList = params[key];
 							}else{
-								var value = service.sanitizeInputs(params[key]);
+								var value = sanitizeInputs(params[key]);
 								searchString += searchString ? '+AND+' : '';
 								if(key === 'distribution_pattern') {
 									value = createAndTerms(createStateMappings(value));
@@ -414,11 +415,11 @@ define([ 'angular', 'app',
       		if(angular.isArray(initiationDate)) {
       			//assumes date array
 	          dateQueryString += '[' +
-	          	service.dateToQueryString(new Date(initiationDate[0])) +
-	          	'+TO+' + service.dateToQueryString(new Date(initiationDate[1])) +
+	          	dateToQueryString(new Date(initiationDate[0])) +
+	          	'+TO+' + dateToQueryString(new Date(initiationDate[1])) +
 	          	']';
       		} else if(angular.isDate(initiationDate)) {
-      			dateQueryString += service.dateToQueryString(initiationDate);
+      			dateQueryString += dateToQueryString(initiationDate);
       		} else if(angular.isString(initiationDate)) {
       			//assumes proper formatting
       			dateQueryString += initiationDate;
@@ -436,12 +437,12 @@ define([ 'angular', 'app',
 			 * @param {Date}        date as Date Object.
 			 * @returns {string}    string in 'YYYYMMDD' format.
 			 */
-			service.dateToQueryString = function(date){
+			function dateToQueryString(date){
 				if(date){
 					return $filter('date')(new Date(date), 'yyyyMMdd');
 				}
 				return '';
-			};
+			}
 
 			/**
 			 * Needs to pass URL as a whole string otherwise AngularJS
@@ -451,15 +452,15 @@ define([ 'angular', 'app',
 			 * @returns {string}    final openFDA API url combining baseURL 
 			 *											and query parameters
 			 */
-			service.createURL = function(baseURL, params){
+			function createURL(baseURL, params){
 				var url = '';
 				for(var key in params){
 					if(params.hasOwnProperty(key)){
 						url += '&' + key + '=' + params[key];
 					}
 				}
-				return baseURL + '?api_key=' + service.apiKey + url;
-			};
+				return baseURL + '?api_key=' + APIKEY + url;
+			}
 
 			return service;
 		});
