@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Safe Food</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.tmp) assets/styles/main.css -->
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="vendor/angular-material/angular-material.css">
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="vendor/ngtoast/dist/ngToast.css">
+    <link rel="stylesheet" href="vendor/ngtoast/dist/ngToast-animations.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <base href="/">
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->    
+    <div class="container" style="width:100%">
+        <div ui-view="main"></div>
+    </div>
+
+    <script src="vendor/requirejs/require.js" data-main="scripts/main"></script>
+    <script src="vendor/tota11y/build/tota11y.min.js"></script>
+  </body>
+</html>
