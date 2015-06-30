@@ -35,7 +35,8 @@ define([ 'angular', 'app' ],
 						}
 
 						var state = null,
-							translationKey = dataTranslationKeys.state;
+								translationKey = dataTranslationKeys.state;
+						
 						angular.forEach(data.results, function(result) {
 							angular.forEach(result.address_components, function(component) {
 								if(component.types.indexOf(translationKey) !== -1) {
@@ -45,15 +46,17 @@ define([ 'angular', 'app' ],
 							});
 						});
 
-
-						state ? defer.resolve(state) : defer.reject(state);
-					});
+						if (state){
+							defer.resolve(state);
+						} else {
+							defer.reject(state);
+						}
 
 				return defer.promise;
-			};
+			});
+		};
 
-
-			return service;
-		});
+		return service;
+	});
 
 });
