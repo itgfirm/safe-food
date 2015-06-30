@@ -52,9 +52,10 @@ define([ 'angular', 'app' ],
 							defer.reject(state);
 						}
 
+				});
+
 				return defer.promise;
-			});
-		};
+			};
 
 		return service;
 	});
