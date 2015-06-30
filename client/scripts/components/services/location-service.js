@@ -2,8 +2,8 @@ define([ 'angular', 'app' ],
 	function(angular, app) {
 
 		app.service('LocationService', function($http, $q) {
-			var service = { meta: null },
-				baseUrl = 'http://maps.googleapis.com/maps/api/geocode/json',
+			var service = {},
+				BASEURL = 'http://maps.googleapis.com/maps/api/geocode/json',
 				dataTranslationKeys = {
 					'state': 'administrative_area_level_1'
 				};
@@ -27,7 +27,7 @@ define([ 'angular', 'app' ],
 						sensor: false
 					};
 
-				$http.get(baseUrl, { params: params })
+				$http.get(BASEURL, { params: params })
 					.success(function(data) {
 						if(data.status !== 'OK') {
 							defer.reject(data.status);
@@ -52,6 +52,9 @@ define([ 'angular', 'app' ],
 							defer.reject(state);
 						}
 
+				})
+				.error(function(err) {
+					defer.reject(err);
 				});
 
 				return defer.promise;
