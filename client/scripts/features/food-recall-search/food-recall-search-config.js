@@ -8,8 +8,7 @@ define([ 'angular', 'app',
         url: '/food-recall-search?page',
         views: {
           'content@base': {
-            templateUrl: 'scripts/features/\
-              food-recall-search/food-recall-search.html',
+            templateUrl: 'scripts/features/food-recall-search/food-recall-search.html', //jshint ignore:line
             controller: 'FoodRecallSearchController'
           }
         }
