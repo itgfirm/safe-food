@@ -17,6 +17,7 @@ define([ 'angular', 'app',
             {'id':3, 'name':'All Records', 'dateOffset':null}
         ];
         $scope.statusList = ['Ongoing', 'Pending', 'Completed', 'Terminated'];
+        $scope.base = $scope.base || {};
 
 				$scope.search = function(params) {
 					OpenFDAService.getData(params)
