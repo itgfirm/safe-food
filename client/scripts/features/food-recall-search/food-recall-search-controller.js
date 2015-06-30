@@ -4,18 +4,19 @@ define([ 'angular', 'app',
 	function(angular, app) {
 
 		app.controller('FoodRecallSearchController',
-			function($scope, $mdDialog, $stateParams, OpenFDAService, FoodDataService) {
+			function($scope, $mdDialog, $stateParams,
+				OpenFDAService, FoodDataService) {
 				$scope.recallData = FoodDataService.getFoodSearchData();
 				$scope.initialized = FoodDataService.isInitialized();
-                //TODO Move arrays to config file.
-                $scope.healthHazardLevels = ['Class I', 'Class II', 'Class III'];
-                $scope.dateRange = [
-                    {'id':0, 'name':'Last 7 Days', 'dateOffset':6},
-                    {'id':1, 'name':'Last 30 Days','dateOffset':29},
-                    {'id':2, 'name':'Last 1 Year', 'dateOffset':364},
-                    {'id':3, 'name':'All Records', 'dateOffset':null}
-                ];
-                $scope.statusList = ['Ongoing', 'Pending', 'Completed', 'Terminated'];
+        //TODO Move arrays to config file.
+        $scope.healthHazardLevels = ['Class I', 'Class II', 'Class III'];
+        $scope.dateRange = [
+            {'id':0, 'name':'Last 7 Days', 'dateOffset':6},
+            {'id':1, 'name':'Last 30 Days','dateOffset':29},
+            {'id':2, 'name':'Last 1 Year', 'dateOffset':364},
+            {'id':3, 'name':'All Records', 'dateOffset':null}
+        ];
+        $scope.statusList = ['Ongoing', 'Pending', 'Completed', 'Terminated'];
 
 				$scope.search = function(params) {
 					OpenFDAService.getData(params)
@@ -35,12 +36,14 @@ define([ 'angular', 'app',
 
 				$scope.viewDetails = (function() {
 					var config = {
-						templateUrl: 'scripts/features/food-recall-search/food-recall-details.html'
+						templateUrl: 'scripts/features/\
+							food-recall-search/food-recall-details.html'
 					};
 
 			    return function(item) {
-			    	var dialog = null;
-			    	scope = $scope.$new();
+			    	var dialog = null,
+			    		scope = $scope.$new();
+
 			    	scope.details = item;
 			    	config.scope = scope;
 			    	item.active = true;
@@ -58,11 +61,12 @@ define([ 'angular', 'app',
 				})();
 
 				$scope.searchDisclaimer = function(params) {
-					var minYear = (params === undefined || params === null) ? 2012: (params.recallStartDate === undefined || params.recallStartDate === null) ? 2012:params.recallStartDate.getFullYear();
-					if (minYear < 2012) {
+					if (params && params.recallStartDate &&
+						params.recallStartDate.getFullYear() < 2012) {
 						var confirm = $mdDialog.alert()
 				      .title('Disclaimer')
-				      .content('Please note, search results prior to 2012 may be incomplete.')
+				      .content('Please note, \
+				      	search results prior to 2012 may be incomplete.')
 				      .ariaLabel('Disclaimer')
 				      .ok('Ok');
 				    $mdDialog.show(confirm).then(function() {

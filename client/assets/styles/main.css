@@ -48,7 +48,7 @@ section h4 {
 .search-results {background-color:#EFEFEF;}
 [layout-padding], [layout-padding] > [flex], [layout-padding] > [flex-gt-sm], [layout-padding] > [flex-md], [layout-padding] > [flex-lt-lg] {padding:0;}
 .green {background-color:}
-.hideInput{
+.transparent {
 	opacity: 0;
 }
 .form-margin{

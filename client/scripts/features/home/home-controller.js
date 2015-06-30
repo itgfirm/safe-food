@@ -3,9 +3,8 @@ define([ 'angular', 'app',
 	'components/services/food-data-service'],
 	function(angular, app) {
 
-		app.controller('HomeController', ['$scope', '$http', '$location', 'OpenFDAService', 'FoodDataService', 
-			function($scope, $http, $location, OpenFDAService, FoodDataService) {
-		    	$scope.appName = 'Safe Food App';
+		app.controller('HomeController',
+			function($scope, $location, OpenFDAService, FoodDataService) {
 
 		    	$scope.searchDisclaimer = function(params){
 		    		OpenFDAService.getData(params)
@@ -21,16 +20,18 @@ define([ 'angular', 'app',
 							$location.path('/food-recall-search');
 						});		    		
 		    	};
-		}])
-		.directive("pageScroll", function($window){
+		})
+		.directive('pageScroll', function($window){
 			return function(scope, element, attrs){			
-				angular.element($window).bind("scroll", function(){
+				angular.element($window).bind('scroll', function(){
 					if(element[0].getBoundingClientRect().top <= 40){
-						element.addClass('hideInput');
-						angular.element(document.getElementById(attrs.nvabarSearchboxId)).removeClass('hideInput');
+						element.addClass('transparent');
+						angular.element(document.getElementById(attrs.nvabarSearchboxId))
+							.removeClass('transparent');
 					}else{
-						element.removeClass('hideInput');
-						angular.element(document.getElementById(attrs.nvabarSearchboxId)).addClass('hideInput');
+						element.removeClass('transparent');
+						angular.element(document.getElementById(attrs.nvabarSearchboxId))
+							.addClass('transparent');
 					}					
 				});
 			};

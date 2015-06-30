@@ -2,30 +2,29 @@ define([ 'angular', 'app',
 	'components/services/location-service' ],
 	function(angular, app) {
 
-		
-		app.service('OpenFDAService', function($http, $q, $filter, LocationService) {
+		app.service('OpenFDAService',
+			function($http, $q, $filter, LocationService) {
 			//TODO: These should come from the app's config file:
 			var service = {
 					apiKey: 'RQklIryrO1GobRvtpSV6W3gE6z3IXIinmqxiIiuB',
 					baseUrl: 'https://api.fda.gov/food/enforcement.json'
 				},
 				LIMIT = 25,
-				state_hash;
-			// service.configure = function() {
-				//not using a promise here, so it's just assumed this will load prior to it's first use.
-				$http.get('./states_hash.json')
-			    .success(function(data) {
-		        state_hash = data;
-		        console.log('States JSON Loaded');
-			    })
-			    .error(function() {
-		        console.error('could not find state_hash.json');
-			    });
-			// };
+				STATEHASH;
 
-			service.getStateHash = function() {
-				return state_hash;
-			};
+			// I think an init should still be required
+			// in order to make sure that the request is resolved
+			// before certain search requests are made or
+			// remove the request and change it to an angular
+			// constant construct
+			$http.get('./states_hash.json')
+		    .success(function(data) {
+	        STATEHASH = data;
+	        console.log('States JSON Loaded');
+		    })
+		    .error(function() {
+	        console.error('could not find state_hash.json');
+		    });
 
 			service.getMeta = function() {
 				var defer = $q.defer();
@@ -40,11 +39,13 @@ define([ 'angular', 'app',
 				return defer.promise;
 			};
 
-
+			//lacks elegance
+			//elegance should be easy to attain here
+			//but takes a bit of thought.
 			function sortQueryBuilder(params) {
 				var defer = $q.defer(),
 					countRequestParams = {
-						search: service.createSearchString(params),
+						search: createSearchString(params),
 						count: 'recall_initiation_date'
 					},
 					limit = params.limit || LIMIT;
@@ -169,9 +170,9 @@ define([ 'angular', 'app',
 
 
 			service.getData = function(params) {
-				var defer = $q.defer(),
-					params = angular.copy(params || {});
-
+				var defer = $q.defer();
+				
+				params = angular.copy(params || {});
 				params.product_type = 'Food';
 				
 				sortQueryBuilder(params)
@@ -179,15 +180,17 @@ define([ 'angular', 'app',
 						var requests = [];
 
 						angular.forEach(requiredRequests.requests,
-							function(requiredRequest, i) {
+							function(requiredRequest) {
 								var requestParams = {
 									limit: requiredRequest.limit,
 									skip: requiredRequest.skip
 								};
 
-								requestParams.search = service.createSearchString(requiredRequest);
+								requestParams.search = createSearchString(requiredRequest);
 
-								requests.push($http.get(service.createURL(service.baseUrl, requestParams)));
+								requests.push(
+									$http.get(service.createURL(service.baseUrl, requestParams))
+								);
 							});
 
 						$q.all(requests)
@@ -200,21 +203,25 @@ define([ 'angular', 'app',
 								response.meta.results = requiredRequests.meta;
 
 								angular.forEach(resolves, function(resolve) {
-									response.results = response.results.concat(resolve.data.results);
+									response.results = response.results
+										.concat(resolve.data.results);
 								});
 
-								response.results = $filter('orderBy')(response.results, 'recall_initiation_date', true);
+								response.results = $filter('orderBy')
+										(response.results, 'recall_initiation_date', true);
 
 								angular.forEach(response.results, function(result) {
-									result.recall_initiation_date = convertFDADateString(result.recall_initiation_date);
-									result.report_date = convertFDADateString(result.report_date);
+									result.recall_initiation_date = 
+										convertFDADateString(result.recall_initiation_date);
+									result.report_date = 
+										convertFDADateString(result.report_date);
+									//kinda false information and unnecessary
 									result.last_updated = response.meta.last_updated;
 								});
-								defer.resolve(response)
+								defer.resolve(response);
 							}, function(err){
 								defer.reject(err);
-							})
-
+							});
 
 					}, function(err) {
 						defer.reject(err);
@@ -236,7 +243,7 @@ define([ 'angular', 'app',
 									.then(function(data) {
 										defer.resolve(data);
 									});
-							})
+							});
 					}, function(error) {
 						defer.reject(error);
 					});
@@ -292,13 +299,18 @@ define([ 'angular', 'app',
 				var terms =  paramVal.split(' ');
 				var newTerms = '';
 
-				//ISSUES: need to deal with case where user enters state name with spaces (i.e. new york)
+				//ISSUES: need to deal with case where 
+				//user enters state name with spaces (i.e. new york)
 
 				angular.forEach(terms, function(result) {
-					//ok to use "in" because we know that state_hash is a nice, clean obeject
-					if(result.toUpperCase() in state_hash) { //found a state term
-						//add the alternative for the state indicates as well as the "nationwide" term
-						result = '('+result+'+'+encodeURIComponent(state_hash[result.toUpperCase()])+'+nationwide)';
+					//ok to use "in" because we know that
+					//STATEHASH is a nice, clean obeject
+					if(result.toUpperCase() in STATEHASH) { //found a state term
+						//add the alternative for the state indicates
+						//as well as the "nationwide" term
+						result = '('+result+'+'+
+							encodeURIComponent(STATEHASH[result.toUpperCase()])+
+							'+nationwide)';
 					}
 					//add each term back into the return value
 					newTerms += newTerms ? ' '+result : result;
@@ -320,14 +332,15 @@ define([ 'angular', 'app',
 
 			/**
 			 * openFDA requires specific format for query parameters in API call.
-			 * This function creates and returns a query string compatible to openFDA API.
+			 * This function creates and returns a 
+			 * query string compatible to openFDA API.
 			 * @param params        parameter object from form.
 			 * @returns {string}    openFDA compatible query string.
 			 */
-			service.createSearchString = function(params){
-			var	searchString = '',
-				recallInitiationDate = null,
-				statusList = null,
+			function createSearchString(params){
+				var	searchString = '',
+					recallInitiationDate = null,
+					statusList = null;
 				params = angular.copy(params);
 
 				delete params.limit;
@@ -360,20 +373,21 @@ define([ 'angular', 'app',
 						}
 					}
 					if(recallInitiationDate){
-			            var recallDateQuery = service.generateDateQueryString(recallInitiationDate);
-			            if(recallDateQuery){
-			                searchString += searchString ? '+AND+'+recallDateQuery : recallDateQuery;
-			            }
+            var recallDateQuery = generateDateQueryString(recallInitiationDate);
+            if(recallDateQuery){
+              searchString += searchString ? '+AND+' : '';
+              searchString += recallDateQuery;
+            }
 					}
-			        if(statusList){
-			            var statusQueryString = '';
-			            angular.forEach(statusList, function(list){
-			                statusQueryString += statusQueryString ? '+': '';
-			                statusQueryString += '"' + list + '"';
-			            });
-			            searchString += searchString ? '+AND+' : '';
-			            searchString += 'status:(' + statusQueryString + ')';
-			        }
+	        if(statusList){
+	            var statusQueryString = '';
+	            angular.forEach(statusList, function(list){
+	                statusQueryString += statusQueryString ? '+': '';
+	                statusQueryString += '"' + list + '"';
+	            });
+	            searchString += searchString ? '+AND+' : '';
+	            searchString += 'status:(' + statusQueryString + ')';
+	        }
 
 				}
 				console.log('search string is:'+searchString);
@@ -381,26 +395,28 @@ define([ 'angular', 'app',
 			}
 
 			/**
-			 * Convert recall_initiation_date query parameter into a format supported by openFDA API
+			 * Convert recall_initiation_date query parameter
+			 * into a format supported by openFDA API
 			 * @param initiationDate    Number Of days to search back in past
 			 * @returns {string}        formatted report_date query parameter
 			 */
-			service.generateDateQueryString = function(initiationDate) {
+			function generateDateQueryString(initiationDate) {
 				var dateQueryString = '';
 
 	    	if(initiationDate){
-	        if(initiationDate['dateOffset']){
+	        if(initiationDate.dateOffset){
 	        	var endDate = new Date(),
 		          startDate = new Date();
-	          startDate.setDate(startDate.getDate()-initiationDate['dateOffset']);
+	          startDate.setDate(startDate.getDate()-initiationDate.dateOffset);
 	          initiationDate = [ startDate, endDate ];
       		}
 
       		if(angular.isArray(initiationDate)) {
       			//assumes date array
-	          dateQueryString += '['
-	          	+ service.dateToQueryString(new Date(initiationDate[0]))
-	          	+ '+TO+' + service.dateToQueryString(new Date(initiationDate[1])) + ']';
+	          dateQueryString += '[' +
+	          	service.dateToQueryString(new Date(initiationDate[0])) +
+	          	'+TO+' + service.dateToQueryString(new Date(initiationDate[1])) +
+	          	']';
       		} else if(angular.isDate(initiationDate)) {
       			dateQueryString += service.dateToQueryString(initiationDate);
       		} else if(angular.isString(initiationDate)) {
@@ -425,14 +441,15 @@ define([ 'angular', 'app',
 					return $filter('date')(new Date(date), 'yyyyMMdd');
 				}
 				return '';
-			}
+			};
 
 			/**
-			 *	Needs to pass URL as a whole string otherwise AngularJS will encode '+' sign
-			 *  which is not valid url for API endpoint
+			 * Needs to pass URL as a whole string otherwise AngularJS
+			 * will encode '+' sign which is not valid url for API endpoint
 			 * @param baseURL       Base URL for openFDA endpoint
 			 * @param params        Query parameter to be passed for GET request
-			 * @returns {string}    final openFDA API url combining baseURL and query parameters
+			 * @returns {string}    final openFDA API url combining baseURL 
+			 *											and query parameters
 			 */
 			service.createURL = function(baseURL, params){
 				var url = '';
@@ -442,7 +459,7 @@ define([ 'angular', 'app',
 					}
 				}
 				return baseURL + '?api_key=' + service.apiKey + url;
-			}
+			};
 
 			return service;
 		});

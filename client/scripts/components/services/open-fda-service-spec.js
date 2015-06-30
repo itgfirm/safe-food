@@ -7,14 +7,15 @@ define(
 
     describe('OpenFDA Service Unit Tests', function() {
 
-      var OpenFDAService, $q, $timeout, $httpBackend; 
+      var OpenFDAService, $httpBackend; 
       var baseUrl = 'http://safe-food.gov',
           limitParams = {
             limit : 25, 
-            skip  : 30   
+            skip  : 30
           };
 
-      //These should probably be loaded from JSON files in a directory for "mocks"
+      //These should probably be loaded from\
+      //JSON files in a directory for "mocks"
       var fakeResponse = {
           meta: {
             disclaimer: 'openFDA is a beta research project and not for '+
@@ -51,11 +52,10 @@ define(
             city: 'Grand Rapids',
             recalling_firm: 'Spartan Central Kitchen',
             report_date: '20121024',
-            //@epoch: 1424553174.836488,
             voluntary_mandated: 'Voluntary: Firm Initiated',
             classification: 'Class II',
-            code_info: 'All with sell by dates on or before 15-Sep with UPC 0-11213-90380',
-            //@id: '00028a950de0ef32fc01dc3963e6fdae7073912c0083faf0a1d1bcdf7a03c44c',
+            code_info: 'All with sell by dates on \
+              or before 15-Sep with UPC 0-11213-90380',
             openfda: { },
             initial_firm_notification: 'E-Mail'
           }]
@@ -77,13 +77,10 @@ define(
 
 
       beforeEach(function(){
-          module('safeFoodApp');
+        module('safeFoodApp');
 
-          inject(function (_$q_, _$timeout_, _$httpBackend_, _OpenFDAService_){
-            //console.log('_OpenFDAService_',_OpenFDAService_);
+        window.inject(function (_$httpBackend_, _OpenFDAService_){
             OpenFDAService = _OpenFDAService_;
-            $q = _$q_;
-            $timeout = _$timeout_;
             $httpBackend = _$httpBackend_;
             $httpBackend.expectGET('./states_hash.json').
               respond({AL: 'Alabama', VA: 'Virginia'});
@@ -91,8 +88,7 @@ define(
             $httpBackend.when('GET', /https:\/\/.*/).
               respond(fakeResponse);
 
-            //$httpBackend.when('GET', /https:\/\/.*/).passThrough();
-          });
+        });
       });
 
 
@@ -117,7 +113,8 @@ define(
         //Reserved characters: $ & + , / : ; = ? @ 
         expect(OpenFDAService.sanitizeInputs('$&+,/:;=?@'))
           .toBe('');              
-        //Unsafe characters: Includes the blank/empty space and " < > # % { } | \ ^ ~ [ ] `
+        //Unsafe characters: Includes the blank/empty
+        //space and " < > # % { } | \ ^ ~ [ ] `
         expect(OpenFDAService.sanitizeInputs(' "<>#%{}|\^~[]`'))
           .toBe(''); 
       });
@@ -134,20 +131,15 @@ define(
         .finally(done);
 
         $httpBackend.flush(); // Force digest cycle to resolve promises
-                    console.log(OpenFDAService.getStateHash());
 
       });
 
-      // it('Should convert date to correct openFDA API format', function(){
-      //   expect(OpenFDAService.dateToQueryString(new Date('Thu Jun 25 00:00:00 2015')))
-      //     .toBe('20150625');
-      //   expect(OpenFDAService.dateToQueryString(new Date('2014-03-27T12:00:00')))
-      //     .toBe('20140327');
-      // });
-
-      it('Should create correct URL using records limit constraints', function(){
-        expect(OpenFDAService.createURL(baseUrl, limitParams))
-          .toBe('http://safe-food.gov?api_key='+OpenFDAService.apiKey+'&limit=25&skip=30');
+      it('Should create correct URL using records limit constraints',
+        function(){
+          expect(OpenFDAService.createURL(baseUrl, limitParams))
+            .toBe('http://safe-food.gov?api_key='+
+              OpenFDAService.apiKey+
+              '&limit=25&skip=30');
       });
 
 
@@ -156,16 +148,26 @@ define(
       // how we are testing incorrectly
       xit('Should generate correct query string', function(){
         expect(OpenFDAService.createSearchString(params))
-          .toBe('distribution_pattern:"VA"+AND+recalling_firm:"Foods"+AND+classification:"Class II"+AND+product_type:"Food"');
+          .toBe('distribution_pattern:"VA"+AND+\
+            recalling_firm:"Foods"+AND+\
+            classification:"Class II"+AND+\
+            product_type:"Food"');
       });
 
-      it('should generate correct query string for status parameters', function(){
-        expect(OpenFDAService.createSearchString({status: [statusParams[0]]}))
-          .toBe('status:("Status0")');
-        expect(OpenFDAService.createSearchString({status: [statusParams[0], statusParams[2]]}))
-          .toBe('status:("Status0"+"Status2")');
-        expect(OpenFDAService.createSearchString({recall_initiation_date:{name:'All Records',dateOffset:null}}))
-          .toBe('');
-      })
+      //made into privatehelper function as these are functions
+      //are only utilized internally in the service
+      //so the tests need to be done through get data
+      xit('should generate correct query string for status parameters',
+        function(){
+          expect(OpenFDAService.createSearchString(
+            {status: [statusParams[0]]}
+          )).toBe('status:("Status0")');
+          expect(OpenFDAService.createSearchString(
+            {status: [statusParams[0], statusParams[2]]}
+          )).toBe('status:("Status0"+"Status2")');
+          expect(OpenFDAService.createSearchString(
+            {recall_initiation_date:{name:'All Records',dateOffset:null}}
+          )).toBe('');
+      });
     });
 });
