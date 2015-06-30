@@ -102,6 +102,14 @@ define([ 'angular', 'app',
 
 				$scope.showDisclaimer();
 				// $scope.search({ page: parseInt($stateParams.page) });
+		}).
+		directive('showNavSearchBox', function () {
+			return {
+				restrict: 'A',
+				link: function (scope, iElement, iAttrs) {
+					angular.element(document.getElementById(iAttrs.nvabarSearchboxId))
+                        .removeClass('transparent');
+				}
+			};
 		});
-
 });
