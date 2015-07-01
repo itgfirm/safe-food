@@ -22,12 +22,10 @@ require.config({
     'angular-touch': '../vendor/angular-touch/angular-touch',
     'angular-sanitize': '../vendor/angular-sanitize/angular-sanitize',
 
-
     'angular-mocks': '../vendor/angular-mocks/angular-mocks',
 
     'angular-ui-router': '../vendor/angular-ui-router/release/angular-ui-router', // jshint ignore:line
     'angular-ui-bootstrap': '../vendor/angular-bootstrap/ui-bootstrap-tpls', // jshint ignore:line
-    'angular-material': '../vendor/angular-material/angular-material',
     'ng-toast': '../vendor/ngtoast/dist/ngToast',
 
     'app': 'app'
@@ -40,7 +38,6 @@ require.config({
     'angular-sanitize': [ 'angular' ],
     'angular-ui-router': [ 'angular-route' ],
     'angular-ui-bootstrap': [ 'angular' ],    
-    'angular-material': [ 'angular', 'angular-aria' ],
     'ng-toast': [ 'angular-sanitize' ],
     'angular-mocks': [ 'angular' ]
   },
