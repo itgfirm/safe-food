@@ -26,9 +26,11 @@ define([ 'angular', 'app',
 		    });
 
 			service.getMeta = function() {
-				var defer = $q.defer();
-					
-				$http.get(BASEURL, { params : { limit: 1 } })
+				var defer = $q.defer(),
+					params = {
+						limit: 1
+					};
+				$http.get(createURL(BASEURL, params))
 					.success(function(data) {
 						delete data.meta.results;
 						defer.resolve(data.meta);
