@@ -1,7 +1,7 @@
 {
   "initial:before": {
     "loopback#favicon": {
-      "params":"$!../client-dist/favicon.ico"
+      "params":"$!../client/favicon.ico"
     },
     "strong-express-metrics": {}
   },
@@ -25,7 +25,7 @@
   },
   "files": {
     "loopback#static": {
-      "params": "$!../client-dist"
+      "params": "$!../client"
     }
   },
   "final": {
