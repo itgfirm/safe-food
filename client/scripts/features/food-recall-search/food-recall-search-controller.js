@@ -97,7 +97,7 @@ define([ 'angular', 'app',
 				restrict: 'A',
 				link: function (scope, iElement, iAttrs) {
 					angular.element(document.getElementById(iAttrs.nvabarSearchboxId))
-                        .removeClass('transparent');
+                        .removeClass('hidden');
 				}
 			};
 		});
