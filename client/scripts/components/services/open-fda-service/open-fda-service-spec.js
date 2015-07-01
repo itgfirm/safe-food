@@ -256,7 +256,7 @@ define(
           '$&+,/:;=?@': '',
           //Unsafe characters: Includes the blank/empty
           //space and " < > # % { } | \ ^ ~ [ ] `
-          ' "<>#%{}|\^~[]`': '',
+          ' "<>#%{}|\\^~[]`': '',
         };
 
         for(var i in ioMap) {

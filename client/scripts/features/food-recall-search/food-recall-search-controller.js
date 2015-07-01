@@ -1,14 +1,12 @@
 define([ 'angular', 'app',
-	'components/services/open-fda-service/open-fda-service',
-	'components/services/food-data-service/food-data-service'],
+	'components/services/open-fda-service/open-fda-service' ],
 	function(angular, app) {
 
 		app.controller('FoodRecallSearchController',
-			function($scope, $stateParams, $modal,
-				OpenFDAService, FoodDataService) {
-
-				$scope.recallData = FoodDataService.getFoodSearchData();
-				$scope.initialized = FoodDataService.isInitialized();
+			function($scope, $stateParams, $modal, OpenFDAService) {
+				window.a = $stateParams;
+				$scope.recallData = null;
+				$scope.initialized = false;
         //TODO Move arrays to config file.
         $scope.healthHazardLevels = ['Class I', 'Class II', 'Class III'];
         $scope.dateRange = [
@@ -18,8 +16,10 @@ define([ 'angular', 'app',
             {'id':3, 'name':'All Records', 'dateOffset':null}
         ];
         $scope.statusList = ['Ongoing', 'Pending', 'Completed', 'Terminated'];
+        
         $scope.base = $scope.base || {};
-
+        $scope.base.searchParams = $stateParams.searchParams;
+        
         var currentSearch = {};
 
 				$scope.search = function(params, isNew) {
@@ -36,7 +36,6 @@ define([ 'angular', 'app',
 							$scope.recallData = resp;
 							if(!$scope.initialized) {
 								$scope.initialized = true;
-								$scope.base.searchParams = { page: $stateParams.page };
 							}
 						}, function(resp) {
 							if(resp.error && resp.error.code === 'NOT_FOUND') {
@@ -64,10 +63,6 @@ define([ 'angular', 'app',
 					modalInstance.result.finally(function() {
 						item.active = false;
 					});
-
-					scope.close = function() {
-						modalInstance.close();
-					};
 				};
 
 				$scope.base.search = function(params) {
@@ -87,9 +82,7 @@ define([ 'angular', 'app',
 					}
 			  };
 
-			  // called from base
-				// $scope.showDisclaimer();
-				// $scope.search({ page: parseInt($stateParams.page) });
+				$scope.base.search($scope.base.searchParams);
 		}).
 		directive('showNavSearchBox', function () {
 			return {
