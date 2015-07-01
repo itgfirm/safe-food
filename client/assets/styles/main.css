@@ -2,11 +2,10 @@ body {
 	color:#575A5C;
 	padding-top: 50px;
 }
-.logo {width:15%;padding:5px;}
-a.md-button:hover:not([disabled]), .md-button:hover:not([disabled]) {
-	background-color:#66a523  !important;
-	color:#fff;
+.logo {
+	width:15%;padding:5px;
 }
+
 .fa-search{
 	color:#fff;
 	background-color:#80b636;
@@ -19,8 +18,6 @@ a.md-button:hover:not([disabled]), .md-button:hover:not([disabled]) {
 	background-image: url('../images/fruit.gif');
 	height:300px;
 	width: 100%;
-	/*background-size:100%;
-	background-repeat:no-repeat;*/
 }
 .searchbar {
 	border:none;
@@ -35,18 +32,14 @@ a.md-button:hover:not([disabled]), .md-button:hover:not([disabled]) {
 	font-size:20px;
 	margin-top:-20px;
 }
-.md-button {background-color:#80b636;}
 .inner {margin:0 auto;position:relative;top:100px;width:500px}
 .outer {width:100%;margin-top:100px;}
-.md-input-container.md-input-focused:not(.md-input-invalid) .md-input {
-	border: none !important;
-}
+
 section h4 {
 	color:#80b636 !important;
 }
 
 .search-results {background-color:#EFEFEF;}
-[layout-padding], [layout-padding] > [flex], [layout-padding] > [flex-gt-sm], [layout-padding] > [flex-md], [layout-padding] > [flex-lt-lg] {padding:0;}
 .green {background-color:}
 
 
@@ -58,11 +51,20 @@ section h4 {
 .pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus {color:#80b636}
 .pagination > li > a {color:#80b636}
 
-a.md-button.md-primary, .md-button.md-primary {color:#fff;}
-
 .form-margin {padding-top:30px;}
 
 .transparent {
 	opacity: 0;
 }
 
+.loading-spinner {
+	position: fixed;
+	z-index: 2000;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 24px 30px;
+	border-radius: 12px;
+	background-color: rgba(0, 0, 0, .8);
+	color: white;
+}
