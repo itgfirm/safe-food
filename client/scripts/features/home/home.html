@@ -47,11 +47,23 @@
     </section>
     <section class="col-sm-4 col-xs-12">
       <h2>Recalls Near Me</h2>
-      <center ng-if="!recallsNearMe" class="loading-spinner-relative">
-        <i class="fa fa-spinner fa-spin fa-5x"></i>
-        <p class="sr-only">Loading...</p>
+      <center ng-switch="nearMeRequestStatus">
+        <span ng-switch-when="5"></span>
+        <div ng-switch-when="4" class="loading-spinner-relative">
+          <i class="fa fa-spinner fa-spin fa-5x"></i>
+          <p class="sr-only">Loading...</p>
+        </div>
+        <p ng-switch-when="1">
+          Geolocation is disabled. Please try to refresh the page to enable geolocation or use the search feature.
+        </p>
+        <p ng-switch-when="0">Your browser does not support geolocation. Please update your browser to a newer version</p>
+        <p ng-switch-default>
+          Failed to retrieve data. Please 
+          <a ng-click="searchNearMe({ limit: 5 })">click here</a>
+          to try again.
+        </p>
       </center>
-      <div ng-if="recallsNearMe" class="list-group">
+      <div class="list-group">
         <a ng-repeat="item in recallsNearMe.results track by $index" 
           class="list-group-item"
           ng-click="viewDetails(item)"

@@ -15,7 +15,7 @@ define([ 'angular', 'app' ],
 						navigator.geolocation.
 							getCurrentPosition(defer.resolve, defer.reject);
 					} else {
-						defer.reject({ UNSUPPORTED: true });
+						defer.reject({ code: 0 });
 					}
 
 					return defer.promise;

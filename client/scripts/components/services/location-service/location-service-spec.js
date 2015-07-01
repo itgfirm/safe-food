@@ -54,7 +54,7 @@ define(
           LocationService.getGeolocation().
             then(function() {},
               function(err) {
-                expect(err.UNSUPPORTED).toEqual(true);
+                expect(err.code).toEqual(0);
             });
 
           $rootScope.$apply();

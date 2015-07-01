@@ -4,11 +4,16 @@ define([ 'angular', 'app',
 
 		app.controller('HomeController',
 			function($scope, $state, $modal, OpenFDAService) {
+			  $scope.nearMeRequestStatus = 4;
 
 			  $scope.searchNearMe = function(params) {
+			  	$scope.nearMeRequestStatus = 4;
 			  	OpenFDAService.searchNearMe(params)
 			  		.then(function(data) {
+			  			$scope.nearMeRequestStatus = 5;
 			  			$scope.recallsNearMe = data;
+			  		}, function(err) {
+			  			$scope.nearMeRequestStatus = err.code;
 			  		});
 			  };
 
