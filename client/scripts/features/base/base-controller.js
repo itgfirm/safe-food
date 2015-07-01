@@ -28,7 +28,5 @@ define([ 'angular', 'app',
 
 				$scope.showDisclaimer();
 
-
-
 		});
 });
