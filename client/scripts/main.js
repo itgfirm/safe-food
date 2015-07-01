@@ -29,7 +29,6 @@ require.config({
 require([
     'angular',
     'app',
-    'features/_example/_example-config',
     'features/home/home-config',
     'features/food-recall-search/food-recall-search-config',
   ],
