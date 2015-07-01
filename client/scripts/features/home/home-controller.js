@@ -1,10 +1,10 @@
 define([ 'angular', 'app', 
-	'components/services/open-fda-service',
-	'components/services/food-data-service'],
+	'components/services/open-fda-service/open-fda-service',
+	'components/services/food-data-service/food-data-service'],
 	function(angular, app) {
 
 		app.controller('HomeController',
-			function($scope, $location, $mdDialog,
+			function($scope, $location, $modal,
 				OpenFDAService, FoodDataService) {
 
 			  $scope.searchNearMe = function(params) {
@@ -14,31 +14,28 @@ define([ 'angular', 'app',
 			  		});
 			  };
 
-				$scope.viewDetails = (function() {
-					var config = {
+				$scope.viewDetails = function(item) {
+					var scope = $scope.$new(),
+					modalInstance = null;
+					
+					item.active = true;
+					scope.details = item;
+
+					modalInstance = $modal.open({
 						templateUrl: 'scripts/features/\
-							food-recall-search/food-recall-details.html'
+							food-recall-search/food-recall-details.html',
+						scope: scope,
+						size: 'lg'
+					});
+					
+					modalInstance.result.finally(function() {
+						item.active = false;
+					});
+
+					scope.close = function() {
+						modalInstance.close();
 					};
-
-			    return function(item) {
-			    	var dialog = null,
-			    		scope = $scope.$new();
-
-			    	scope.details = item;
-			    	config.scope = scope;
-			    	item.active = true;
-
-						scope.hideDialog = function() {
-							$mdDialog.cancel(dialog);
-						};
-
-						dialog = $mdDialog.show(config)
-							.finally(function(){
-								item.active = false;
-							});
-
-			    };
-				})();
+				};
 
 
 	    	$scope.base.search = function(params){

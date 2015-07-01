@@ -1,7 +1,7 @@
 define(
   [ 'angular',
     'angular-mocks',
-    'components/services/open-fda-service'
+    'components/services/open-fda-service/open-fda-service'
   ],
   function(angular){
 

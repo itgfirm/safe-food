@@ -1,5 +1,5 @@
 define([ 'angular', 'app',
-	'components/services/location-service' ],
+	'components/services/location-service/location-service' ],
 	function(angular, app) {
 
 		app.service('OpenFDAService',

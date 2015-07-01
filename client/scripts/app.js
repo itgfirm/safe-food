@@ -1,7 +1,6 @@
 define([
     'angular', 
     'angular-aria',
-    'angular-animate',
     'angular-touch',
     'angular-ui-router',
     'angular-ui-bootstrap',
@@ -11,11 +10,9 @@ define([
   function (angular) {
     var app = angular.module('safeFoodApp', [
       'ngAria',
-      'ngAnimate',
       'ngTouch',
       'ui.router',
       'ui.bootstrap',
-      'ngMaterial',
       'ngToast'
     ]);
 
@@ -27,27 +24,39 @@ define([
       ngToastProvider.configure({
         verticalPosition: 'bottom',
         horizontalPosition: 'left',
-        maxNumber: 1,
+        maxNumber: 3,
         className: 'danger',
         animation: 'slide'
       });
 
-      $httpProvider.interceptors.push(function($q, ngToast) {
-        var interceptor = {};
+      $httpProvider.interceptors.push(function($q, $timeout, ngToast) {
+        var interceptor = {},
+          lastErrorInPeriod = null,
+          timeoutPromise;
 
         interceptor.responseError = function(rejection) {
-          switch(rejection.status) {
-            case 400:
-              ngToast.create('Bad request! \
-                Please update your search and try again');
-              break;
-            case 429:
-              ngToast.create('Too many requests! \
-               Please wait a few seconds and try again!');
-              break;
-            case 500:
-              ngToast.create('Server error! Please try again!');
-              break;
+          if(lastErrorInPeriod !== rejection.status) {
+            switch(rejection.status) {
+              case 400:
+                ngToast.create('Bad request! \
+                  Please update your search and try again');
+                break;
+              case 429:
+                ngToast.create('Too many requests! \
+                 Please wait a few seconds and try again!');
+                break;
+              case 500:
+                ngToast.create('Server error! Please try again!');
+                break;
+            }
+
+            $timeout.cancel(timeoutPromise);
+            
+            timeoutPromise = $timeout(function() {
+              lastErrorInPeriod = null;
+            }, 1000);
+
+            lastErrorInPeriod = rejection.status;
           }
 
           return $q.reject(rejection);

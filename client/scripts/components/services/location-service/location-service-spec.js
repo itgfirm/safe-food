@@ -1,7 +1,7 @@
 define(
   [ 'angular',
     'angular-mocks',
-    'components/services/location-service'
+    'components/services/location-service/location-service'
   ],
   function(angular){
 

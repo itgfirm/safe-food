@@ -19,7 +19,6 @@ require.config({
     'angular': '../vendor/angular/angular',
     'angular-route': '../vendor/angular-route/angular-route',
     'angular-aria': '../vendor/angular-aria/angular-aria',
-    'angular-animate': '../vendor/angular-animate/angular-animate',
     'angular-touch': '../vendor/angular-touch/angular-touch',
     'angular-sanitize': '../vendor/angular-sanitize/angular-sanitize',
 
@@ -37,13 +36,12 @@ require.config({
     'angular': { exports: 'angular' },
     'angular-route': [ 'angular' ],
     'angular-aria': [ 'angular' ],
-    'angular-animate': [ 'angular' ],
     'angular-touch': [ 'angular' ],
     'angular-sanitize': [ 'angular' ],
     'angular-ui-router': [ 'angular-route' ],
     'angular-ui-bootstrap': [ 'angular' ],    
     'angular-material': [ 'angular', 'angular-aria' ],
-    'ng-toast': [ 'angular-sanitize', 'angular-animate' ],
+    'ng-toast': [ 'angular-sanitize' ],
     'angular-mocks': [ 'angular' ]
   },
   // dynamically load all test files

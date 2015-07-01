@@ -13,38 +13,39 @@
   </div>
 </div>
 <div class="container">
-  <section>
-    <h2>Safe Food - Recall Data</h2>
-    <p>The Food Recalls on this site are based on the Enforcement Reports published via the OpenFDA API</p>
+  <div class="row">
+    <section class="col-sm-8 col-xs-12">
+      <h2>Safe Food - Recall Data</h2>
+      <p>The Food Recalls on this site are based on the Enforcement Reports published via the OpenFDA API</p>
 
-    <p>For more information about OpenFDA </p>
-    <ul>
-      <li><a href="https://open.fda.gov/index.html">OpenFDA</a></li>
-      <li><a href="https://open.fda.gov/terms/">Terms</a></li>
-      <li><a href="https://open.fda.gov/about/">About</a></li>
-      <li><a href="https://open.fda.gov/about/">Food Enforcement Reports API</a></li>
-    </ul>
+      <p>For more information about OpenFDA </p>
+      <ul>
+        <li><a href="https://open.fda.gov/index.html">OpenFDA</a></li>
+        <li><a href="https://open.fda.gov/terms/">Terms</a></li>
+        <li><a href="https://open.fda.gov/about/">About</a></li>
+        <li><a href="https://open.fda.gov/about/">Food Enforcement Reports API</a></li>
+      </ul>
 
-    <p>For more information on the FDA's Food Enforcement Reports</p>
-    <ul>
-      <li><a href="http://www.fda.gov/Safety/Recalls/EnforcementReports/ucm181313.htm">Enforcement Report Definitions</a></li>
-      <li><a href="http://www.fda.gov/Safety/Recalls/default.htm">Recalls press release</a></li>
-      <li><a href="http://www.fda.gov/ForConsumers/ConsumerUpdates/ucm049070.htm">FDA 101: Product Recalls</a></li>
-    </ul>
+      <p>For more information on the FDA's Food Enforcement Reports</p>
+      <ul>
+        <li><a href="http://www.fda.gov/Safety/Recalls/EnforcementReports/ucm181313.htm">Enforcement Report Definitions</a></li>
+        <li><a href="http://www.fda.gov/Safety/Recalls/default.htm">Recalls press release</a></li>
+        <li><a href="http://www.fda.gov/ForConsumers/ConsumerUpdates/ucm049070.htm">FDA 101: Product Recalls</a></li>
+      </ul>
 
-  </section>
-  <section>
-    <h2>Recalls Near Me</h2>
-    <div class="list-group">
-      <a ng-repeat="item in recallsNearMe.results track by $index" 
-        class="list-group-item"
-        ng-click="viewDetails(item)"
-        ng-class="{ 'active': item.active }">
-        <h4 class="list-group-item-heading">{{item.recalling_firm}} ({{item.recall_number}})</h4>
-        <div><strong>Recall Initiated:</strong> {{item.recall_initiation_date}} ({{item.status}})</div>
-        <div><strong>Distribution Pattern:</strong> {{item.distribution_pattern}}</div>
-        <div><strong>Product Description:</strong> {{item.product_description}}</div>
-      </a>
-    </div>
-  </section>
+    </section>
+    <section class="col-sm-4 col-xs-12">
+      <h2>Recalls Near Me</h2>
+      <div class="list-group">
+        <a ng-repeat="item in recallsNearMe.results track by $index" 
+          class="list-group-item"
+          ng-click="viewDetails(item)"
+          ng-class="{ 'active': item.active }">
+          <h4 class="list-group-item-heading">{{item.recalling_firm}} ({{item.recall_number}})</h4>
+          <div><strong>Recall Initiated:</strong> {{item.recall_initiation_date}} ({{item.status}})</div>
+          <div><strong>Product Description:</strong> {{item.product_description}}</div>
+        </a>
+      </div>
+    </section>
+  </div>
 </div>
