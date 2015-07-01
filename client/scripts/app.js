@@ -16,9 +16,11 @@ define([
       'ngToast'
     ]);
 
-    app.config(function($stateProvider, $urlRouterProvider,
-      $httpProvider, ngToastProvider) {
-      // $stateProvider.state('base', { abstract: true });
+    app.config(function($urlRouterProvider, $httpProvider,
+      $modalProvider, ngToastProvider) {
+      
+      $modalProvider.options.backdrop = 'static';
+      
       $urlRouterProvider.otherwise('/');
 
       ngToastProvider.configure({

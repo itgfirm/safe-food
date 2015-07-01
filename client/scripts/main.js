@@ -31,6 +31,7 @@ require([
     'app',
     'features/home/home-config',
     'features/food-recall-search/food-recall-search-config',
+    'decorators/$modal-decorator/$modal-decorator'
   ],
   function(angular, app) {
     angular.element().ready(function() {

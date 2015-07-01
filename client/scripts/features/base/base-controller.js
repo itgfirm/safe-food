@@ -1,10 +1,9 @@
 define([ 'angular', 'app', 
-	'components/services/open-fda-service/open-fda-service',
-	'components/services/simple-modal-service/simple-modal-service' ],
+	'components/services/open-fda-service/open-fda-service' ],
 	function(angular, app) {
 
 		app.controller('BaseController',
-			function($scope, $location, SimpleModalService, OpenFDAService) {
+			function($scope, $modal, OpenFDAService) {
 				$scope.meta = null;
 	    	$scope.base = {
 	    		search: function(params) {
@@ -20,7 +19,7 @@ define([ 'angular', 'app',
 				$scope.showDisclaimer = function() {
 					OpenFDAService.getMeta().
 						then(function(meta) {
-							SimpleModalService.open({
+							$modal.openSimple({
 								title: 'Disclaimer',
 								content: meta.disclaimer
 							});

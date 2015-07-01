@@ -1,12 +1,11 @@
 define([ 'angular', 'app',
 	'components/services/open-fda-service/open-fda-service',
-	'components/services/food-data-service/food-data-service',
-	'components/services/simple-modal-service/simple-modal-service' ],
+	'components/services/food-data-service/food-data-service'],
 	function(angular, app) {
 
 		app.controller('FoodRecallSearchController',
 			function($scope, $stateParams, $modal,
-				SimpleModalService, OpenFDAService, FoodDataService) {
+				OpenFDAService, FoodDataService) {
 
 				$scope.recallData = FoodDataService.getFoodSearchData();
 				$scope.initialized = FoodDataService.isInitialized();
@@ -75,7 +74,7 @@ define([ 'angular', 'app',
 					if (params && params.recallStartDate &&
 						params.recallStartDate.getFullYear() < 2012) {
 
-						SimpleModalService.open({
+						$modal.openSimple({
 							title: 'Disclaimer',
 							content: 'Please note, search results \
 								prior to 2012 may be incomplete.'
