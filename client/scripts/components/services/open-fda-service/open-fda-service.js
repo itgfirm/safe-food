@@ -344,9 +344,7 @@ define([ 'angular', 'app',
 			 * @returns {string}    openFDA compatible query string.
 			 */
 			function createSearchString(params){
-				var	searchString = '',
-					recallInitiationDate = null,
-					statusList = null;
+				var	searchString = '';
 				params = angular.copy(params);
 
 				delete params.limit;
@@ -354,47 +352,54 @@ define([ 'angular', 'app',
 				delete params.page;
 
 				if (params) {
-					if(params.generalSearch){ //Google-style search
+					if(params.generalSearch) { //Google-style search
 						searchString += createAndTerms(createStateMappings(
 															sanitizeInputs(params.generalSearch)));
 						delete params.generalSearch;
 					}
 
-					for(var key in params) {
-						if(params.hasOwnProperty(key)) {
-							if(key === 'recall_initiation_date'){
-			          recallInitiationDate = params[key];
-			        }else if(key === 'status'){
-			          statusList = params[key];
-							}else{
-								var value = sanitizeInputs(params[key]);
-								searchString += searchString ? '+AND+' : '';
-								if(key === 'distribution_pattern') {
-									value = createAndTerms(createStateMappings(value));
-									searchString += key + ':' + value;
-								} else {
-									searchString += key + ':"' + value + '"';
-								}
-							}
-						}
+					if(params.recall_initiation_date) {
+            var recallDateQuery = generateDateQueryString(
+            	params.recall_initiation_date
+            );
+
+            searchString += recallDateQuery ?
+            	recallDateQuery + '+AND+' : '';
+            delete params.recall_initiation_date;
 					}
-					if(recallInitiationDate){
-            var recallDateQuery = generateDateQueryString(recallInitiationDate);
-            if(recallDateQuery){
-              searchString += searchString ? '+AND+' : '';
-              searchString += recallDateQuery;
-            }
-					}
-	        if(statusList){
-	            var statusQueryString = '';
-	            angular.forEach(statusList, function(list){
-	                statusQueryString += statusQueryString ? '+': '';
-	                statusQueryString += '"' + list + '"';
-	            });
-	            searchString += searchString ? '+AND+' : '';
-	            searchString += 'status:(' + statusQueryString + ')';
+
+	        if(params.status) {
+            var statusQueryString = 'status:(';
+            
+            angular.forEach(params.status, function(list) {
+              statusQueryString += '"' + list + '"+';
+            });
+
+            statusQueryString = statusQueryString.
+            	substr(0, statusQueryString.length - 1);
+
+            searchString += statusQueryString + ')+AND+';
+            delete params.status;
 	        }
 
+	        if(params.distribution_pattern) {
+						searchString += 'distribution_pattern:' +
+							createAndTerms(
+								createStateMappings(
+									sanitizeInputs(params.distribution_pattern)
+								)
+							) + '+AND+';
+						delete params.distribution_pattern;
+	        }
+
+					for(var key in params) {
+						if(params.hasOwnProperty(key)) {
+							searchString += key + ':"' +
+								sanitizeInputs(params[key]) + '"+AND+';
+						}
+					}
+	
+					searchString = searchString.substr(0, searchString.length - 5);
 				}
 				console.log('search string is:'+searchString);
 				return searchString;
