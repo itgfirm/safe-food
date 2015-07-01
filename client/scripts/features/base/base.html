@@ -5,12 +5,12 @@
         <img src="../../../assets/images/logo.jpg" alt="Home" class="logo"/>
       </a>
     </div>
-    <form class="navbar-form navbar-right hidden" role="search"  id="navSearchId" ng-submit="base.search(base.searchParams)">
+    <form class="navbar-form navbar-right col-xs-8 col-sm-4 hidden" role="search"  id="navSearchId" ng-submit="base.search(base.searchParams)">
       <div class="input-group">
-        <input type="text" class="form-control" name="generalSearch" ng-model="base.searchParams.generalSearch"  placeholder="example: Spinach MI">
+        <input type="text" class="form-control" name="generalSearch" ng-model="base.searchParams.generalSearch" title="Search Terms" placeholder="example: Spinach MI">
         <span class="input-group-btn">
-          <button class="btn btn-default" type="button" ng-click="base.search(base.searchParams)">
-            <span class="glyphicon glyphicon-search"></span>
+          <button class="btn btn-default" type="button" ng-click="base.search(base.searchParams)" title="Search">
+            <i class="fa fa-search"></i>
           </button>
         </span>
       </div>

@@ -2,10 +2,10 @@
   <div class="search-bg">
     <form name="omni-search" ng-submit="base.search(searchParams)">
       <div class="form-group input-group inner col-xs-8 col-sm-4" page-scroll  nvabar-searchbox-id="navSearchId">
-        <input type="text" class="form-control" id="generalSearch" ng-model="searchParams.generalSearch" placeholder="example: Spinach MI">
+        <input type="text" class="form-control" id="generalSearch" ng-model="searchParams.generalSearch" title="Search Terms" placeholder="example: Spinach MI">
         <sapn class="input-group-btn">
-          <button class="btn btn-default" type="button" ng-click="base.search(searchParams)">
-            <span class="glyphicon glyphicon-search"></span>
+          <button class="btn btn-default" type="button" ng-click="base.search(searchParams)" title="Search">
+            <i class="fa fa-search"></i>
           </button>
           </sapn>
       </div>
