@@ -1,9 +1,7 @@
-define([ 'angular', 'app',
-	'components/directives/loading-spinner-directive/loading-spinner-directive' ], //jshint ignore: line
+define([ 'angular', 'app' ],
 		function(angular, app) {
 
-			app.service('LocationService',
-				function($http, $q, LoadingSpinnerService) {
+			app.service('LocationService', function($http, $q) {
 				var service = {},
 					BASEURL = 'http://maps.googleapis.com/maps/api/geocode/json',
 					dataTranslationKeys = {
@@ -14,14 +12,8 @@ define([ 'angular', 'app',
 					var defer = $q.defer();
 
 					if(navigator && navigator.geolocation) {
-						LoadingSpinnerService.add();
-
 						navigator.geolocation.
 							getCurrentPosition(defer.resolve, defer.reject);
-					
-						defer.promise.finally(function() {
-							LoadingSpinnerService.remove();
-						});
 					} else {
 						defer.reject({ UNSUPPORTED: true });
 					}

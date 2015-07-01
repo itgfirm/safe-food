@@ -47,7 +47,11 @@
     </section>
     <section class="col-sm-4 col-xs-12">
       <h2>Recalls Near Me</h2>
-      <div class="list-group">
+      <center ng-if="!recallsNearMe" class="loading-spinner-relative">
+        <i class="fa fa-spinner fa-spin fa-5x"></i>
+        <p class="sr-only">Loading...</p>
+      </center>
+      <div ng-if="recallsNearMe" class="list-group">
         <a ng-repeat="item in recallsNearMe.results track by $index" 
           class="list-group-item"
           ng-click="viewDetails(item)"
