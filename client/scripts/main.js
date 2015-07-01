@@ -8,7 +8,6 @@ require.config({
 
     'angular-ui-router': '../vendor/angular-ui-router/release/angular-ui-router', // jshint ignore:line
     'angular-ui-bootstrap': '../vendor/angular-bootstrap/ui-bootstrap-tpls', // jshint ignore:line
-    'angular-material': '../vendor/angular-material/angular-material',
     'ng-toast': '../vendor/ngtoast/dist/ngToast',
 
     'app': 'app',
@@ -21,7 +20,6 @@ require.config({
     'angular-sanitize': [ 'angular' ],
     'angular-ui-router': [ 'angular-route' ],
     'angular-ui-bootstrap': [ 'angular' ],
-    'angular-material': [ 'angular-aria' ],
     'ng-toast': [ 'angular-sanitize' ]
   }
 });
@@ -31,7 +29,8 @@ require([
     'app',
     'features/home/home-config',
     'features/food-recall-search/food-recall-search-config',
-    'decorators/$modal-decorator/$modal-decorator'
+    'decorators/$modal-decorator/$modal-decorator',
+    'components/directives/loading-spinner-directive/loading-spinner-directive'
   ],
   function(angular, app) {
     angular.element().ready(function() {

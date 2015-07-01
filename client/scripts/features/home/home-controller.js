@@ -1,11 +1,9 @@
 define([ 'angular', 'app', 
-	'components/services/open-fda-service/open-fda-service',
-	'components/services/food-data-service/food-data-service'],
+	'components/services/open-fda-service/open-fda-service' ],
 	function(angular, app) {
 
 		app.controller('HomeController',
-			function($scope, $location, $modal,
-				OpenFDAService, FoodDataService) {
+			function($scope, $state, $modal, OpenFDAService) {
 
 			  $scope.searchNearMe = function(params) {
 			  	OpenFDAService.searchNearMe(params)
@@ -31,26 +29,11 @@ define([ 'angular', 'app',
 					modalInstance.result.finally(function() {
 						item.active = false;
 					});
-
-					scope.close = function() {
-						modalInstance.close();
-					};
 				};
 
 
 	    	$scope.base.search = function(params){
-	    		OpenFDAService.getData(params)
-					.then(function(resp) {
-						FoodDataService.setFoodSearchData(resp);
-						FoodDataService.setInitialized(true);
-						$location.path('/food-recall-search');
-					}, function(resp) {
-						if(resp.error && resp.error.code === 'NOT_FOUND') {
-							FoodDataService.setFoodSearchData(null);
-							FoodDataService.setInitialized(true);								
-						}
-						$location.path('/food-recall-search');
-					});		    		
+	    		$state.go('base.food-recall-search', { searchParams: params });
 	    	};
 
 				$scope.searchNearMe({ limit: 5 });

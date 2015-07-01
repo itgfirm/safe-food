@@ -4,8 +4,9 @@ define([ 'angular', 'app',
   function (angular, app) {
 
     app.config(function($stateProvider) {
-      $stateProvider.state('base.foodRecallSearch', {
-        url: '/food-recall-search?page',
+      $stateProvider.state('base.food-recall-search', {
+        url: '/food-recall-search',
+        params: { searchParams: null },
         views: {
           'content@base': {
             templateUrl: 'scripts/features/food-recall-search/food-recall-search.html', //jshint ignore:line

@@ -32,6 +32,9 @@ define([ 'angular', 'app',
 					.success(function(data) {
 						delete data.meta.results;
 						defer.resolve(data.meta);
+					})
+					.error(function(err) {
+						defer.reject(err);
 					});
 
 				return defer.promise;
@@ -112,6 +115,8 @@ define([ 'angular', 'app',
 								service.getData(params)
 									.then(function(recalls) {
 										defer.resolve(recalls);
+									}, function(err){
+										defer.reject(err);
 									});
 							});
 					}, function(error) {
