@@ -1,64 +1,66 @@
-<form name="recall-search" class="form-margin" show-nav-search-box nvabar-searchbox-id="navSearchId">
-  <div class="row">
-    <div class="form-group col-md-6">
-      <label for="affectedArea">Affected Area</label>
-      <input type="text" class="form-control" name="affectedArea" ng-model="base.searchParams.distribution_pattern" >
-    </div>
-    <div class="form-group col-md-6">
-      <label for="affectedProduct">Affected Product</label>
-      <input type="text" class="form-control" name="affectedProduct" ng-model="base.searchParams.product_description">
-    </div>
-  </div>
-  <div class="row">
-    <div class="form-group col-md-6">
-      <label for="companyName">Company Name</label>
-      <input type="text" class="form-control" name="companyName" ng-model="base.searchParams.recalling_firm">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="healthHazardLevel">Health Hazard Level</label>
-      <select class="form-control" name="healthHazardLevel" id="healthHazardLevel" ng-model="base.searchParams.classification" ng-options="healthHazardLevel for healthHazardLevel in healthHazardLevels"></select>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <div class="form-group">
-        <label for="currentStatus">Current Status</label>
-        <select class="form-control" name="currentStatus" id="currentStatus" ng-model="base.searchParams.status" ng-options="status for status in statusList" multiple></select>
+<div class="container">
+  <form name="recall-search" class="form-margin" show-nav-search-box nvabar-searchbox-id="navSearchId">
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="affectedArea">Affected Area</label>
+        <input type="text" class="form-control" name="affectedArea" ng-model="base.searchParams.distribution_pattern" >
+      </div>
+      <div class="form-group col-md-6">
+        <label for="affectedProduct">Affected Product</label>
+        <input type="text" class="form-control" name="affectedProduct" ng-model="base.searchParams.product_description">
       </div>
     </div>
-    <div class="col-md-6">
-      <div class="form-group">
-        <label for="dateRange">Date Range</label>
-        <select class="form-control" name="dateRange" id="dateRange" ng-model="base.searchParams.recall_initiation_date" ng-options="date.name for date in dateRange"></select>
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="companyName">Company Name</label>
+        <input type="text" class="form-control" name="companyName" ng-model="base.searchParams.recalling_firm">
       </div>
-      <div class="form-group">
-        <button class="btn btn-primary pull-right" ng-click="base.search(base.searchParams)">Advance Search</button>
+      <div class="form-group col-md-6">
+        <label for="healthHazardLevel">Health Hazard Level</label>
+        <select class="form-control" name="healthHazardLevel" id="healthHazardLevel" ng-model="base.searchParams.classification" ng-options="healthHazardLevel for healthHazardLevel in healthHazardLevels"></select>
       </div>
     </div>
-  </div>
-</form>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="currentStatus">Current Status</label>
+          <select class="form-control" name="currentStatus" id="currentStatus" ng-model="base.searchParams.status" ng-options="status for status in statusList" multiple></select>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="dateRange">Date Range</label>
+          <select class="form-control" name="dateRange" id="dateRange" ng-model="base.searchParams.recall_initiation_date" ng-options="date.name for date in dateRange"></select>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary pull-right" ng-click="base.search(base.searchParams)">Advance Search</button>
+        </div>
+      </div>
+    </div>
+  </form>
 
-<hr>
+  <hr>
 
-<div ng-show="recallData" style="text-align:right">
-  <div class="pull-left" style="margin:20px 10px; padding-top:6px; padding-bottom:6px;">{{recallData.meta.results.skip + 1}} - {{(recallData.meta.results.skip + recallData.results.length)}} of {{recallData.meta.results.total}} Results</div>
-  <pagination total-items="recallData.meta.results.total" ng-model="base.searchParams.page" ng-change="search(base.searchParams, false)" items-per-page="recallData.meta.results.limit" max-size="5" style="padding-right:15px"></pagination>
+  <div ng-show="recallData" style="text-align:right">
+    <div class="pull-left" style="margin:20px 10px; padding-top:6px; padding-bottom:6px;">{{recallData.meta.results.skip + 1}} - {{(recallData.meta.results.skip + recallData.results.length)}} of {{recallData.meta.results.total}} Results</div>
+    <pagination total-items="recallData.meta.results.total" ng-model="base.searchParams.page" ng-change="search(base.searchParams, false)" items-per-page="recallData.meta.results.limit" max-size="5" style="padding-right:15px"></pagination>
+  </div>
+  <center ng-if="!recallData && initialized">
+    <h4>Record(s) Not Found!</h4>
+    <p>Your search did not return any results. Please modify your search criteria and try again!</p>
+  </center>
+
+  <section>
+    <div class="list-group">
+      <a ng-repeat="item in recallData.results track by $index" 
+        class="list-group-item"
+        ng-click="viewDetails(item)"
+        ng-class="{ 'active': item.active }">
+        <h4 class="list-group-item-heading">{{item.recalling_firm}} ({{item.recall_number}})</h4>
+        <div><strong>Recall Initiated:</strong> {{item.recall_initiation_date}} ({{item.status}})</div>
+        <div><strong>Distribution Pattern:</strong> {{item.distribution_pattern}}</div>
+        <div><strong>Product Description:</strong> {{item.product_description}}</div>
+      </a>
+    </div>
+  </section>
 </div>
-<center ng-if="!recallData && initialized">
-  <h4>Record(s) Not Found!</h4>
-  <p>Your search did not return any results. Please modify your search criteria and try again!</p>
-</center>
-
-<section>
-  <div class="list-group">
-    <a ng-repeat="item in recallData.results track by $index" 
-      class="list-group-item"
-      ng-click="viewDetails(item)"
-      ng-class="{ 'active': item.active }">
-      <h4 class="list-group-item-heading">{{item.recalling_firm}} ({{item.recall_number}})</h4>
-      <div><strong>Recall Initiated:</strong> {{item.recall_initiation_date}} ({{item.status}})</div>
-      <div><strong>Distribution Pattern:</strong> {{item.distribution_pattern}}</div>
-      <div><strong>Product Description:</strong> {{item.product_description}}</div>
-    </a>
-  </div>
-</section>
