@@ -18,7 +18,6 @@ define([ 'angular', 'app',
         $scope.statusList = ['Ongoing', 'Pending', 'Completed', 'Terminated'];
         
         $scope.base = $scope.base || {};
-        // $scope.base.searchParams = $scope.base.searchParams || {};
         $scope.base.searchParams = $stateParams.searchParams;
         
         var currentSearch = {};
