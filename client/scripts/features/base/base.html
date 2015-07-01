@@ -1,7 +1,11 @@
 <nav class="navbar navbar-default navbar-fixed-top sf-header">
   <div class="container-fluid">
-    <a href="#/"><img src="../../../assets/images/logo.jpg" class="logo pull-left"/></a>
-    <form class="navbar-form navbar-left transparent" role="search"  id="navSearchId" ng-submit="base.search(base.searchParams)">
+    <div class="navbar-header">
+      <a class="navbar-brand" ui-sref="base.home">
+        <img src="../../../assets/images/logo.jpg" alt="Home" class="logo"/>
+      </a>
+    </div>
+    <form class="navbar-form navbar-right hidden" role="search"  id="navSearchId" ng-submit="base.search(base.searchParams)">
       <div class="input-group">
         <input type="text" class="form-control" name="generalSearch" ng-model="base.searchParams.generalSearch"  placeholder="example: Spinach MI">
         <span class="input-group-btn">

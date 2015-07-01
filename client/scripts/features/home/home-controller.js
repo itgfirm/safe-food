@@ -59,16 +59,17 @@ define([ 'angular', 'app',
 		.directive('pageScroll', function($window){
 			return function(scope, element, attrs){	
 				angular.element(document.getElementById(attrs.nvabarSearchboxId))
-                    .addClass('transparent');
+        	.addClass('hidden');
+
 				angular.element($window).bind('scroll', function(){
 					if(element[0].getBoundingClientRect().top <= 40){
 						element.addClass('transparent');
 						angular.element(document.getElementById(attrs.nvabarSearchboxId))
-							.removeClass('transparent');
+							.removeClass('hidden');
 					}else{
 						element.removeClass('transparent');
 						angular.element(document.getElementById(attrs.nvabarSearchboxId))
-							.addClass('transparent');
+							.addClass('hidden');
 					}					
 				});
 				// Event should be unbound when view is destroyed.
