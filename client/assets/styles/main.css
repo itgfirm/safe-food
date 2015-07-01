@@ -30,6 +30,7 @@ body {
 	margin-top:-20px;
 }
 .inner {margin:0 auto;position:relative;top:100px;}
+.inner h1 {margin:0;}
 .outer {width:100%;margin-top:100px;}
 
 section h4 {
@@ -50,8 +51,9 @@ section h4 {
 
 .form-margin {padding-top:30px;}
 
-.transparent {
-	opacity: 0;
+.hidden {
+	/*opacity: 0;*/
+    transition:all 0.3s ease-in-out 0s;
 }
 
 .loading-spinner {
@@ -65,3 +67,50 @@ section h4 {
 	background-color: rgba(0, 0, 0, .8);
 	color: white;
 }
+
+.slide:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right:0;
+}
+#title {
+    background-image: url("../images/fruit.gif");
+    background-attachment: fixed;
+    height:350px;
+}
+.slide, .slide:before {
+    background: 50% 50% / cover;
+}
+.header {
+    text-align: center;
+    font-size: 175%;
+    color: #fff;
+    text-shadow: 0 2px 2px #000;
+}
+.navbar-default {border-color:#66a523;}
+.btn-default {
+    background-color: #ee552a;
+    border-color: #ee552a;
+    color:#fff;
+}
+.btn-default:hover {
+    background-color: #d94a22;
+    border-color: #d94a22;
+    color:#fff;
+}
+.btn-default:focus, .btn-default.focus {
+    background-color: #ee552a !important;
+    border-color: #ee552a !important;
+    color:#fff !important;
+}
+.btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+    background-color: #ee552a !important;
+    border-color: #ee552a !important;
+    color:#fff !important;
+}
+input-group-btn {top:20px;}
+.form-group h1 {text-shadow:2px 2px 7px #222;font-size:3.5rem;font-weight:normal;margin:5px 0;line-height: 1.4}
+.btn-top {top:30px;}
