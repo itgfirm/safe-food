@@ -19,7 +19,6 @@ define([ 'angular', 'app',
 			$http.get('./states_hash.json')
 		    .success(function(data) {
 	        STATEHASH = data;
-	        console.log('States JSON Loaded');
 		    })
 		    .error(function() {
 	        console.error('could not find state_hash.json');
@@ -403,7 +402,6 @@ define([ 'angular', 'app',
 	
 					searchString = searchString.substr(0, searchString.length - 5);
 				}
-				console.log('search string is:'+searchString);
 				return searchString;
 			}
 
