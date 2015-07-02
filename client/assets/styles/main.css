@@ -3,6 +3,7 @@ body {
 	padding-top: 50px;
 }
 .logo {width:60%;padding:5px;}
+.fa-search {height:17px !important;background-color:transparent !important;}
 .navbar-brand {padding:0px;}
 a.md-button:hover:not([disabled]), .md-button:hover:not([disabled]) {
 	background-color:#66a523  !important;
