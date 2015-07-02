@@ -68,9 +68,8 @@
           class="list-group-item"
           ng-click="viewDetails(item)"
           ng-class="{ 'active': item.active }">
-          <h4 class="list-group-item-heading">{{item.recalling_firm}} ({{item.recall_number}})</h4>
-          <div><strong>Recall Initiated:</strong> {{item.recall_initiation_date}} ({{item.status}})</div>
-          <div><strong>Product Description:</strong> {{item.product_description}}</div>
+          <h4 class="list-group-item-heading">{{item.recalling_firm}} ({{item.recall_initiation_date}})</h4>
+          <div>{{item.reason_for_recall}}</div>
         </a>
       </div>
     </section>
