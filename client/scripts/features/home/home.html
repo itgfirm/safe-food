@@ -1,13 +1,13 @@
 <div class="row">
   <div class="slide header" id="title">
     <form name="omni-search" ng-submit="base.search(searchParams)">
-        <h1>Safe Food Search Recalls</h1>
-      <div class="form-group input-group inner col-xs-8 col-sm-4" page-scroll  nvabar-searchbox-id="navSearchId">
-        <div style="clear:both;"></div>
-        <input type="text" class="form-control" id="generalSearch" ng-model="searchParams.generalSearch" title="Search Terms" placeholder="example: Spinach MI">
-        <sapn class="input-group-btn">
-          <button class="btn btn-default" type="button" ng-click="base.search(searchParams)" title="Search">
-            <i class="fa fa-search"></i>
+      <div class="form-group input-group inner" page-scroll  nvabar-searchbox-id="navSearchId">
+      <h1>Safe Food Search Recalls</h1>
+      <div style="clear:both;"></div>
+        <input  type="text" class="form-control"  id="generalSearch" ng-model="searchParams.generalSearch"  placeholder="example: Spinach MI">
+        <sapn class="input-group-btn btn-top">
+          <button class="btn btn-default" type="button" ng-click="base.search(searchParams)">
+            <span class="glyphicon glyphicon-search"></span>
           </button>
           </sapn>
       </div>
@@ -15,17 +15,18 @@
   </div>
 </div>
 <div class="container">
-    <div>
-        <h2>Food Recalls and Enforcement Reports</h2>
-        <p>
-            Recalls are an appropriate alternative method for removing or correcting marketed consumer products, their labeling, and/or promotional literature that violate the laws administered by the Food and Drug Administration (FDA). Recalls afford equal consumer protection but generally are more efficient and timely than formal administrative or civil actions, especially when the product has been widely distributed.
-        </p>
-        <p>
-            Manufacturers and/or distributors may initiate a recall at any time to fulfill their responsibility to protect the public health from products that present a risk of injury or gross deception, or are otherwise defective. Firms may also initiate a recall following notification of a problem by FDA or a state agency, in response to a formal request by FDA, or as ordered by FDA.
-        </p>
-    </div>
+  <div>
+    <h2>Food Recalls and Enforcement Reports</h2>
+    <p>
+    Recalls are an appropriate alternative method for removing or correcting marketed consumer products, their labeling, and/or promotional literature that violate the laws administered by the Food and Drug Administration (FDA). Recalls afford equal consumer protection but generally are more efficient and timely than formal administrative or civil actions, especially when the product has been widely distributed.
+    </p>
+    <p>
+    Manufacturers and/or distributors may initiate a recall at any time to fulfill their responsibility to protect the public health from products that present a risk of injury or gross deception, or are otherwise defective. Firms may also initiate a recall following notification of a problem by FDA or a state agency, in response to a formal request by FDA, or as ordered by FDA.
+    </p>
+  </div>
   <div class="row">
     <section class="col-sm-8 col-xs-12">
+
       <h2>Safe Food - Recall Data</h2>
       <p>The Food Recalls on this site are based on the Enforcement Reports published via the OpenFDA API</p>
 
@@ -58,13 +59,13 @@
         </p>
         <p ng-switch-when="0">Your browser does not support geolocation. Please update your browser to a newer version</p>
         <p ng-switch-default>
-          Failed to retrieve data. Please 
+          Failed to retrieve data. Please
           <a ng-click="searchNearMe({ limit: 5 })">click here</a>
           to try again.
         </p>
       </center>
       <div class="list-group">
-        <a ng-repeat="item in recallsNearMe.results track by $index" 
+        <a ng-repeat="item in recallsNearMe.results track by $index"
           class="list-group-item"
           ng-click="viewDetails(item)"
           ng-class="{ 'active': item.active }">
