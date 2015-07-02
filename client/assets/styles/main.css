@@ -112,7 +112,7 @@ a.md-button.md-primary, .md-button.md-primary {color:#fff;}
   	border-color: #ee552a !important;
 	color:#fff !important;
 }
-input-group-btn {top:20px;}
+input.group-btn {top:20px;}
 .form-group h1 {text-shadow:2px 2px 7px #222;font-size:3.5rem;font-weight:normal;margin:5px 0;line-height: 1.4}
 .btn-top {top:30px;}
 
