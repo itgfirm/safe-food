@@ -356,7 +356,7 @@ define([ 'angular', 'app',
 				if (params) {
 					if(params.generalSearch) { //Google-style search
 						searchString += createAndTerms(createStateMappings(
-															sanitizeInputs(params.generalSearch)));
+							sanitizeInputs(params.generalSearch))) + '+AND+';
 						delete params.generalSearch;
 					}
 
