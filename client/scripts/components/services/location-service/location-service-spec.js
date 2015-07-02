@@ -5,7 +5,7 @@ define(
   ],
   function(angular){
 
-    describe('OpenFDA Service Unit Tests', function() {
+    describe('Location Service Unit Tests', function() {
 
       var $q,
         $rootScope,
