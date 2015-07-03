@@ -1,0 +1,372 @@
+[
+    {
+        "user": "U06J3KEHZ",
+        "inviter": "U038XKHA7",
+        "type": "message",
+        "subtype": "channel_join",
+        "text": "<@U06J3KEHZ|kevin.foglio> has joined the channel",
+        "ts": "1434716519.000002"
+    },
+    {
+        "user": "U06J3SP2R",
+        "inviter": "U038XKHA7",
+        "type": "message",
+        "subtype": "channel_join",
+        "text": "<@U06J3SP2R|benrrose> has joined the channel",
+        "ts": "1434716620.000003"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/06ca03e|1 new commit> by hnpatel",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/06ca03e|06ca03e>: client code - initial checkin - hnpatel",
+                "pretext": "[safe-food:master] 1 new commit by hnpatel:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434737187.000004"
+    },
+    {
+        "user": "U06J47UK1",
+        "inviter": "U038XKHA7",
+        "type": "message",
+        "subtype": "channel_join",
+        "text": "<@U06J47UK1|itg-tito> has joined the channel",
+        "ts": "1434737664.000005"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/8fedb97|1 new commit> by hnpatel",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/8fedb97|8fedb97>: leftover changes -initial commit - hnpatel",
+                "pretext": "[safe-food:master] 1 new commit by hnpatel:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434738354.000006"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/4945479|1 new commit> by hnpatel",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/4945479|4945479>: clean up - removing unnecessary files. - hnpatel",
+                "pretext": "[safe-food:master] 1 new commit by hnpatel:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434739019.000007"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/3af4eef|1 new commit> by hnpatel",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/3af4eef|3af4eef>: steps to test application - hnpatel",
+                "pretext": "[safe-food:master] 1 new commit by hnpatel:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434739538.000008"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/a416b54|1 new commit> by philarmour",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/a416b54|a416b54>: added Travis-CI build indicator - philarmour",
+                "pretext": "[safe-food:master] 1 new commit by philarmour:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434741678.000009"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/01b5bde|1 new commit> by philarmour",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/01b5bde|01b5bde>: fixed README formatting from last commit - philarmour",
+                "pretext": "[safe-food:master] 1 new commit by philarmour:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434741735.000010"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/compare\/01b5bde9846a...98ab0bd24e20|2 new commits> by Phil Armour",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/f5ca2b3|f5ca2b3>: changed the build scripts from npm to grunt - Phil Armour\n <https:\/\/github.com\/itgfirm\/safe-food\/commit\/98ab0bd|98ab0bd>: Merge remote-tracking branch 'refs\/remotes\/origin\/master' - Phil Armour",
+                "pretext": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/compare\/01b5bde9846a...98ab0bd24e20|2 new commits> by Phil Armour:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434742877.000011"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/7118e03|1 new commit> by Phil Armour",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/7118e03|7118e03>: added travis to sauce info and a few 'fake' test cases to prove the integration - Phil Armour",
+                "pretext": "[safe-food:master] 1 new commit by Phil Armour:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434746710.000012"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/ec03d5b|1 new commit> by Phil Armour",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/ec03d5b|ec03d5b>: fixed broken fake test cases by adding python http file - Phil Armour",
+                "pretext": "[safe-food:master] 1 new commit by Phil Armour:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434747581.000013"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/4199b6b|1 new commit> by Phil Armour",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/4199b6b|4199b6b>: added travis to slack integration - Phil Armour",
+                "pretext": "[safe-food:master] 1 new commit by Phil Armour:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434748523.000014"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67587805|#12> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/ec03d5b4dd05...4199b6b51cc2|4199b6b>) of itgfirm\/safe-food@master by Phil Armour passed in 1 min 46 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67587805|#12> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/ec03d5b4dd05...4199b6b51cc2|4199b6b>) of itgfirm\/safe-food@master by Phil Armour passed in 1 min 46 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434748687.000015"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/245bfb8|1 new commit> by hnpatel",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/245bfb8|245bfb8>: Setup karma\/jasmine for frontend unit testing. Modified Gruntfile to execute tests. - hnpatel",
+                "pretext": "[safe-food:master] 1 new commit by hnpatel:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434759550.000016"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67605552|#13> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/4199b6b51cc2...245bfb8b0000|245bfb8>) of itgfirm\/safe-food@master by hnpatel errored in 1 min 11 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67605552|#13> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/4199b6b51cc2...245bfb8b0000|245bfb8>) of itgfirm\/safe-food@master by hnpatel errored in 1 min 11 sec",
+                "id": 1,
+                "color": "daa038"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434759656.000017"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/7a7f9ec|1 new commit> by hnpatel",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/7a7f9ec|7a7f9ec>: Added 'bower install' task to travis build execution. - hnpatel",
+                "pretext": "[safe-food:master] 1 new commit by hnpatel:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434760034.000018"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/416f370|1 new commit> by hnpatel",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/416f370|416f370>: removed extra space characters. - hnpatel",
+                "pretext": "[safe-food:master] 1 new commit by hnpatel:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434760458.000019"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67606620|#15> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/7a7f9eca16bc...416f37017502|416f370>) of itgfirm\/safe-food@master by hnpatel errored in 0 min 47 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67606620|#15> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/7a7f9eca16bc...416f37017502|416f370>) of itgfirm\/safe-food@master by hnpatel errored in 0 min 47 sec",
+                "id": 1,
+                "color": "daa038"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434760606.000020"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/ee3558a|1 new commit> by hnpatel",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/ee3558a|ee3558a>: Forgot to add step to install bower, before running bower install - instructions are running on travis-ci cloud not on my local box !! - hnpatel",
+                "pretext": "[safe-food:master] 1 new commit by hnpatel:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434760798.000021"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67606975|#16> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/416f37017502...ee3558af84c7|ee3558a>) of itgfirm\/safe-food@master by hnpatel passed in 1 min 56 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67606975|#16> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/416f37017502...ee3558af84c7|ee3558a>) of itgfirm\/safe-food@master by hnpatel passed in 1 min 56 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434760982.000022"
+    },
+    {
+        "type": "message",
+        "user": "U06H8LUH2",
+        "text": "Finally build is passed. Learned hard way that don't put extra white space in .travis.yml file.",
+        "ts": "1434761051.000023"
+    }
+]

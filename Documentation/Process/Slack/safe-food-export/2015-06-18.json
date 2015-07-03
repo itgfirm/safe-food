@@ -1,0 +1,23 @@
+[
+    {
+        "user": "U038XKHA7",
+        "type": "message",
+        "subtype": "channel_join",
+        "text": "<@U038XKHA7|phil> has joined the channel",
+        "ts": "1434650164.000002"
+    },
+    {
+        "user": "U06H8LUH2",
+        "type": "message",
+        "subtype": "channel_join",
+        "text": "<@U06H8LUH2|hpatel> has joined the channel",
+        "ts": "1434657329.000003"
+    },
+    {
+        "user": "U06HGFLJ2",
+        "type": "message",
+        "subtype": "channel_join",
+        "text": "<@U06HGFLJ2|mohammed.nauage> has joined the channel",
+        "ts": "1434668211.000002"
+    }
+]

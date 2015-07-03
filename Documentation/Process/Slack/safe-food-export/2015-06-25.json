@@ -1,0 +1,332 @@
+[
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/compare\/31a36f2f2750...83458cfb9722|2 new commits> by hnpatel",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/0ebf9e5|0ebf9e5>: Updated Contributors List - hnpatel\n <https:\/\/github.com\/itgfirm\/safe-food\/commit\/83458cf|83458cf>: Changed part of Angular Material to bootstrap. Modified Search fields. - hnpatel",
+                "pretext": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/compare\/31a36f2f2750...83458cfb9722|2 new commits> by hnpatel:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435253412.000222"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68356876|#74> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/31a36f2f2750...83458cfb9722|83458cf>) of itgfirm\/safe-food@master by hnpatel passed in 5 min 10 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68356876|#74> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/31a36f2f2750...83458cfb9722|83458cf>) of itgfirm\/safe-food@master by hnpatel passed in 5 min 10 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435255420.000223"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/compare\/83458cfb9722...d0fbb9e0f08f|2 new commits> by Phil Armour",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/cd568cc|cd568cc>: cleaned up a bit of lint in the karma config - Phil Armour\n <https:\/\/github.com\/itgfirm\/safe-food\/commit\/d0fbb9e|d0fbb9e>: added an intiail karma test case for the service.  Also commented out the example test - Phil Armour",
+                "pretext": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/compare\/83458cfb9722...d0fbb9e0f08f|2 new commits> by Phil Armour:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435268414.000224"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68390687|#75> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/83458cfb9722...d0fbb9e0f08f|d0fbb9e>) of itgfirm\/safe-food@master by Phil Armour passed in 8 min 11 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68390687|#75> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/83458cfb9722...d0fbb9e0f08f|d0fbb9e>) of itgfirm\/safe-food@master by Phil Armour passed in 8 min 11 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435273395.000225"
+    },
+    {
+        "type": "message",
+        "user": "U038XKHA7",
+        "text": "I found out that FDA shares images of the recalled products on Flickr here: <https:\/\/www.flickr.com\/photos\/fdaphotos\/sets\/72157639317944704\/> I have applied for a Flickr API key and it's here: 56fb9f5d410af2c58f453d716dbd1f12 \/ f1054d8b7b490df0",
+        "ts": "1435275392.000226"
+    },
+    {
+        "text": "Kevin S. Foglio reopened Story <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-32|ADSBPA-32>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "d96b38",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "As a user I would like to see the data set I am searching was last updated"
+                    },
+                    {
+                        "title": "Assignee",
+                        "value": "Hiteshkumar N. Patel",
+                        "short": true
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Major",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435281869.000227"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/compare\/d0fbb9e0f08f...a1c97bffb633|2 new commits> by Mohammed Nauage",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/fd983b1|fd983b1>: fix data bindings in details - Mohammed Nauage\n <https:\/\/github.com\/itgfirm\/safe-food\/commit\/a1c97bf|a1c97bf>: Merge branch 'master' of <https:\/\/github.com\/itgfirm\/safe-food> - Mohammed Nauage",
+                "pretext": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/compare\/d0fbb9e0f08f...a1c97bffb633|2 new commits> by Mohammed Nauage:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435286129.000228"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68416578|#76> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/d0fbb9e0f08f...a1c97bffb633|a1c97bf>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 6 min 20 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68416578|#76> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/d0fbb9e0f08f...a1c97bffb633|a1c97bf>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 6 min 20 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435286662.000229"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/f5327fb|1 new commit> by Phil Armour",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/f5327fb|f5327fb>: added incomplete unit test for async call to search for data - Phil Armour",
+                "pretext": "[safe-food:master] 1 new commit by Phil Armour:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435287225.000230"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68417647|#77> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/a1c97bffb633...f5327fb2b027|f5327fb>) of itgfirm\/safe-food@master by Phil Armour passed in 5 min 33 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68417647|#77> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/a1c97bffb633...f5327fb2b027|f5327fb>) of itgfirm\/safe-food@master by Phil Armour passed in 5 min 33 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435287708.000231"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/54fdd12|1 new commit> by Phil Armour",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/54fdd12|54fdd12>: fixed the non-working unit test for the call to get the openFDA search response - Phil Armour",
+                "pretext": "[safe-food:master] 1 new commit by Phil Armour:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435288752.000232"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68419043|#78> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/f5327fb2b027...54fdd123d28e|54fdd12>) of itgfirm\/safe-food@master by Phil Armour passed in 6 min 41 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68419043|#78> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/f5327fb2b027...54fdd123d28e|54fdd12>) of itgfirm\/safe-food@master by Phil Armour passed in 6 min 41 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435289412.000233"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/04692ab|1 new commit> by Phil Armour",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/04692ab|04692ab>: attempting to enable caching to speed up travis build - Phil Armour",
+                "pretext": "[safe-food:master] 1 new commit by Phil Armour:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435290307.000234"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68421035|#79> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/54fdd123d28e...04692ab756bd|04692ab>) of itgfirm\/safe-food@master by Phil Armour passed in 5 min 9 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68421035|#79> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/54fdd123d28e...04692ab756bd|04692ab>) of itgfirm\/safe-food@master by Phil Armour passed in 5 min 9 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435290711.000235"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68421035|#79> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/54fdd123d28e...04692ab756bd|04692ab>) of itgfirm\/safe-food@master by Phil Armour passed in 5 min 7 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68421035|#79> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/54fdd123d28e...04692ab756bd|04692ab>) of itgfirm\/safe-food@master by Phil Armour passed in 5 min 7 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435291179.000236"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/1fd2b42|1 new commit> by hnpatel",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/1fd2b42|1fd2b42>: Adding unit tests for service - hnpatel",
+                "pretext": "[safe-food:master] 1 new commit by hnpatel:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435294250.000237"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68424814|#80> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/04692ab756bd...1fd2b42c3809|1fd2b42>) of itgfirm\/safe-food@master by hnpatel failed in 3 min 10 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68424814|#80> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/04692ab756bd...1fd2b42c3809|1fd2b42>) of itgfirm\/safe-food@master by hnpatel failed in 3 min 10 sec",
+                "id": 1,
+                "color": "d00000"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435294536.000238"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/8939c39|1 new commit> by hnpatel",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/8939c39|8939c39>: ignoring failing test for a now - need to fix it. - hnpatel",
+                "pretext": "[safe-food:master] 1 new commit by hnpatel:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435295101.000239"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68425609|#81> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/1fd2b42c3809...8939c397292e|8939c39>) of itgfirm\/safe-food@master by hnpatel passed in 4 min 38 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68425609|#81> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/1fd2b42c3809...8939c397292e|8939c39>) of itgfirm\/safe-food@master by hnpatel passed in 4 min 38 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435295531.000240"
+    }
+]

@@ -1,0 +1,311 @@
+[
+    {
+        "type": "message",
+        "user": "U038XKHA7",
+        "text": "nice work Hitesh!",
+        "ts": "1434800132.000024"
+    },
+    {
+        "user": "U06JR1881",
+        "inviter": "U038XKHA7",
+        "type": "message",
+        "subtype": "channel_join",
+        "text": "<@U06JR1881|davidm> has joined the channel",
+        "ts": "1434800168.000025"
+    },
+    {
+        "type": "message",
+        "user": "U038XKHA7",
+        "text": "<@U06H8LUH2>: I noticed that the grunt (default) is running before the actual build and therefore it's not being run as part of the testing step (on SauceLabs).",
+        "ts": "1434802969.000026"
+    },
+    {
+        "user": "U06K7L7FF",
+        "inviter": "U038XKHA7",
+        "type": "message",
+        "subtype": "channel_join",
+        "text": "<@U06K7L7FF|bjohnston> has joined the channel",
+        "ts": "1434803197.000027"
+    },
+    {
+        "type": "message",
+        "user": "U06H8LUH2",
+        "text": "<@U038XKHA7>: Are you talking about karma tests?",
+        "ts": "1434803419.000028"
+    },
+    {
+        "type": "message",
+        "user": "U038XKHA7",
+        "text": "<@U06H8LUH2>: yes",
+        "ts": "1434803644.000029"
+    },
+    {
+        "type": "message",
+        "user": "U038XKHA7",
+        "text": "Hi openFDA,\n\nYour API key for <mailto:phillip.armour@itgfirm.com|phillip.armour@itgfirm.com> is:\n\nRQklIryrO1GobRvtpSV6W3gE6z3IXIinmqxiIiuB",
+        "ts": "1434809860.000030"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/6c518a8|1 new commit> by Phil Armour",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/6c518a8|6c518a8>: updated the grunt file to do all tests in a single grunt task - Phil Armour",
+                "pretext": "[safe-food:master] 1 new commit by Phil Armour:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434832696.000031"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67676416|#17> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/ee3558af84c7...6c518a83070d|6c518a8>) of itgfirm\/safe-food@master by Phil Armour errored in 0 min 2 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67676416|#17> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/ee3558af84c7...6c518a83070d|6c518a8>) of itgfirm\/safe-food@master by Phil Armour errored in 0 min 2 sec",
+                "id": 1,
+                "color": "daa038"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434832718.000032"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/9386d05|1 new commit> by Phil Armour",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/9386d05|9386d05>: attempt to fix broken travis build script - removed double-quotes - Phil Armour",
+                "pretext": "[safe-food:master] 1 new commit by Phil Armour:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434832948.000033"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67676702|#18> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/6c518a83070d...9386d05e292a|9386d05>) of itgfirm\/safe-food@master by Phil Armour errored in 0 min 2 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67676702|#18> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/6c518a83070d...9386d05e292a|9386d05>) of itgfirm\/safe-food@master by Phil Armour errored in 0 min 2 sec",
+                "id": 1,
+                "color": "daa038"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434832975.000034"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/d52e95a|1 new commit> by Phil Armour",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/d52e95a|d52e95a>: attempt to fix broken travis build script - removed unused\/test build steps - Phil Armour",
+                "pretext": "[safe-food:master] 1 new commit by Phil Armour:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434833056.000035"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67676832|#19> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/9386d05e292a...d52e95ada1e4|d52e95a>) of itgfirm\/safe-food@master by Phil Armour passed in 2 min 33 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67676832|#19> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/9386d05e292a...d52e95ada1e4|d52e95a>) of itgfirm\/safe-food@master by Phil Armour passed in 2 min 33 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434833226.000036"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/3fb6162|1 new commit> by Mohammed Nauage",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/3fb6162|3fb6162>: Add new build scripts and update client project structure - Mohammed Nauage",
+                "pretext": "[safe-food:master] 1 new commit by Mohammed Nauage:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434857978.000037"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67699630|#20> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/d52e95ada1e4...3fb61627f13a|3fb6162>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 3 min 25 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67699630|#20> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/d52e95ada1e4...3fb61627f13a|3fb6162>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 3 min 25 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434858205.000038"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/e6ff4ff|1 new commit> by Mohammed Nauage",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/e6ff4ff|e6ff4ff>: testing correct account association - Mohammed Nauage",
+                "pretext": "[safe-food:master] 1 new commit by Mohammed Nauage:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434858879.000039"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67700169|#21> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/3fb61627f13a...e6ff4ff89dc9|e6ff4ff>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 3 min 34 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67700169|#21> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/3fb61627f13a...e6ff4ff89dc9|e6ff4ff>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 3 min 34 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434859115.000040"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/beb06d4|1 new commit> by Mohammed Nauage",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/beb06d4|beb06d4>: Revert \"testing correct account association\" - Mohammed Nauage",
+                "pretext": "[safe-food:master] 1 new commit by Mohammed Nauage:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434864681.000041"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67703823|#22> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/e6ff4ff89dc9...beb06d4beb40|beb06d4>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 3 min 38 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67703823|#22> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/e6ff4ff89dc9...beb06d4beb40|beb06d4>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 3 min 38 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434864916.000042"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food] <https:\/\/github.com\/itgfirm\/safe-food\/tree\/test|test> was branched from \"master\" and pushed by msn4fd",
+                "text": "[safe-food] <https:\/\/github.com\/itgfirm\/safe-food\/tree\/test|test> was branched from \"master\" and pushed by msn4fd",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434866680.000043"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food] The branch \"test\" was deleted by msn4fd",
+                "text": "[safe-food] The branch \"test\" was deleted by msn4fd",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434866885.000044"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67705005|#23> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/test|beb06d4>) of itgfirm\/safe-food@test by Mohammed Nauage passed in 3 min 19 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67705005|#23> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/test|beb06d4>) of itgfirm\/safe-food@test by Mohammed Nauage passed in 3 min 19 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434866891.000045"
+    }
+]

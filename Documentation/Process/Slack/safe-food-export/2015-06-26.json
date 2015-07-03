@@ -1,0 +1,458 @@
+[
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/c2ba6e7|1 new commit> by ITG-Tito",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/c2ba6e7|c2ba6e7>: adding new css - ITG-Tito",
+                "pretext": "[safe-food:master] 1 new commit by ITG-Tito:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435325410.000002"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68477766|#82> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/8939c397292e...c2ba6e7ab4f2|c2ba6e7>) of itgfirm\/safe-food@master by ITG-Tito passed in 5 min 23 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68477766|#82> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/8939c397292e...c2ba6e7ab4f2|c2ba6e7>) of itgfirm\/safe-food@master by ITG-Tito passed in 5 min 23 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435325984.000003"
+    },
+    {
+        "text": "Kevin S. Foglio created Bug <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-64|ADSBPA-64>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "daa038",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "Read Reports stay highlighted after being read"
+                    },
+                    {
+                        "title": "Assignee",
+                        "value": "Phillip Armour",
+                        "short": true
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Minor",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435334516.000004"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/b460738|1 new commit> by ITG-Tito",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/b460738|b460738>: style edits - ITG-Tito",
+                "pretext": "[safe-food:master] 1 new commit by ITG-Tito:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435335181.000005"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/compare\/b460738ab052...7a0a68243e6e|2 new commits> by Mohammed Nauage",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/de05a33|de05a33>: fix close detailed view on esc - Mohammed Nauage\n <https:\/\/github.com\/itgfirm\/safe-food\/commit\/7a0a682|7a0a682>: Merge branch 'master' of <https:\/\/github.com\/itgfirm\/safe-food> - Mohammed Nauage",
+                "pretext": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/compare\/b460738ab052...7a0a68243e6e|2 new commits> by Mohammed Nauage:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435335533.000006"
+    },
+    {
+        "type": "message",
+        "user": "U038XKHA7",
+        "text": "<@U06H8LUH2>: <@U06HGFLJ2> Can we do something like this to get the JSON for our tests out of the actual spec files?  <http:\/\/stackoverflow.com\/questions\/17370427\/loading-a-mock-json-file-within-karmaangularjs-test>",
+        "attachments": [
+            {
+                "title": "Loading a mock JSON file within Karma+AngularJS test",
+                "title_link": "http:\/\/stackoverflow.com\/questions\/17370427\/loading-a-mock-json-file-within-karmaangularjs-test",
+                "text": "I have an AngularJS app set up with tests using Karma+Jasmine. I have a function I want to test that takes a large JSON object, converts it to a format that's more consumable by the rest of the app...",
+                "fallback": "Loading a mock JSON file within Karma+AngularJS test",
+                "thumb_url": "http:\/\/cdn.sstatic.net\/stackoverflow\/img\/apple-touch-icon@2.png?v=ea71a5211a91&a",
+                "from_url": "http:\/\/stackoverflow.com\/questions\/17370427\/loading-a-mock-json-file-within-karmaangularjs-test",
+                "thumb_width": 316,
+                "thumb_height": 316,
+                "id": 1
+            }
+        ],
+        "ts": "1435336423.000007"
+    },
+    {
+        "type": "message",
+        "user": "U038XKHA7",
+        "text": "Here's some late-night reading for the team: <http:\/\/git-scm.com\/book\/en\/v2>",
+        "ts": "1435336635.000009"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68504340|#84> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/b460738ab052...7a0a68243e6e|7a0a682>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 5 min 0 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68504340|#84> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/b460738ab052...7a0a68243e6e|7a0a682>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 5 min 0 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435336686.000010"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U06H8LUH2|hpatel> uploaded a file: <https:\/\/itg-dev.slack.com\/files\/hpatel\/F06SV22D8\/screen_shot_2015-06-26_at_12.41.14_pm.png|Screen Shot 2015-06-26 at 12.41.14 PM.png>",
+        "file": {
+            "id": "F06SV22D8",
+            "created": 1435336905,
+            "timestamp": 1435336905,
+            "name": "Screen Shot 2015-06-26 at 12.41.14 PM.png",
+            "title": "Screen Shot 2015-06-26 at 12.41.14 PM.png",
+            "mimetype": "image\/png",
+            "filetype": "png",
+            "pretty_type": "PNG",
+            "user": "U06H8LUH2",
+            "editable": false,
+            "size": 52752,
+            "mode": "hosted",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "url": "https:\/\/slack-files.com\/files-pub\/T038XKHA3-F06SV22D8-04abdbd51f\/screen_shot_2015-06-26_at_12.41.14_pm.png",
+            "url_download": "https:\/\/slack-files.com\/files-pub\/T038XKHA3-F06SV22D8-04abdbd51f\/download\/screen_shot_2015-06-26_at_12.41.14_pm.png",
+            "url_private": "https:\/\/files.slack.com\/files-pri\/T038XKHA3-F06SV22D8\/screen_shot_2015-06-26_at_12.41.14_pm.png",
+            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T038XKHA3-F06SV22D8\/download\/screen_shot_2015-06-26_at_12.41.14_pm.png",
+            "thumb_64": "https:\/\/slack-files.com\/files-tmb\/T038XKHA3-F06SV22D8-8eb0f1cdeb\/screen_shot_2015-06-26_at_12.41.14_pm_64.png",
+            "thumb_80": "https:\/\/slack-files.com\/files-tmb\/T038XKHA3-F06SV22D8-8eb0f1cdeb\/screen_shot_2015-06-26_at_12.41.14_pm_80.png",
+            "thumb_360": "https:\/\/slack-files.com\/files-tmb\/T038XKHA3-F06SV22D8-8eb0f1cdeb\/screen_shot_2015-06-26_at_12.41.14_pm_360.png",
+            "thumb_360_w": 360,
+            "thumb_360_h": 175,
+            "thumb_480": "https:\/\/slack-files.com\/files-tmb\/T038XKHA3-F06SV22D8-8eb0f1cdeb\/screen_shot_2015-06-26_at_12.41.14_pm_480.png",
+            "thumb_480_w": 480,
+            "thumb_480_h": 233,
+            "thumb_160": "https:\/\/slack-files.com\/files-tmb\/T038XKHA3-F06SV22D8-8eb0f1cdeb\/screen_shot_2015-06-26_at_12.41.14_pm_160.png",
+            "image_exif_rotation": 1,
+            "permalink": "https:\/\/itg-dev.slack.com\/files\/hpatel\/F06SV22D8\/screen_shot_2015-06-26_at_12.41.14_pm.png",
+            "permalink_public": "https:\/\/slack-files.com\/T038XKHA3-F06SV22D8-04abdbd51f",
+            "channels": [
+                "C06H2F83U"
+            ],
+            "groups": [],
+            "ims": [],
+            "comments_count": 0
+        },
+        "user": "U06H8LUH2",
+        "upload": true,
+        "ts": "1435336908.000011"
+    },
+    {
+        "type": "message",
+        "user": "U06H8LUH2",
+        "text": "I am keep getting this error even I stash all my changes and keep working directory clean.",
+        "ts": "1435336928.000012"
+    },
+    {
+        "type": "message",
+        "user": "U06H8LUH2",
+        "text": "any suggestion ?",
+        "ts": "1435336931.000013"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/ea07fcb|1 new commit> by Mohammed Nauage",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/ea07fcb|ea07fcb>: update meta data request - Mohammed Nauage",
+                "pretext": "[safe-food:master] 1 new commit by Mohammed Nauage:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435338417.000014"
+    },
+    {
+        "type": "message",
+        "user": "U06HGFLJ2",
+        "text": "I pushed up the fix",
+        "ts": "1435338428.000015"
+    },
+    {
+        "type": "message",
+        "user": "U038XKHA7",
+        "text": "cool.  I confirmed it is happened in my local and on the integration server as well",
+        "ts": "1435338472.000016"
+    },
+    {
+        "type": "message",
+        "user": "U038XKHA7",
+        "text": "also, we need to make sure we are not exposing (too late?!?) our API key and other private configs.  Here are some examples of ways to correct it: <https:\/\/github.com\/search?o=desc&amp;q=%22api.fda.gov%22+api_key&amp;s=indexed&amp;type=Code&amp;utf8=%E2%9C%93>",
+        "attachments": [
+            {
+                "service_name": "GitHub",
+                "title": "Build software better, together",
+                "title_link": "https:\/\/github.com\/search?o=desc&q=%22api.fda.gov%22+api_key&s=indexed&type=Code&utf8=%E2%9C%93",
+                "text": "GitHub is the best place to build software together. Over 10 million people use GitHub to share code.",
+                "fallback": "GitHub: Build software better, together",
+                "image_width": 1200,
+                "image_height": 1200,
+                "from_url": "https:\/\/github.com\/search?o=desc&q=%22api.fda.gov%22+api_key&s=indexed&type=Code&utf8=%E2%9C%93",
+                "id": 1
+            }
+        ],
+        "ts": "1435338517.000017"
+    },
+    {
+        "type": "message",
+        "user": "U06H8LUH2",
+        "text": "apparently, the problem seems to be resolved.",
+        "ts": "1435338735.000019"
+    },
+    {
+        "type": "message",
+        "user": "U06H8LUH2",
+        "text": "Thanks",
+        "ts": "1435338739.000020"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/56c0b3e|1 new commit> by hnpatel",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/56c0b3e|56c0b3e>: Added more unit test. - hnpatel",
+                "pretext": "[safe-food:master] 1 new commit by hnpatel:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435339233.000021"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68503662|#83> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/c2ba6e7ab4f2...b460738ab052|b460738>) of itgfirm\/safe-food@master by ITG-Tito passed in 6 min 0 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68503662|#83> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/c2ba6e7ab4f2...b460738ab052|b460738>) of itgfirm\/safe-food@master by ITG-Tito passed in 6 min 0 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435339375.000022"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68510692|#85> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/7a0a68243e6e...ea07fcb143e7|ea07fcb>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 7 min 5 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68510692|#85> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/7a0a68243e6e...ea07fcb143e7|ea07fcb>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 7 min 5 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435340822.000023"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/compare\/56c0b3e158cc...e583ce651e90|2 new commits> by ITG-Tito",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/8c4d5a1|8c4d5a1>: css change - ITG-Tito\n <https:\/\/github.com\/itgfirm\/safe-food\/commit\/e583ce6|e583ce6>: Merge branch 'master' of <http:\/\/github.com:itgfirm\/safe-food|github.com:itgfirm\/safe-food> - ITG-Tito",
+                "pretext": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/compare\/56c0b3e158cc...e583ce651e90|2 new commits> by ITG-Tito:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435341511.000024"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68512291|#86> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/ea07fcb143e7...56c0b3e158cc|56c0b3e>) of itgfirm\/safe-food@master by hnpatel passed in 4 min 51 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68512291|#86> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/ea07fcb143e7...56c0b3e158cc|56c0b3e>) of itgfirm\/safe-food@master by hnpatel passed in 4 min 51 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435341597.000025"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/c3f7faa|1 new commit> by hnpatel",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/c3f7faa|c3f7faa>: Corrected typo in name of gif image - hnpatel",
+                "pretext": "[safe-food:master] 1 new commit by hnpatel:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435342238.000026"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68517085|#87> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/56c0b3e158cc...e583ce651e90|e583ce6>) of itgfirm\/safe-food@master by ITG-Tito passed in 4 min 59 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68517085|#87> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/56c0b3e158cc...e583ce651e90|e583ce6>) of itgfirm\/safe-food@master by ITG-Tito passed in 4 min 59 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435342370.000027"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68518781|#88> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/e583ce651e90...c3f7faa03c38|c3f7faa>) of itgfirm\/safe-food@master by hnpatel passed in 6 min 10 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68518781|#88> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/e583ce651e90...c3f7faa03c38|c3f7faa>) of itgfirm\/safe-food@master by hnpatel passed in 6 min 10 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435343182.000028"
+    },
+    {
+        "type": "message",
+        "user": "U038XKHA7",
+        "text": "<@U06J47UK1>: new style has some issues on mobile.  Please see if you can make it handle a little better.",
+        "ts": "1435363804.000029"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U038XKHA7|phil> uploaded a file: <https:\/\/itg-dev.slack.com\/files\/phil\/F06TDAPR8\/site_s_new_look_on_mobile.png|Site's new look on mobile>",
+        "file": {
+            "id": "F06TDAPR8",
+            "created": 1435363855,
+            "timestamp": 1435363855,
+            "name": "Site's new look on mobile.png",
+            "title": "Site's new look on mobile",
+            "mimetype": "image\/jpeg",
+            "filetype": "jpg",
+            "pretty_type": "JPEG",
+            "user": "U038XKHA7",
+            "editable": false,
+            "size": 47288,
+            "mode": "hosted",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "url": "https:\/\/slack-files.com\/files-pub\/T038XKHA3-F06TDAPR8-f668d92a09\/site_s_new_look_on_mobile.png",
+            "url_download": "https:\/\/slack-files.com\/files-pub\/T038XKHA3-F06TDAPR8-f668d92a09\/download\/site_s_new_look_on_mobile.png",
+            "url_private": "https:\/\/files.slack.com\/files-pri\/T038XKHA3-F06TDAPR8\/site_s_new_look_on_mobile.png",
+            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T038XKHA3-F06TDAPR8\/download\/site_s_new_look_on_mobile.png",
+            "thumb_64": "https:\/\/slack-files.com\/files-tmb\/T038XKHA3-F06TDAPR8-4acb7d4b76\/site_s_new_look_on_mobile_64.png",
+            "thumb_80": "https:\/\/slack-files.com\/files-tmb\/T038XKHA3-F06TDAPR8-4acb7d4b76\/site_s_new_look_on_mobile_80.png",
+            "thumb_360": "https:\/\/slack-files.com\/files-tmb\/T038XKHA3-F06TDAPR8-4acb7d4b76\/site_s_new_look_on_mobile_360.png",
+            "thumb_360_w": 202,
+            "thumb_360_h": 360,
+            "thumb_480": "https:\/\/slack-files.com\/files-tmb\/T038XKHA3-F06TDAPR8-4acb7d4b76\/site_s_new_look_on_mobile_480.png",
+            "thumb_480_w": 270,
+            "thumb_480_h": 480,
+            "thumb_160": "https:\/\/slack-files.com\/files-tmb\/T038XKHA3-F06TDAPR8-4acb7d4b76\/site_s_new_look_on_mobile_160.png",
+            "image_exif_rotation": 1,
+            "permalink": "https:\/\/itg-dev.slack.com\/files\/phil\/F06TDAPR8\/site_s_new_look_on_mobile.png",
+            "permalink_public": "https:\/\/slack-files.com\/T038XKHA3-F06TDAPR8-f668d92a09",
+            "channels": [
+                "C06H2F83U"
+            ],
+            "groups": [],
+            "ims": [],
+            "comments_count": 0
+        },
+        "user": "U038XKHA7",
+        "upload": true,
+        "ts": "1435363858.000030"
+    }
+]

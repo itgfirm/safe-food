@@ -1,0 +1,176 @@
+[
+    {
+        "text": "Phillip Armour resolved Story <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-21|ADSBPA-21> as Fixed",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "59A452",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "b. assembled a multidisciplinary and collaborative team"
+                    },
+                    {
+                        "title": "Assignee",
+                        "value": "Sudha Venkateswaran",
+                        "short": true
+                    },
+                    {
+                        "title": "Creator",
+                        "value": "Phillip Armour",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435412158.000002"
+    },
+    {
+        "text": "Kevin S. Foglio created Story <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-65|ADSBPA-65>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "daa038",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "Pagination displaying 1-26 and 26-51 "
+                    },
+                    {
+                        "title": "Assignee",
+                        "value": "Mohammed Nauage",
+                        "short": true
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Minor",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435412172.000003"
+    },
+    {
+        "text": "Kevin S. Foglio reopened Story <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-34|ADSBPA-34>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "d96b38",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "As a user I should be made aware that search results for data prior to 2012 may be incomplete."
+                    },
+                    {
+                        "title": "Assignee",
+                        "value": "Kevin S. Foglio",
+                        "short": true
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Major",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435414290.000004"
+    },
+    {
+        "text": "Phillip Armour created Story <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-66|ADSBPA-66>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "daa038",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "Navigation and Header Bar"
+                    },
+                    {
+                        "title": "Assignee",
+                        "value": "Hiteshkumar N. Patel",
+                        "short": true
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Minor",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435414409.000005"
+    },
+    {
+        "text": "Phillip Armour created Story <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-67|ADSBPA-67>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "daa038",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "Add style for home page"
+                    },
+                    {
+                        "title": "Assignee",
+                        "value": "Tito Araujo",
+                        "short": true
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Minor",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435414560.000006"
+    },
+    {
+        "text": "Phillip Armour created Story <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-68|ADSBPA-68>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "daa038",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "Change logo to support green background"
+                    },
+                    {
+                        "title": "Assignee",
+                        "value": "Tito Araujo",
+                        "short": true
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Minor",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435414701.000007"
+    }
+]

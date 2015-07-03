@@ -1,0 +1,725 @@
+[
+    {
+        "type": "message",
+        "user": "U06J3SP2R",
+        "text": "<@U038XKHA7>: Do we want to have it deploy to heroku every build or just a branch?",
+        "ts": "1434890102.000046"
+    },
+    {
+        "type": "message",
+        "user": "U038XKHA7",
+        "text": "<@U06J3SP2R>: I guess we can just do every time for now.  I'm assuming the deploy will replace the previous one?  In the future, or sooner if we have issues, we can switch to deployment only for a specific branch.  For now let's use this as a non-prod integration environment.",
+        "ts": "1434890298.000047"
+    },
+    {
+        "type": "message",
+        "user": "U06J3SP2R",
+        "text": "ok",
+        "ts": "1434890666.000048"
+    },
+    {
+        "type": "message",
+        "user": "U06J3SP2R",
+        "text": "waitinf ro my internet to get better to commit...",
+        "ts": "1434890676.000049"
+    },
+    {
+        "type": "message",
+        "user": "U06HGFLJ2",
+        "text": "Hangouts isn't working right now, so I called in. Are there issues with that?",
+        "ts": "1434893781.000050"
+    },
+    {
+        "type": "message",
+        "user": "U06H8LUH2",
+        "text": "we are on it.",
+        "ts": "1434893807.000051"
+    },
+    {
+        "type": "message",
+        "user": "U038XKHA7",
+        "text": "here's an interesting project: <https:\/\/github.com\/sahat\/hackathon-starter#project-structure>",
+        "attachments": [
+            {
+                "service_name": "GitHub",
+                "title": "sahat\/hackathon-starter",
+                "title_link": "https:\/\/github.com\/sahat\/hackathon-starter#project-structure",
+                "text": "hackathon-starter - A boilerplate for Node.js web applications",
+                "fallback": "GitHub: sahat\/hackathon-starter",
+                "thumb_url": "https:\/\/avatars2.githubusercontent.com\/u\/544954?v=3&s=400",
+                "from_url": "https:\/\/github.com\/sahat\/hackathon-starter#project-structure",
+                "thumb_width": 400,
+                "thumb_height": 400,
+                "id": 1
+            }
+        ],
+        "ts": "1434894182.000052"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/af75420|1 new commit> by Mohammed Nauage",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/af75420|af75420>: update README.md - Mohammed Nauage",
+                "pretext": "[safe-food:master] 1 new commit by Mohammed Nauage:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434896350.000054"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67732811|#24> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/beb06d4beb40...af7542033525|af75420>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 3 min 56 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67732811|#24> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/beb06d4beb40...af7542033525|af75420>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 3 min 56 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434896611.000055"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/7a3b3be|1 new commit> by Ben Rose",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/7a3b3be|7a3b3be>: Adding first round of Heroku intergration - Ben Rose",
+                "pretext": "[safe-food:master] 1 new commit by Ben Rose:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434901730.000056"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67739674|#25> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/af7542033525...7a3b3bebe9a2|7a3b3be>) of itgfirm\/safe-food@master by Ben Rose errored in 3 min 28 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67739674|#25> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/af7542033525...7a3b3bebe9a2|7a3b3be>) of itgfirm\/safe-food@master by Ben Rose errored in 3 min 28 sec",
+                "id": 1,
+                "color": "daa038"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434901963.000057"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/4776deb|1 new commit> by Ben Rose",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/4776deb|4776deb>: Round 2 of testing - Ben Rose",
+                "pretext": "[safe-food:master] 1 new commit by Ben Rose:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434902189.000058"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67740362|#26> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/7a3b3bebe9a2...4776deb1e9aa|4776deb>) of itgfirm\/safe-food@master by Ben Rose errored in 3 min 38 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67740362|#26> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/7a3b3bebe9a2...4776deb1e9aa|4776deb>) of itgfirm\/safe-food@master by Ben Rose errored in 3 min 38 sec",
+                "id": 1,
+                "color": "daa038"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434902420.000059"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/96350d0|1 new commit> by Ben Rose",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/96350d0|96350d0>: Readded Key and created app in heroku - Ben Rose",
+                "pretext": "[safe-food:master] 1 new commit by Ben Rose:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434902654.000060"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/compare\/96350d0ad152...0d2a8c661a61|2 new commits> by Mohammed Nauage",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/dc372e7|dc372e7>: Add initial example and disclaimer - Mohammed Nauage\n <https:\/\/github.com\/itgfirm\/safe-food\/commit\/0d2a8c6|0d2a8c6>: Merge branch 'master' of <https:\/\/github.com\/itgfirm\/safe-food> - Mohammed Nauage",
+                "pretext": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/compare\/96350d0ad152...0d2a8c661a61|2 new commits> by Mohammed Nauage:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434902947.000061"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67741042|#27> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/4776deb1e9aa...96350d0ad152|96350d0>) of itgfirm\/safe-food@master by Ben Rose passed in 5 min 12 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67741042|#27> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/4776deb1e9aa...96350d0ad152|96350d0>) of itgfirm\/safe-food@master by Ben Rose passed in 5 min 12 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434902988.000062"
+    },
+    {
+        "type": "message",
+        "user": "U06HGFLJ2",
+        "text": "Pushed up an initial example and a disclaimer. Its under the #\/food-recall-search route. And I updated the README.md to have links to documentation and demos of some libraries we may be actively using. 2 out of 3 of them are new to me.",
+        "ts": "1434903103.000063"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67741387|#28> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/96350d0ad152...0d2a8c661a61|0d2a8c6>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 4 min 58 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67741387|#28> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/96350d0ad152...0d2a8c661a61|0d2a8c6>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 4 min 58 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434903273.000064"
+    },
+    {
+        "type": "message",
+        "user": "U06J3SP2R",
+        "text": "APp is up at <https:\/\/safe-food.herokuapp.com\/>",
+        "ts": "1434904570.000065"
+    },
+    {
+        "type": "message",
+        "user": "U06J3SP2R",
+        "text": "but has errors",
+        "ts": "1434904572.000066"
+    },
+    {
+        "type": "message",
+        "user": "U06J3SP2R",
+        "text": "will look into it in a bit",
+        "ts": "1434904579.000067"
+    },
+    {
+        "type": "message",
+        "user": "U06J3SP2R",
+        "text": "2015-06-21T16:36:00.990934+00:00 heroku[router]: at=error code=H14 desc=\"No web processes running\" method=GET path=\"\/\" host=<http:\/\/safe-food.herokuapp.com|safe-food.herokuapp.com> request_id=6b2df8b3-df80-4b26-8765-ef40f32157c8 fwd=\"65.184.158.111\" dyno= connect= service= status=503 bytes=\n2015-06-21T16:36:01.407951+00:00 heroku[router]: at=error code=H14 desc=\"No web processes running\" method=GET path=\"\/favicon.ico\" host=<http:\/\/safe-food.herokuapp.com|safe-food.herokuapp.com> request_id=c6b1f985-1bfb-4a28-8a56-957061ffdfdc fwd=\"65.184.158.111\" dyno= connect= service= status=503 bytes=\n2015-06-21T16:36:11.150210+00:00 heroku[router]: at=error code=H14 desc=\"No web processes running\" method=GET path=\"\/\" host=<http:\/\/safe-food.herokuapp.com|safe-food.herokuapp.com> request_id=b9d60045-5512-4e9d-a678-83da7782f365 fwd=\"52.4.29.156\" dyno= connect= service= status=503 bytes=",
+        "ts": "1434904695.000068"
+    },
+    {
+        "type": "message",
+        "user": "U06J3SP2R",
+        "text": "<@U038XKHA7> Not sure if this is due to anything or just because nothing is there yet",
+        "ts": "1434904705.000069"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/compare\/0d2a8c661a61...6ec88bd6badb|2 new commits> by Ben Rose",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/664ba1e|664ba1e>: Adding Procfile for Heroku - Ben Rose\n <https:\/\/github.com\/itgfirm\/safe-food\/commit\/6ec88bd|6ec88bd>: Merge branch 'master' of <https:\/\/github.com\/itgfirm\/safe-food> - Ben Rose",
+                "pretext": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/compare\/0d2a8c661a61...6ec88bd6badb|2 new commits> by Ben Rose:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434905116.000070"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67744077|#29> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/0d2a8c661a61...6ec88bd6badb|6ec88bd>) of itgfirm\/safe-food@master by Ben Rose passed in 4 min 20 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67744077|#29> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/0d2a8c661a61...6ec88bd6badb|6ec88bd>) of itgfirm\/safe-food@master by Ben Rose passed in 4 min 20 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434905388.000071"
+    },
+    {
+        "type": "message",
+        "user": "U06J3SP2R",
+        "text": "New Error messages: Seems the app is incomplete:",
+        "ts": "1434908474.000072"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U06J3SP2R|benrrose> uploaded a file: <https:\/\/itg-dev.slack.com\/files\/benrrose\/F06KSAHB2\/errors.txt|Errors>",
+        "file": {
+            "id": "F06KSAHB2",
+            "created": 1434908488,
+            "timestamp": 1434908488,
+            "name": "Errors.txt",
+            "title": "Errors",
+            "mimetype": "text\/plain",
+            "filetype": "text",
+            "pretty_type": "Plain Text",
+            "user": "U06J3SP2R",
+            "editable": true,
+            "size": 6802,
+            "mode": "snippet",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "url": "https:\/\/slack-files.com\/files-pub\/T038XKHA3-F06KSAHB2-00dc05123e\/errors.txt",
+            "url_download": "https:\/\/slack-files.com\/files-pub\/T038XKHA3-F06KSAHB2-00dc05123e\/download\/errors.txt",
+            "url_private": "https:\/\/files.slack.com\/files-pri\/T038XKHA3-F06KSAHB2\/errors.txt",
+            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T038XKHA3-F06KSAHB2\/download\/errors.txt",
+            "permalink": "https:\/\/itg-dev.slack.com\/files\/benrrose\/F06KSAHB2\/errors.txt",
+            "permalink_public": "https:\/\/slack-files.com\/T038XKHA3-F06KSAHB2-00dc05123e",
+            "edit_link": "https:\/\/itg-dev.slack.com\/files\/benrrose\/F06KSAHB2\/errors.txt\/edit",
+            "preview": "2015-06-21T17:29:29.946230+00:00 heroku[api]: Scale to web=1 by phillip.armour+gsa@itgfirm.com\n2015-06-21T17:29:33.509766+00:00 heroku[web.1]: Starting process with command `node server\/server.js`\n2015-06-21T17:29:35.580384+00:00 app[web.1]: Detected 512 MB available memory, 512 MB limit per process (WEB_MEMORY)\n2015-06-21T17:29:35.580410+00:00 app[web.1]: Recommending WEB_CONCURRENCY=1\n2015-06-21T17:29:37.315227+00:00 app[web.1]: Browse your REST API at http:\/\/0.0.0.0:17812\/explorer\n2015-06-21T17:29:37.316183+00:00 app[web.1]: Web server listening at: http:\/\/0.0.0.0:17812\/\n2015-06-21T17:29:37.992236+00:00 heroku[web.1]: State changed from starting to up\n2015-06-21T17:29:45.590741+00:00 heroku[router]: at=info method=GET path=\"\/\" host=safe-food.herokuapp.com request_id=7914d144-8d85-40f3-a014-927b8a94b968 fwd=\"65.184.158.111\" dyno=web.1 connect=1ms service=26ms status=200 bytes=1360\n2015-06-21T17:29:45.774905+00:00 heroku[router]: at=info method=GET path=\"\/vendor\/angular-material\/angular-material.css\" host=sa\u2026",
+            "preview_highlight": "<div class=\"sssh-code\"><div class=\"sssh-line\"><pre>2015-06-21T17:29:29.946230+00:00 heroku[api]: Scale to web=1 by phillip.armour+gsa@itgfirm.com\r<\/pre><\/div>\n<div class=\"sssh-line\"><pre>2015-06-21T17:29:33.509766+00:00 heroku[web.1]: Starting process with command `node server\/server.js`\r<\/pre><\/div>\n<div class=\"sssh-line\"><pre>2015-06-21T17:29:35.580384+00:00 app[web.1]: Detected 512 MB available memory, 512 MB limit per process (WEB_MEMORY)\r<\/pre><\/div>\n<div class=\"sssh-line\"><pre>2015-06-21T17:29:35.580410+00:00 app[web.1]: Recommending WEB_CONCURRENCY=1\r<\/pre><\/div>\n<div class=\"sssh-line\"><pre>2015-06-21T17:29:37.315227+00:00 app[web.1]: Browse your REST API at http:\/\/0.0.0.0:17812\/explorer\r<\/pre><\/div>\n<div class=\"sssh-line\"><pre>2015-06-21T17:29:37.316183+00:00 app[web.1]: Web server listening at: http:\/\/0.0.0.0:17812\/\r<\/pre><\/div>\n<div class=\"sssh-line\"><pre>2015-06-21T17:29:37.992236+00:00 heroku[web.1]: State changed from starting to up\r<\/pre><\/div>\n<div class=\"sssh-line\"><pre>2015-06-21T17:29:45.590741+00:00 heroku[router]: at=info method=GET path=&quot;\/&quot; host=safe-food.herokuapp.com request_id=7914d144-8d85-40f3-a014-927b8a94b968 fwd=&quot;65.184.158.111&quot; dyno=web.1 connect=1ms service=26ms status=200 bytes=1360\r<\/pre><\/div>\n<\/div>",
+            "lines": 46,
+            "lines_more": 38,
+            "channels": [
+                "C06H2F83U"
+            ],
+            "groups": [],
+            "ims": [],
+            "comments_count": 0
+        },
+        "user": "U06J3SP2R",
+        "upload": true,
+        "ts": "1434908488.000073"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/1ca931d|1 new commit> by Phil Armour",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/1ca931d|1ca931d>: added postinstall script to call grunt build for heroku deployments - Phil Armour",
+                "pretext": "[safe-food:master] 1 new commit by Phil Armour:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434912325.000074"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67752840|#30> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/6ec88bd6badb...1ca931d809dc|1ca931d>) of itgfirm\/safe-food@master by Phil Armour errored in 2 min 54 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67752840|#30> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/6ec88bd6badb...1ca931d809dc|1ca931d>) of itgfirm\/safe-food@master by Phil Armour errored in 2 min 54 sec",
+                "id": 1,
+                "color": "daa038"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434912515.000075"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/b362268|1 new commit> by Phil Armour",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/b362268|b362268>: added bower install the postinstall command to correct missing dependencies for grunt build - Phil Armour",
+                "pretext": "[safe-food:master] 1 new commit by Phil Armour:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434912931.000076"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67753436|#31> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/1ca931d809dc...b362268a37e9|b362268>) of itgfirm\/safe-food@master by Phil Armour errored in 4 min 38 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67753436|#31> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/1ca931d809dc...b362268a37e9|b362268>) of itgfirm\/safe-food@master by Phil Armour errored in 4 min 38 sec",
+                "id": 1,
+                "color": "daa038"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434913224.000077"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/6d6c710|1 new commit> by Phil Armour",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/6d6c710|6d6c710>: added grunt and bower to the dependencies (not dev) in an attempt to correct the heroku deployment - Phil Armour",
+                "pretext": "[safe-food:master] 1 new commit by Phil Armour:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434914189.000078"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67754924|#32> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/b362268a37e9...6d6c71017f4f|6d6c710>) of itgfirm\/safe-food@master by Phil Armour errored in 5 min 23 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67754924|#32> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/b362268a37e9...6d6c71017f4f|6d6c710>) of itgfirm\/safe-food@master by Phil Armour errored in 5 min 23 sec",
+                "id": 1,
+                "color": "daa038"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434914750.000079"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/0dbdbe1|1 new commit> by Phil Armour",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/0dbdbe1|0dbdbe1>: removed grunt and bower postinstall task from package.json - Phil Armour",
+                "pretext": "[safe-food:master] 1 new commit by Phil Armour:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434914983.000080"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67755989|#33> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/6d6c71017f4f...0dbdbe10036e|0dbdbe1>) of itgfirm\/safe-food@master by Phil Armour passed in 4 min 15 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67755989|#33> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/6d6c71017f4f...0dbdbe10036e|0dbdbe1>) of itgfirm\/safe-food@master by Phil Armour passed in 4 min 15 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434915251.000081"
+    },
+    {
+        "type": "message",
+        "user": "U038XKHA7",
+        "text": "<@U06J3SP2R>: <@U06HGFLJ2> I am giving up on Heroku build for now.  It appears we need to better strategize how to build and deploy for Heroku (<https:\/\/devcenter.heroku.com\/articles\/slug-compiler>).  I'm not sure if it makes sense to re-run the \"build\" multiple times (travis, heroku, etc.) - although it might.",
+        "attachments": [
+            {
+                "title": "Slug Compiler | Heroku Dev Center",
+                "title_link": "https:\/\/devcenter.heroku.com\/articles\/slug-compiler",
+                "text": "Slugs are compressed and pre-packaged copies of an application, optimized for distribution by the Heroku dyno manager. Minimize slug size with .slugignore",
+                "fallback": "Slug Compiler | Heroku Dev Center",
+                "from_url": "https:\/\/devcenter.heroku.com\/articles\/slug-compiler",
+                "id": 1
+            }
+        ],
+        "ts": "1434915269.000082"
+    },
+    {
+        "type": "message",
+        "user": "U06HGFLJ2",
+        "text": "how do I access the build server?",
+        "ts": "1434921794.000084"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/compare\/0dbdbe10036e...d00c687d278a|2 new commits> by Mohammed Nauage",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/07a4878|07a4878>: Do some layoutish stuff on the food recall search page - Mohammed Nauage\n <https:\/\/github.com\/itgfirm\/safe-food\/commit\/d00c687|d00c687>: Merge branch 'master' of <https:\/\/github.com\/itgfirm\/safe-food> - Mohammed Nauage",
+                "pretext": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/compare\/0dbdbe10036e...d00c687d278a|2 new commits> by Mohammed Nauage:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434932147.000085"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67775863|#34> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/0dbdbe10036e...d00c687d278a|d00c687>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 3 min 55 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67775863|#34> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/0dbdbe10036e...d00c687d278a|d00c687>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 3 min 55 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434932404.000086"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/e1c020d|1 new commit> by Mohammed Nauage",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/e1c020d|e1c020d>: Add filler recall search inputs (requires wiring up and layout tweeking) - Mohammed Nauage",
+                "pretext": "[safe-food:master] 1 new commit by Mohammed Nauage:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434934173.000087"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67777432|#35> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/d00c687d278a...e1c020df7e4c|e1c020d>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 4 min 3 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67777432|#35> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/d00c687d278a...e1c020df7e4c|e1c020d>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 4 min 3 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434934435.000088"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/4e35f83|1 new commit> by Mohammed Nauage",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/4e35f83|4e35f83>: test commit account - Mohammed Nauage",
+                "pretext": "[safe-food:master] 1 new commit by Mohammed Nauage:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434937508.000089"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/498187f|1 new commit> by Mohammed Nauage",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/498187f|498187f>: Revert \"test commit account\" - Mohammed Nauage",
+                "pretext": "[safe-food:master] 1 new commit by Mohammed Nauage:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434937714.000090"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67780243|#36> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/e1c020df7e4c...4e35f832a5eb|4e35f83>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 4 min 18 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67780243|#36> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/e1c020df7e4c...4e35f832a5eb|4e35f83>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 4 min 18 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434937782.000091"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/97a3950|1 new commit> by Mohammed Nauage",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/97a3950|97a3950>: Revert \"Revert \"test commit account\"\" - Mohammed Nauage",
+                "pretext": "[safe-food:master] 1 new commit by Mohammed Nauage:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434937913.000092"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67780416|#37> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/4e35f832a5eb...498187f2e2d1|498187f>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 3 min 57 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67780416|#37> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/4e35f832a5eb...498187f2e2d1|498187f>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 3 min 57 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434937965.000093"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/fa737e7|1 new commit> by Mohammed Nauage",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/fa737e7|fa737e7>: Revert \"Revert \"Revert \"test commit account\"\"\" - Mohammed Nauage",
+                "pretext": "[safe-food:master] 1 new commit by Mohammed Nauage:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434937974.000094"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67780532|#38> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/498187f2e2d1...97a39509402d|97a3950>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 4 min 29 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67780532|#38> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/498187f2e2d1...97a39509402d|97a3950>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 4 min 29 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434938199.000095"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67780595|#39> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/97a39509402d...fa737e7e96c3|fa737e7>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 4 min 24 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/67780595|#39> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/97a39509402d...fa737e7e96c3|fa737e7>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 4 min 24 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1434938255.000096"
+    }
+]

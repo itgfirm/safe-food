@@ -1,0 +1,862 @@
+[
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/3ff0230|1 new commit> by ITG-Tito",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/3ff0230|3ff0230>: tito test - ITG-Tito",
+                "pretext": "[safe-food:master] 1 new commit by ITG-Tito:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435071752.000124"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/1f95556|1 new commit> by hnpatel",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/1f95556|1f95556>: Company Name model property is changed to recalling_firm - hnpatel",
+                "pretext": "[safe-food:master] 1 new commit by hnpatel:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435072846.000125"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68012867|#48> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/c8b0a85d4949...3ff0230d837d|3ff0230>) of itgfirm\/safe-food@master by ITG-Tito passed in 4 min 48 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68012867|#48> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/c8b0a85d4949...3ff0230d837d|3ff0230>) of itgfirm\/safe-food@master by ITG-Tito passed in 4 min 48 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435073170.000126"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68015488|#49> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/3ff0230d837d...1f95556359b2|1f95556>) of itgfirm\/safe-food@master by hnpatel passed in 4 min 31 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68015488|#49> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/3ff0230d837d...1f95556359b2|1f95556>) of itgfirm\/safe-food@master by hnpatel passed in 4 min 31 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435074196.000127"
+    },
+    {
+        "text": "Sudha Venkateswaran resolved Story <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-20|ADSBPA-20> as Fixed",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "59A452",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "a. assigned one leader"
+                    },
+                    {
+                        "title": "Assignee",
+                        "value": "Sudha Venkateswaran",
+                        "short": true
+                    },
+                    {
+                        "title": "Creator",
+                        "value": "Phillip Armour",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435081668.000128"
+    },
+    {
+        "text": "Matthew Brown created Design Decision <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-40|ADSBPA-40>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "daa038",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "Search results should be limited to 25 records"
+                    },
+                    {
+                        "title": "Assignee",
+                        "value": "Matthew Brown",
+                        "short": true
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Minor",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435085301.000129"
+    },
+    {
+        "text": "Matthew Brown created Design Decision <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-41|ADSBPA-41>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "daa038",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "Add a timeline of the recall"
+                    },
+                    {
+                        "title": "Assignee",
+                        "value": "Matthew Brown",
+                        "short": true
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Minor",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435085349.000130"
+    },
+    {
+        "text": "Matthew Brown created Design Decision <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-42|ADSBPA-42>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "daa038",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "Top menu should be a nav bar"
+                    },
+                    {
+                        "title": "Assignee",
+                        "value": "Matthew Brown",
+                        "short": true
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Minor",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435085385.000131"
+    },
+    {
+        "text": "Matthew Brown created Design Decision <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-43|ADSBPA-43>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "daa038",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "Where can I go to return the item"
+                    },
+                    {
+                        "title": "Assignee",
+                        "value": "Matthew Brown",
+                        "short": true
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Minor",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435085395.000132"
+    },
+    {
+        "text": "Matthew Brown created Design Decision <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-44|ADSBPA-44>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "daa038",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "Add images for each food item"
+                    },
+                    {
+                        "title": "Assignee",
+                        "value": "Matthew Brown",
+                        "short": true
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Minor",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435085407.000133"
+    },
+    {
+        "text": "Matthew Brown created Design Decision <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-45|ADSBPA-45>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "daa038",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "Add a visual timeline for the recall"
+                    },
+                    {
+                        "title": "Assignee",
+                        "value": "Matthew Brown",
+                        "short": true
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Minor",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435085424.000134"
+    },
+    {
+        "text": "Matthew Brown created Design Decision <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-46|ADSBPA-46>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "daa038",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "Add top menu Nav Bar"
+                    },
+                    {
+                        "title": "Assignee",
+                        "value": "Matthew Brown",
+                        "short": true
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Minor",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435085461.000135"
+    },
+    {
+        "text": "Matthew Brown created Design Decision <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-47|ADSBPA-47>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "daa038",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "Allow users to sort search results"
+                    },
+                    {
+                        "title": "Assignee",
+                        "value": "Matthew Brown",
+                        "short": true
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Minor",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435085478.000136"
+    },
+    {
+        "text": "Matthew Brown created Bug <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-48|ADSBPA-48>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "daa038",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "Search Pop-up Disclaimer hidden button"
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Minor",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435085540.000137"
+    },
+    {
+        "text": "Matthew Brown created Bug <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-49|ADSBPA-49>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "daa038",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "Wild Card Search"
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Minor",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435085573.000138"
+    },
+    {
+        "text": "Matthew Brown created Design Decision <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-50|ADSBPA-50>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "daa038",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "Acknowledge search criteria and new record count"
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Minor",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435085632.000139"
+    },
+    {
+        "text": "Matthew Brown created Design Decision <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-51|ADSBPA-51>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "daa038",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "Add legend for color coded headers"
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Minor",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435085669.000140"
+    },
+    {
+        "text": "Matthew Brown created Design Decision <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-52|ADSBPA-52>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "daa038",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "Add Masks\/Input validation for search critieria"
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Minor",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435085691.000141"
+    },
+    {
+        "text": "Matthew Brown created Design Decision <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-53|ADSBPA-53>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "daa038",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "Add labels to search criteria "
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Minor",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435085729.000142"
+    },
+    {
+        "text": "Matthew Brown created Design Decision <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-54|ADSBPA-54>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "daa038",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "add minimum requirements to return results"
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Minor",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435085748.000143"
+    },
+    {
+        "text": "Matthew Brown created Design Decision <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-55|ADSBPA-55>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "daa038",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "Contrasting colors\/508 Compliant buttons"
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Minor",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435085804.000144"
+    },
+    {
+        "text": "Matthew Brown created Design Decision <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-56|ADSBPA-56>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "daa038",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "Roll-over text for 508 compliance "
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Minor",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435085820.000145"
+    },
+    {
+        "text": "Matthew Brown created Design Decision <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-57|ADSBPA-57>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "daa038",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "Allow user to export results"
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Minor",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435085837.000146"
+    },
+    {
+        "text": "Matthew Brown created Design Decision <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-58|ADSBPA-58>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "daa038",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "On initial page load - query user location &amp; return 5 most recent enforcement reports "
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Minor",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435085918.000147"
+    },
+    {
+        "text": "Matthew Brown created Design Decision <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-59|ADSBPA-59>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "daa038",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "Add google omni-bar search field for free text searching"
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Minor",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435085943.000148"
+    },
+    {
+        "text": "Matthew Brown created Design Decision <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-60|ADSBPA-60>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "daa038",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "Add advanced search below Omni Bar"
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Minor",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435085963.000149"
+    },
+    {
+        "text": "Matthew Brown created Design Decision <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-61|ADSBPA-61>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "daa038",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "Limit detail in result set on search\/allow click-though for more detail"
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Minor",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435086008.000150"
+    },
+    {
+        "text": "Matthew Brown created Design Decision <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-62|ADSBPA-62>",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "daa038",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "add logic so pre-2012 results warning only returns when dates prior to 2012 are selected."
+                    },
+                    {
+                        "title": "Priority",
+                        "value": "Minor",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435086082.000151"
+    },
+    {
+        "text": "Sudha Venkateswaran resolved Story <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-22|ADSBPA-22> as Fixed",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "59A452",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "c. used at least five modern and open-source technologies"
+                    },
+                    {
+                        "title": "Assignee",
+                        "value": "Phillip Armour",
+                        "short": true
+                    },
+                    {
+                        "title": "Creator",
+                        "value": "Phillip Armour",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435086352.000152"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/ccdcc39|1 new commit> by Mohammed Nauage",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/ccdcc39|ccdcc39>: create a details modal - Mohammed Nauage",
+                "pretext": "[safe-food:master] 1 new commit by Mohammed Nauage:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435102993.000153"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68083910|#50> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/1f95556359b2...ccdcc3977054|ccdcc39>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 3 min 49 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68083910|#50> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/1f95556359b2...ccdcc3977054|ccdcc39>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 3 min 49 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435103257.000154"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/compare\/ccdcc3977054...5d16fdf68b75|2 new commits> by Mohammed Nauage",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/3dc60bb|3dc60bb>: update summary view - Mohammed Nauage\n <https:\/\/github.com\/itgfirm\/safe-food\/commit\/5d16fdf|5d16fdf>: fix typo - Mohammed Nauage",
+                "pretext": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/compare\/ccdcc3977054...5d16fdf68b75|2 new commits> by Mohammed Nauage:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435103925.000155"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68085220|#51> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/ccdcc3977054...5d16fdf68b75|5d16fdf>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 4 min 2 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68085220|#51> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/ccdcc3977054...5d16fdf68b75|5d16fdf>) of itgfirm\/safe-food@master by Mohammed Nauage passed in 4 min 2 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435104392.000156"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SVV5",
+        "attachments": [
+            {
+                "fallback": "[safe-food:master] <https:\/\/github.com\/itgfirm\/safe-food\/commit\/b0e70de|1 new commit> by hnpatel",
+                "text": "<https:\/\/github.com\/itgfirm\/safe-food\/commit\/b0e70de|b0e70de>: Replaced 'Product Type' with 'Product Description'. Modified search query to accommodate date ranges. - hnpatel",
+                "pretext": "[safe-food:master] 1 new commit by hnpatel:",
+                "id": 1,
+                "color": "4183C4",
+                "mrkdwn_in": [
+                    "text",
+                    "pretext"
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435118879.000157"
+    },
+    {
+        "text": "",
+        "bot_id": "B06J3SKQW",
+        "attachments": [
+            {
+                "fallback": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68102741|#52> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/5d16fdf68b75...b0e70de1a0fe|b0e70de>) of itgfirm\/safe-food@master by hnpatel passed in 4 min 36 sec",
+                "text": "Build <https:\/\/travis-ci.org\/itgfirm\/safe-food\/builds\/68102741|#52> (<https:\/\/github.com\/itgfirm\/safe-food\/compare\/5d16fdf68b75...b0e70de1a0fe|b0e70de>) of itgfirm\/safe-food@master by hnpatel passed in 4 min 36 sec",
+                "id": 1,
+                "color": "36a64f"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435119221.000158"
+    },
+    {
+        "text": "Hiteshkumar N. Patel resolved Story <https:\/\/jira.itgfirm.com\/browse\/ADSBPA-37|ADSBPA-37> as Fixed",
+        "username": "jira - agile bpa",
+        "bot_id": "B06JVR3CJ",
+        "attachments": [
+            {
+                "color": "59A452",
+                "fields": [
+                    {
+                        "title": "Summary",
+                        "value": "As a user, I need to be able to search food recall data with various search fields  so that I can better understand food recall enforcement reports."
+                    },
+                    {
+                        "title": "Assignee",
+                        "value": "Hiteshkumar N. Patel",
+                        "short": true
+                    },
+                    {
+                        "title": "Creator",
+                        "value": "Phillip Armour",
+                        "short": true
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1435120289.000159"
+    },
+    {
+        "type": "message",
+        "user": "U06H8LUH2",
+        "text": "In index.html this line always gives error :     &lt;link rel=\"stylesheet\" href=\"vendor\/angular-motion\/dist\/angular-motion.css\"&gt;. I checked bower.json and there is no entry for angular-motion. Can any one tell me what version of angular-motion should I use ?",
+        "ts": "1435124152.000160"
+    }
+]
