@@ -4,6 +4,7 @@ define([ 'angular', 'app',
 
 		app.controller('HomeController',
 			function($scope, $state, $modal, OpenFDAService) {
+			  $scope.base = $scope.base || {};
 			  $scope.nearMeRequestStatus = 4;
 
 			  $scope.searchNearMe = function(params) {

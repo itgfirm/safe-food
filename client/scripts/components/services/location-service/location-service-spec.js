@@ -5,7 +5,7 @@ define(
   ],
   function(angular){
 
-    describe('Location Service Unit Tests', function() {
+    describe('LocationService', function() {
 
       var $q,
         $rootScope,

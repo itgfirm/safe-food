@@ -5,7 +5,7 @@ define(
   ],
   function(angular){
 
-    describe('OpenFDA Service Unit Tests', function() {
+    describe('OpenFDAService', function() {
 
       var $q,
         $httpBackend,

@@ -4,12 +4,13 @@ define(
 		'features/food-recall-search/food-recall-search-controller'
 	],
 	function(angular){
-		describe('FoodRecallSearchController Unit Test', function(){
-			var passPromise,
+		describe('FoodRecallSearchController', function(){
+			var passPromise = true,
           mockOpenFDASvc,
-					FoodRecallSearchController,
 					scope,
-          $controller;
+          $controller,
+          $modalMock,
+          $q;
 
       beforeEach( module('safeFoodApp'));
       beforeEach(function(){
@@ -17,9 +18,9 @@ define(
           $provide.factory('OpenFDAService', ['$q', function($q){
             function getData(){
               if(passPromise){
-                return $q.when();
+                return $q.when({});
               } else{
-                return $q.reject();
+                return $q.reject({});
               }
             }
             return{
@@ -31,14 +32,16 @@ define(
 
 			beforeEach(function(){
   			angular.mock.inject(function(_$rootScope_, _$controller_, 
-  																			_OpenFDAService_){
+  																		_$q_, _OpenFDAService_){
 					scope = _$rootScope_.$new();
           $controller = _$controller_;
-          mockOpenFDASvc = _OpenFDAService_;          
-					FoodRecallSearchController = 
-									$controller('FoodRecallSearchController',{
+          $q = _$q_;
+          mockOpenFDASvc = _OpenFDAService_;
+          $modalMock = jasmine.createSpyObj('$modal', [ 'open' ]);       
+					$controller('FoodRecallSearchController',{
             $scope:scope,
-            OpenFDAService: mockOpenFDASvc
+            OpenFDAService: mockOpenFDASvc,
+            $modal: $modalMock
           });
           spyOn(mockOpenFDASvc, 'getData').and.callThrough();
 				});
@@ -55,6 +58,34 @@ define(
     it('Calls method search', function(){
       scope.search(null, true);
       expect(mockOpenFDASvc.getData).toHaveBeenCalled();
+    });
+
+    it('should show detailed recall information', function() {
+      var item = { a: 'a' },
+        defer = $q.defer(),
+        modalScope = {};
+
+      spyOn(scope, '$new');
+      scope.$new.and.returnValue(modalScope);
+
+      $modalMock.open.and.callFake(function() {
+        return { result: defer.promise };
+      });
+
+      scope.viewDetails(item);
+
+      expect(item.active).toEqual(true);
+      expect(modalScope.details).toEqual(item);
+      expect($modalMock.open).toHaveBeenCalledWith({
+        scope: modalScope,
+        size: jasmine.any(String),
+        templateUrl: jasmine.any(String)
+      });
+
+      defer.resolve();
+      scope.$apply();
+
+      expect(item.active).toEqual(false);
     });
 
 	});
