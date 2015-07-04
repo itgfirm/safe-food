@@ -25,4 +25,4 @@ cache:
     - node_modules
     - client/vendor
 after_deploy:
--python test/selenium/*.py
+- python test/selenium/*.py
