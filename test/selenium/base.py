@@ -48,6 +48,7 @@ class ManualTest(unittest.TestCase):
 
 
     def test_a_d_s_b_p_a32_last_updated(self):
+        self.name = "Test a32_last_updated"
         driver = self.driver
         driver.get("http://safe-food.herokuapp.com")
         time.sleep(10)
@@ -59,9 +60,10 @@ class ManualTest(unittest.TestCase):
         driver.find_element_by_css_selector("div.modal-footer.ng-scope > button.btn.btn-primary").click()
         driver.find_element_by_css_selector("img.logo").click()
         self.success = True
-        self.name = "Test a32_last_updated"
+
 
     def test_a_d_s_b_p_a36(self):
+        self.name = "Test a36"
         driver = self.driver
         driver.get("http://safe-food.herokuapp.com")
         time.sleep(10)
@@ -75,7 +77,6 @@ class ManualTest(unittest.TestCase):
         driver.find_element_by_xpath("//div[2]/strong").click()
         driver.find_element_by_css_selector("div.modal-footer.ng-scope > button.btn.btn-primary").click()
         driver.find_element_by_css_selector("img.logo").click()
-        self.name = "Test a36"
         self.success = True
 
     def is_element_present(self, how, what):
