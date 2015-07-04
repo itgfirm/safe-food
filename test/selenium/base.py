@@ -9,19 +9,13 @@ import new, json, httplib, base64, os, time, unittest, nose
 
 chosen_browsers = [
     ('Mac OS X 10.9', 'firefox', '32.0')
-    #('Mac OS X 10.9', 'chrome', '43.0'),
-    ##('Windows 8.1', 'internet explorer', '11.0'),
-    ##('Windows 8.1', 'firefox', '32.0'),
-    #('Windows 8.1', 'chrome', '43.0'),
-    #('Windows 7', 'internet explorer', '10.0'),
-    #('Windows 7', 'chrome', '43.0'),
-    #('Windows 7', 'firefox', '32.0')
-    # for Se1 platforms are a big different
-    #('Windows 2003', 'iexplore', '6'),
-    #('Windows 2003', 'iexplore', '7'),
-    #('Windows 2003', 'iexplore', '8'),
-    #('Windows 2008', 'iexplore', '9'),
-    #('Windows 2008', 'firefox', '11'),
+    ('Mac OS X 10.9', 'chrome', '43.0'),
+    ('Windows 8.1', 'internet explorer', '11.0'),
+    ('Windows 8.1', 'firefox', '32.0'),
+    ('Windows 8.1', 'chrome', '43.0'),
+    ('Windows 7', 'internet explorer', '10.0'),
+    ('Windows 7', 'chrome', '43.0'),
+    ('Windows 7', 'firefox', '32.0')
 ]
 user = os.environ.get('SAUCE_USERNAME')
 key = os.environ.get('SAUCE_ACCESS_KEY')
