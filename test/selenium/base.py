@@ -8,7 +8,7 @@ import new, json, httplib, base64, os, time, unittest, nose
 
 
 chosen_browsers = [
-    ('Mac OS X 10.9', 'firefox', '32.0')
+    ('Mac OS X 10.9', 'firefox', '32.0'),
     ('Mac OS X 10.9', 'chrome', '43.0'),
     ('Windows 8.1', 'internet explorer', '11.0'),
     ('Windows 8.1', 'firefox', '32.0'),
