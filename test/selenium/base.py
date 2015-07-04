@@ -25,6 +25,7 @@ chosen_browsers = [
 ]
 user = os.environ.get('SAUCE_USERNAME')
 key = os.environ.get('SAUCE_ACCESS_KEY')
+buildnum = os.environ.get('TRAVIS_COMMIT')
 
 class ManualTest(unittest.TestCase):
     # Nose won't run the original Test Class, we'll change this in the
@@ -106,7 +107,7 @@ class ManualTest(unittest.TestCase):
 
     def report_pass_fail(self):
         sauce_client = SauceClient(user, key)
-        sauce_client.jobs.update_job(self.driver.session_id, passed=self.success, name = self.name)
+        sauce_client.jobs.update_job(self.driver.session_id, passed=self.success, name = self.name, build_num = buildnum)
 
     def tearDown(self):
         self.assertEqual([], self.verificationErrors)
