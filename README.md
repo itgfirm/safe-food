@@ -25,13 +25,6 @@ This will concat and minify all the files and write it to client-dist.
 
 For testing:
 ```
-grunt build
+grunt test
 ```
 This will run jshint, karma, and mocha.
-
-## Components Used
-
-* Angular UI Router
-	* Github: [https://github.com/angular-ui/ui-router](https://github.com/angular-ui/ui-router)
-	* Documentation: [http://angular-ui.github.io/ui-router/site/](http://angular-ui.github.io/ui-router/site/)
-	* Demo: [https://angular-ui.github.io/ui-router/sample/](https://angular-ui.github.io/ui-router/sample/)
