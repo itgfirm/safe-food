@@ -1,7 +1,9 @@
-# safe-food
+# Safe Food Application
 Safe Food App based on FDA Open Data
 
 [![Build Status](https://travis-ci.org/itgfirm/safe-food.svg?branch=master)](https://travis-ci.org/itgfirm/safe-food)
+
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/itg-gsa-bpa.svg)](https://saucelabs.com/u/itg-gsa-bpa)
 
 ## Get Started
 
