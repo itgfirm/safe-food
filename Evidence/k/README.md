@@ -21,7 +21,7 @@
 * `npm start`  (requires all front-end code to be built via `grunt build`)
 
 
-*Key Files*
+**Key Files**
 - [package.json](https://github.com/itgfirm/safe-food/blob/master/package.json)
 - [Gruntfile.js](https://github.com/itgfirm/safe-food/blob/master/Gruntfile.js)
 - [bower.json](https://github.com/itgfirm/safe-food/blob/master/bower.json)
