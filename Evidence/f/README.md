@@ -1,4 +1,4 @@
-[<-- Back to the Evidence Listing](https://github.com/philarmour/staged-content/edit/master/Evidence)
+[<-- Back to the Evidence Listing](https://github.com/itgfirm/safe-food/edit/master/Evidence)  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Next Evidence (c) -->](https://github.com/itgfirm/safe-food/edit/master/Evidence/g)
 
 ***f. set up or used a continuous integration system to automate the running of tests and continuously deployed their code to their IaaS or PaaS provider***
 
@@ -14,7 +14,7 @@ We also chose Travis CI due to its multitude of integration partners, including 
 
 And similarly it also creates a [publicly available dashboard](https://travis-ci.org/itgfirm/safe-food/builds) with a detailed history of our builds:
 
-![TravisCI Dasboard Image](https://github.com/philarmour/staged-content/raw/master/Evidence/f/TravisCI_Build_History.png)
+![TravisCI Dasboard Image](https://github.com/itgfirm/safe-food/raw/master/Evidence/f/TravisCI_Build_History.png)
 
 Travis also published build notifications to our team's Slack channel:
 
@@ -37,3 +37,5 @@ SauceLabs provides a [publicly available dashboard](https://saucelabs.com/u/itg-
 Another feature of our CI build is that we run cross-browser testing with every build. We are utilizing an integration between Travis CI and SauceLabs to run our end-to-end tests across a number of different operating systems and browsers.  This allows us to have transparency at every build about our ability to reach as many customers as possible.
 
 [![Sauce Test Status](https://saucelabs.com/browser-matrix/itg-gsa-bpa.svg)](https://saucelabs.com/u/itg-gsa-bpa)
+
+[<-- Back to the Evidence Listing](https://github.com/itgfirm/safe-food/edit/master/Evidence)  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Next Evidence (c) -->](https://github.com/itgfirm/safe-food/edit/master/Evidence/g)

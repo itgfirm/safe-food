@@ -1,4 +1,4 @@
-[<-- Back to the Evidence Listing](https://github.com/philarmour/staged-content/edit/master/Evidence)
+[<-- Back to the Evidence Listing](https://github.com/itgfirm/safe-food/edit/master/Evidence)  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Next Evidence (c) -->](https://github.com/itgfirm/safe-food/edit/master/Evidence/f)
 
 ***e. wrote unit tests for their code***
 
@@ -15,7 +15,7 @@ Tests for our front-end components can be found at /client/\*\*/*-spec.js
 * [base-controller-spec.js](https://github.com/itgfirm/safe-food/blob/master/client/scripts/features/base/base-controller-spec.js)
 * [home-controller-spec.js](https://github.com/itgfirm/safe-food/blob/master/client/scripts/features/home/home-controller-spec.js)
 
-![Karma Unit Tests](https://github.com/philarmour/staged-content/raw/master/Evidence/e/Unit_Tests_Results.png)
+![Karma Unit Tests](https://github.com/itgfirm/safe-food/raw/master/Evidence/e/Unit_Tests_Results.png)
 
 Our testing frameworks, Mocha and Karma, are configured in our [Gruntfile.js](https://github.com/itgfirm/safe-food/blob/master/Gruntfile.js).
 
@@ -26,13 +26,15 @@ We leveraged Selenium as well as SauceLabs for our user acceptance testing (end-
 Tests for end-to-end are in /test/selenium/*.py
 * [base.py](https://github.com/itgfirm/safe-food/blob/master/test/selenium/base.py)
 
-![SauceLabs Badge](https://github.com/philarmour/staged-content/raw/master/Evidence/e/SauceLabs_badge_cross-browser.png)
+![SauceLabs Badge](https://github.com/itgfirm/safe-food/raw/master/Evidence/e/SauceLabs_badge_cross-browser.png)
 
 (Note that failures are actually due to performance and tuning of the SauceLabs test execution environment.)
 
 The SauceLabs dashbaord shows the individual test cases, including the outcome as well as being able to replay the recorded test exectution from the browser.
 
-![SauceLabs Output](https://github.com/philarmour/staged-content/raw/master/Evidence/e/cross-browser_sauce.png)
+![SauceLabs Output](https://github.com/itgfirm/safe-food/raw/master/Evidence/e/cross-browser_sauce.png)
 
 
 * ~~Tests for the backend are in /server/test/*.js~~
+
+[<-- Back to the Evidence Listing](https://github.com/itgfirm/safe-food/edit/master/Evidence)  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Next Evidence (c) -->](https://github.com/itgfirm/safe-food/edit/master/Evidence/f)

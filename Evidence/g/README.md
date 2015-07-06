@@ -1,4 +1,4 @@
-[<-- Back to the Evidence Listing](https://github.com/philarmour/staged-content/edit/master/Evidence)
+[<-- Back to the Evidence Listing](https://github.com/itgfirm/safe-food/edit/master/Evidence)  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Next Evidence (c) -->](https://github.com/itgfirm/safe-food/edit/master/Evidence/h)
 
 ***g. set up or used configuration management***
 
@@ -23,13 +23,13 @@ We recognize that some of the configuration for a running application, especiall
 
 The first method is encryption.  Where practical, we have leveraged the various encryption tools provided by our CI system.  This allows us to provide the secrets to Travis CI for their exclusive use in testing and deploying our application.  
 
-[![Encrypted Keys](https://github.com/philarmour/staged-content/blob/master/Evidence/g/TravisCI_Encrypted_Keys.png)](https://github.com/itgfirm/safe-food/blob/master/.travis.yml)
+[![Encrypted Keys](https://github.com/itgfirm/safe-food/blob/master/Evidence/g/TravisCI_Encrypted_Keys.png)](https://github.com/itgfirm/safe-food/blob/master/.travis.yml)
 
 #### Environment-Specific Settings
 
 The second method is by putting the secret values directly into the environment in which they will be needed. This is a fairly trivial exercise for developers, and Heroku has a mechanism for setting environment variables for an application.
 
-![Environment Settings](https://github.com/philarmour/staged-content/blob/master/Evidence/g/Heroku_ENV_Vars.png)
+![Environment Settings](https://github.com/itgfirm/safe-food/blob/master/Evidence/g/Heroku_ENV_Vars.png)
 
 **Specific Configurations**
 - [package.json](https://github.com/itgfirm/safe-food/blob/master/package.json)
@@ -38,3 +38,4 @@ The second method is by putting the secret values directly into the environment 
 - [karma.conf.js](https://github.com/itgfirm/safe-food/blob/master/client/test/karma.conf.js)
 - [.travis.yml](https://github.com/itgfirm/safe-food/blob/master/.travis.yml)
 
+[<-- Back to the Evidence Listing](https://github.com/itgfirm/safe-food/edit/master/Evidence)  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Next Evidence (c) -->](https://github.com/itgfirm/safe-food/edit/master/Evidence/h)
