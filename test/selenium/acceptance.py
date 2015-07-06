@@ -16,10 +16,6 @@ key = os.environ.get('SAUCE_ACCESS_KEY')
 buildnum = os.environ.get('TRAVIS_COMMIT')
 
 class OneBrowser(unittest.TestCase):
-    # Nose won't run the original Test Class, we'll change this in the
-    # dynamically generated classes
-    __test__ = False
-
     def setUp(self):
         des_caps = {
                 # The following properties are set dynamically
