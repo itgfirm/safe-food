@@ -7,7 +7,7 @@
 
 ![Sudha Photo](Sudha_Venkateswaran_small.jpg)
 
-We appoint [Sudha Venkateswaran](https://www.linkedin.com/pub/sudha-vijay-venkateswaran-pmp-csm/1/2b7/a16) as the Product Owner for our application. She was the most knowledgeable of the client needs, the agile process, and most importantly possesses the leadership qualities to manage disparate views, styles, and personalities to ensure we are able to meet the project deadlines.
+We appointed [Sudha Venkateswaran](https://www.linkedin.com/pub/sudha-vijay-venkateswaran-pmp-csm/1/2b7/a16) as the Product Owner for our application. She was the most knowledgeable of the client needs, the agile process, and most importantly possesses the leadership qualities to manage disparate views, styles, and personalities to ensure we are able to meet the project deadlines.
 
 
 ## Authorized and Accountable
