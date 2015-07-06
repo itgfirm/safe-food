@@ -10,14 +10,14 @@ Upon review of the BPA, the BPA response team rapidly self-organized and met to 
 As customary, ITG’s Chief Information Security Officer (CISO) was engaged during Backlog Development to detail security requirements including collected information, storage, data usage and role based access.
  
 ###Selecting the Technologies
-We finalized the technology architecture and selected modern tools for project execution. Leveraging DevOps principles we rapidly provisioned the necessary environments to support continuous integration, continuous deployment, automated testing and acceptance. Our environments were provisioned on flexible infrastructure with elastic resources, using Heroku’s Cloud PaaS.
+We finalized the technology architecture and selected modern tools for project execution. Leveraging DevOps principles, we rapidly provisioned the necessary environments to support continuous integration, continuous deployment, automated testing and acceptance. Our environments were provisioned on flexible infrastructure with elastic resources, using Heroku’s Cloud PaaS.
  
 To meet the requirements our Solution Architect selected:
-- AngularJS, Mocha, and Node.js, New Relic and Git
-- LoopBack, a highly-extensible, open-source Node.js framework to create dynamic end-to-end REST APIs supporting secure data marshaling
-- New Relic to provide analytics and performance monitoring
-- Travis CI to support our CI integrated with Open SauceLabs to run automated tests
- 
+- AngularJS, RequireJS, and Karma
+- Node.js, LoopBack, Mocha, and Grunt
+- Travis CI and SauceLabs to support our CI integrated with automated tests
+- Heroku as our deployment environment, as well as New Relic and Papertrail for monitoring
+
 ###Agile Execution
 Our prototype was developed using our proven Agile Scrum methodologies (Figure 1) to deliver an application that provides informative data to citizens detailing food safety recalls.
 
