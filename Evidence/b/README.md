@@ -13,16 +13,16 @@ To fulfill these needs, we constructed the following team:
 
 | Labor Category | Name | Responsibilities |
 |---|---|---|
-| Category 1 - Product Manager | Sudha Venkateswaran | Product Owner |
-| Category 11 - Agile Coach | Casey Johnson | Scrum Master |
+| Category 2 - Technical Architect | Sudha Venkateswaran | Product Owner |
+| Category 2 - Technical Architect | Casey Johnson | Scrum Master |
 | Category 2 - Technical Architect | Phillip Armour | Technical Architect |
 | Category 6 - Front End Web Developer | Mohammed Nauage | Javascript Developer |
 | Category 7 - Backend Web Developer | Hitesh Patel | Javascript Developer |
 | Category 6 - Front End Web Developer | Brian Johnston | Javascript Developer |
-| Category 5 - Visual Designer | Tito Araujo | UX Design & Graphics |
+| Category 6 - Front End Web Developer | Tito Araujo | UX Design & Graphics |
 | Category 8 - DevOps Engineer | Ben Rose | DevOps Engineer |
-| Category 3 - Interaction Designer / User Researcher / Usability Tester | Kevin Foglio | Test Specialist |
-| Category 9 - Security Engineer | Kent Bridges | Security Engineer |
+| Category 6 - Front End Web Developer / User Researcher / Usability Tester | Kevin Foglio | Test Specialist |
+| Category 2 - Technical Architect | Kent Bridges | Security Architect |
 
 
 ### Project Charter
