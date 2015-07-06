@@ -10,9 +10,9 @@ Modern and open-source technologies pervade all levels of our development and de
 ### Build Tools
 | Tool  | Evidence  | Open-source Documentation  |
 |---|---|---|
-| NPM  | https://github.com/itgfirm/safe-food/blob/master/package.json  | https://www.npmjs.com/policies/npm-license  |
-| Bower  | https://github.com/itgfirm/safe-food/blob/master/bower.json  | http://bower.io/docs/about/  |
-| Grunt  | https://github.com/itgfirm/safe-food/blob/master/Gruntfile.js  | https://github.com/gruntjs/grunt/blob/master/LICENSE-MIT  |
+| NPM  |[Evidence](https://github.com/itgfirm/safe-food/blob/master/package.json)|[Open Source Documentation](https://www.npmjs.com/policies/npm-license)|
+| Bower  |[Evidence](https://github.com/itgfirm/safe-food/blob/master/bower.json)|[Open Source Documentation](http://bower.io/docs/about/)  |
+| Grunt  |[Evidence](https://github.com/itgfirm/safe-food/blob/master/Gruntfile.js)|[Open Source Documentation](https://github.com/gruntjs/grunt/blob/master/LICENSE-MIT)|
 
 ### Runtime Technologies
 - [Node.js]()
