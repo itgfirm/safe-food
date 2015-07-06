@@ -4,7 +4,7 @@
 
 ## Heroku
 
-We deploy to Heroku via our Travis CI build as configured in [.travis.yml](https://github.com/itgfirm/safe-food/blob/master/.travis.yml)
+ITG deployed our software in a container via Heroku leveraging our Travis CI build as configured in [.travis.yml](https://github.com/itgfirm/safe-food/blob/master/.travis.yml)
 
 ### Container
 Heroku’s platform by default uses containers (or dynos) which are an encapsulation of their stack, [Cedar-14](https://blog.heroku.com/archives/2014/11/4/cedar_14_now_generally_available), which has been battle-tested and continuously improved over the last four years. Cedar-14 is built on top of Ubuntu 14.04 and offers a [Polyglot platform](http://blog.heroku.com/archives/2011/8/3/polyglot_platform/) - which simply means it can natively support many different software stacks (including Node.js) from dependency management, build, to deploy and runtime.
