@@ -20,4 +20,12 @@
 ### Deployment & Local Full-Stack Development 
 * `npm start`  (requires all front-end code to be built via `grunt build`)
 
+
+*Key Files*
+- [package.json](https://github.com/itgfirm/safe-food/blob/master/package.json)
+- [Gruntfile.js](https://github.com/itgfirm/safe-food/blob/master/Gruntfile.js)
+- [bower.json](https://github.com/itgfirm/safe-food/blob/master/bower.json)
+- [.jshintrc](https://github.com/itgfirm/safe-food/blob/master/.jshintrc)
+- [karma.conf.js](https://github.com/itgfirm/safe-food/blob/master/client/test/karma.conf.js)
+
 [<-- Back to the Evidence Listing](https://github.com/itgfirm/safe-food/edit/master/Evidence)  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Next Evidence (l) -->](https://github.com/itgfirm/safe-food/edit/master/Evidence/l)
