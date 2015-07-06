@@ -2,8 +2,6 @@
 
 ***h. set up or used continuous monitoring***
 
-**Continuous monitoring is a risk management approach to cybersecurity that maintains an accurate picture of an agency’s security risk posture, provides visibility into assets, and leverages use of automated data feeds to quantify risk, ensure effectiveness of security controls, and implement prioritized remedies. A well-designed and well-managed continuous monitoring program can effectively transform an otherwise static security control assessment and risk determination process into a dynamic process that provides essential, near real-time security status.**
-
 ## Risk Management
 
 ITG federal clients benefit from our proactive and extensive approach to continuous monitoring. Given our experience in delivering FISMA compliant systems at GSA and other agencies, we are familiar with the continuous diagnostics & mitigation (CDM) activities necessary to support security operations. 
