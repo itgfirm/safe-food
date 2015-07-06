@@ -4,22 +4,22 @@
 
 While strictly speaking, we intended for this project to consist of a single iteration (or sprint) of development.  However within the original sprint we still used a micro-iteration due to the short duration required to get a working pilot finished.  Then when the project extensions occured we absolutely were able to stop and have an inflection point, resulting in another opportunity to gather feedback and re-assess.
 
-# Phase 1 - Conception
+# 1 - Conception
 When the RFQ was published, our chosen stakeholders (Product Owner, Gov. customer proxy,) gathered to brainstorm ideas.  After coming up with some potential ideas around business cases and possible features, they invited the technical team to discuss and provide feedback from a practical perspective. We also collaboratively worked on mock-ups of a hypothetical application to facilitate discussions and generate a common understanding. From those ideas, the Product Owner created User Stories in JIRA and loaded them into the project’s backlog.
 
-# Phase 2 - Sprint Planning
+# 2 - Sprint Planning
 With our set of stories in the backlog, we gathered the entire team for the sprint planning session.  This consisted of working with the Product Owner to prioritize the stories and better groom the backlog; It also consisted of working with the technical team to size the stories into abstract categories of complexity and effort so that the entire team could better gauge what could be accomplished during the short sprint.  Both of these activities resulted in a very interactive conversation between the developers and the Product Owner where we were able to constructively and concretely agree on what stories needed to be in the sprint and whether the team could realistically be expected to get them done.
 
-# Phase 3 - Execution
+# 3 - Execution
 Once the sprint began, each day consisted of a scrum, a post-scrum discussion, and demos to the product owners.  We also utilized a collaboration tool called Slack for all communication between the previously mentioned events.  The scrums were short, yet collaborative scrum where each development team member was able to report progress, plans, and issues.  The post-scrum was a more “in-the-weeds” conversation time, where developers asked the Product Owner and the Architect detailed questions about their stories and had constructive dialogues to clarify and design the features that he was building.  The demo’s were similar to the post-scrum, except that they were performed after some functionality was operational, and provided an opportunity to get additional feedback from the stakeholders as well as perform additional testing and debugging.  Typically our team does not perform demo’s within the sprint, however given the short length, and finality of the single sprint in this project, we felt that demo’s each day was appropriate.
 
-# Phase 4 - Reflection
+# 4 - Reflection
 There were many points of reflection in our project resulting from technical clarifications on the API, feature demos, and even from extensions provided by GSA for the RFQ response due date.  Our team was able to openly discuss the issues and opportunities at each of these reflection points with our Product Manager as well as the development team as a whole. In some cases we just needed to modify the objectives in an existing story or the acceptance criteria for it to better align with the realities of the provided FDA API and data.  In other cases, we discussed changing the scope of the sprint by both removing specific stories from the sprint when they became obsolete or overly complicated.  We also increased the scope of the sprint after the first deadline extension to appropriately accommodate the team’s capacity and also to better meet the Product Manager’s expectations based on the initial concepts.
 
-# Phase 5 - Pivot
+# 5 - Pivot
 Resulting from each out the reflection points, the team needed to pivot and be agile in their expectations, efforts, and development.  During the tight collaboration required to modify stories and acceptance criteria, the developers discussed limitations and new ideas with the product owner, designer, and other proxy stakeholders.  The result was new implementations, new test cases, revised Jira stories.  This level of accountability and transparency allowed the pivots to happen seamlessly throughout the project.
 
-# Phase 6 - Release & Retrospection
+# 6 - Release & Retrospection
 Upon completion of the development and testing, we stabilized the code and deployment process to better represent a “production” environment as opposed to the “Integration” environment that we previously been operating in.  Ideally we would have 2 separate environments and utilized the CI process including separate GitHub branches, but for this short exercise, we simplified. We also conducted a sprint retrospective with the development team and the Product Owner. This was a relaxed session where we were able to review how effective the sprint was both in terms of process as well as the delivered product. Each developer was able to express their thoughts and provide ideas for future improvements.  The Product Owner was also able to provide her perspective and similarly identify successes and suggest improvements.
 
 
