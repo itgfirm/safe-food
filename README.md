@@ -1,18 +1,15 @@
-Prototype: http://safe-food.herokuapp.com
-Repository: https://github.com/itgfirm/safe-food 
+http://safe-food.herokuapp.com - Prototype
+https://github.com/itgfirm/safe-food - Repository
   
 ###Introduction
-
 ITG is an innovative woman-owned small business that has since its inception adopted Agile scrum as its methodology to deliver complex cloud-enabled, mobile-ready, enterprise applications. Our customer portfolio includes GSA where we have developed agile systems including G-REX and EASi.
  
 ###Assembling the Team
-
 Upon review of the BPA, the BPA response team rapidly self-organized and met to determine roles. We decided to work on the requirements for Pool 2 and chose the api.fda.gov/food/enforcement API because it allowed us to demonstrate a wider subset of our expertise including search and data analytics. To execute on the requirements we mobilized resources from our highly qualified pool of Agile Scrum trained professionals and developed a Project Charter.  Our Product Owner was selected based on experience with similar programs and understanding of the domain. Our team is comprised of a Scrum Master, and additional cross functional roles that include a solution architect, data architect, developers, testers, UI/UX designer, and analysts.
  
 As customary, ITG’s Chief Information Security Officer (CISO) was engaged during Backlog Development to detail security requirements including collected information, storage, data usage and role based access.
  
 ###Selecting the Technologies
-
 We finalized the technology architecture and selected modern tools for project execution. Leveraging DevOps principles we rapidly provisioned the necessary environments to support continuous integration, continuous deployment, automated testing and acceptance. Our environments were provisioned on flexible infrastructure with elastic resources, using Heroku’s Cloud PaaS.
  
 To meet the requirements our Solution Architect selected
@@ -22,7 +19,6 @@ New Relic to provide analytics and performance monitoring
 Travis CI to support our CI integrated with SauceLabs to run automated tests
  
 ###Agile Execution
- 
 Our prototype was developed using our proven Agile Scrum methodologies (Figure 1) to deliver an application that provides informative data to citizens detailing food safety recalls.
 
 We held a Backlog Development Meeting, led by the Product Owner. The Product Owner developed stories with acceptance criteria, and the Scrum Master led the team through grooming sessions to assign points to stories. Our stories included wireframes focused on human-centered design principles by our UX designer and test scripts from our QC specialists that ensured alignment with acceptance criteria, feature quality and industry accepted mobile responsive apps. Our architects developed the underpinning solution and data architectures and ensured alignment with GSA Enterprise Architecture (EA). Our target was to develop an evolutionary tool rather than a throw-away prototype.
