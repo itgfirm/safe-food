@@ -3,10 +3,10 @@
 ***f. set up or used a continuous integration system to automate the running of tests and continuously deployed their code to their IaaS or PaaS provider***
 
 ## Continuous Integration System - Travis CI
-We used [Travis CI as our continuous integration (CI) system](https://travis-ci.org/itgfirm/safe-food/builds).  It allowed us to configure [common build and test scripts](https://github.com/itgfirm/safe-food/blob/master/package.json) (via NPM) and ensure that we are [executing them consistently and regularly](https://github.com/itgfirm/safe-food/blob/master/.travis.yml).
+ITG used [Travis CI as our continuous integration (CI) system](https://travis-ci.org/itgfirm/safe-food/builds).  It enabled us to configure [common build and test scripts](https://github.com/itgfirm/safe-food/blob/master/package.json) (via NPM) and ensure that we are [executing them consistently and regularly](https://github.com/itgfirm/safe-food/blob/master/.travis.yml).
 
-### Continuous Integration and Continuous Deployments
-We chose to link the CI build to our Master, and only, branch in Github due to fact that we are a small team operating on a tight deadline and would benefit from tighter feedback loops with respect to how our builds are faring in the integration environment. 
+### Continuous Integration with Continuous Deployments
+We chose to link the CI build to our Master, and only, branch in Github due to fact that we are a small team operating on a tight deadline and would benefit from tighter feedback loops from our build results in our integration environment. 
 
 We also chose Travis CI due to its multitude of integration partners, including Heroku, SauceLabs, and Slack.  Travis offers a rich feature set for deploying to Heroku environments, and we found it very easy to add continuous deployment to our CI build. Travis CI was especially helpful in providing visibility into the success (or lack of) for each build. Travis CI provides a Build Status badge that can be embeded anywhere like on a GitHub README page:
 
