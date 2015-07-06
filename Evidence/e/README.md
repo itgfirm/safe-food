@@ -3,7 +3,9 @@
 ***e. wrote unit tests for their code***
 
 ## Automated Testing
-In agile projects, ensuring that customer requirements are being fully met can be a challenge.  By creating acceptance criteria and associated automated test cases, our team is able to ensure that we continue to meet all requirements during regression testing which occurs in a consistent and automated fashion.
+ITG wrote unit tests for our code. In agile projects, ensuring that customer requirements are being fully met can be a challenge.  By creating acceptance criteria and associated automated test cases, our team is able to ensure that we continue to meet all requirements during regression testing which occurs in a consistent and automated fashion.
+
+In addition, as demonstrated by our test cases, ITG went above and beyond and performed regression, 508 and cross browser compliance testing.
 
 ### Unit Tests
 Moreover, during development we created more discrete unit tests to ensure our functionality was meeting the desired specifications at all levels (controllers, services, etc.).  
