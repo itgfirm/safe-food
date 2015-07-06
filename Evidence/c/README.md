@@ -18,8 +18,8 @@ Modern and open-source technologies pervade all levels of our development and de
 ### Runtime Technologies
 |Tool|Evidence|Open Source Documentation|
 |---|---|---|
-|Node.js|[Evidence]( )| |
-|LoopBack Framework|[Evidence]( )| |
+|Node.js|[Evidence]( )|[Open Source Documentation](https://github.com/joyent/node/blob/master/LICENSE)|
+|LoopBack Framework|[Evidence]( )|[Open Source Documentation](https://github.com/strongloop/loopback/blob/master/LICENSE)|
 |AngularJS|[Evidence](https://github.com/itgfirm/safe-food/blob/master/server/server.js)|[Open Source Documentation](https://github.com/angular/angular.js/blob/master/LICENSE)|
 |RequireJS|[Evidence](https://github.com/itgfirm/safe-food/blob/master/client/index.html)|[Open Source Documentation](https://github.com/jrburke/requirejs/blob/master/LICENSE) |
 
