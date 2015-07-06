@@ -6,7 +6,7 @@ from sauceclient import SauceClient
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
-import new,json,httplib,base64,unittest,nose,time
+import new,json,httplib,base64,unittest,nose,time,os
 from nose.plugins.multiprocess import MultiProcess
 
 
