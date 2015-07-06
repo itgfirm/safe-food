@@ -11,7 +11,7 @@ Based on the requirements of the pilot effort (modern web stack), we decided tha
 
 To fulfill these needs, we constructed the following team:
 
-| Labor Category | Name | Responsibilities |
+| Pool 2 Labor Category | Name | Responsibilities |
 |---|---|---|
 | Category 2 - Technical Architect | Sudha Venkateswaran | Product Owner |
 | Category 2 - Technical Architect | Casey Johnson | Scrum Master |
