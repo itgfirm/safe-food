@@ -3,9 +3,9 @@
 ***d. deployed the prototype on an Infrastructure as a Service (IaaS) or Platform as a Service (PaaS) provider, and indicated which provider was used***
 
 ## Heroku
-The Safe Food prototype was deployed on the Heroku Platform as a Service (PaaS). 
+The Safe Food prototype was deployed on the Heroku Platform as a Service (PaaS). PaaS enables our customers to innovate faster, focus resources, and save money.
 
-Heroku is one of (if not the leader) in providing Node.JS (as well as other stacks) hosting solutions.  Also, given our team’s desire to balance architectural flexibility with hands-off, managed service, we feel that Heroku offered the best platform for our pilot application.
+Heroku is a market leader in providing Node.JS (as well as other stacks) hosting solutions.  Also, inorder to balance architectural flexibility with hands-off, managed service, ITG believes that Heroku offered the best platform for our pilot application.
 
 ### Heroku Platform Dashboard
 We chose to deploy the [Safe Food Application](http://safe-food.herokuapp.com) to the Heroku Platform as a Service (PaaS). For this project we need our hosting environment to meet several requirements:
