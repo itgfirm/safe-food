@@ -2,7 +2,7 @@
 
 ***f. set up or used a continuous integration system to automate the running of tests and continuously deployed their code to their IaaS or PaaS provider***
 
-## Travis CI
+## Continuous Integration System - Travis CI
 We used [Travis CI as our continuous integration (CI) system](https://travis-ci.org/itgfirm/safe-food/builds).  It allowed us to configure [common build and test scripts](https://github.com/itgfirm/safe-food/blob/master/package.json) (via NPM) and ensure that we are [executing them consistently and regularly](https://github.com/itgfirm/safe-food/blob/master/.travis.yml).
 
 ### Continuous Integration and Continuous Deployments
