@@ -3,7 +3,7 @@
 ***c. used at least five modern and open-source technologies, regardless of architectural layer (frontend, backend etc)***
 
 ## Open Source Technologies
-ITG used more than five modern and open-source technologies throughout the architectre of our system. ITG belives that our customers will benefit from open-source technologies ability to provide cost controls while keeping a permium on innovation.
+ITG used more than five modern and open-source technologies throughout the architectre of our system. ITG belives that our customers benefit from open-source technologies ability to provide cost controls while keeping a permium on innovation.
 
 ITG used the following open-source technologies:<br>
 -NPM<br>
