@@ -3,9 +3,25 @@
 ***c. used at least five modern and open-source technologies, regardless of architectural layer (frontend, backend etc)***
 
 ## Open Source Technologies
-Modern and open-source technologies pervade all levels of our development and deployment stack.  Starting with the core of our chosen architecture: Node.js and AngularJS, we believe that open-source technologies provide the best opportunity to control cost while keeping a premium on innovation.
+ITG used more than five open-source technologies throughout the architectre of our system. ITG belives that our customers will benefit from open-source technologies ability to provide cost controls while keeping a permium on innovation.
 
+ITG used the following open-source technologies:<br>
+-NPM<br>
+-Bower<br>
+-Grunt<br>
+-Node.js<br>
+-LoopBack Framework<br>
+-AngularJS<br>
+-RequireJS<br>
+-Karma<br>
+-Jasmine<br>
+-JSHint<br>
+-Selenium<br>
+-Travis CI<br>
+-Heroku<br>
+-Open Saucelabs<br>
 
+Evidence and documentation is provided in the tables below.
 
 ### Build Tools
 
