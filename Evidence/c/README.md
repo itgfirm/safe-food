@@ -5,10 +5,14 @@
 ## Open Source Technologies
 Modern and open-source technologies pervade all levels of our development and deployment stack.  Starting with the core of our chosen architecture: Node.js and AngularJS, we believe that open-source technologies provide the best opportunity to control cost while keeping a premium on innovation.
 
+
+
 ### Build Tools
-- [NPM](https://github.com/itgfirm/safe-food/blob/master/package.json)
-- [Bower](https://github.com/itgfirm/safe-food/blob/master/bower.json)
-- [Grunt](https://github.com/itgfirm/safe-food/blob/master/Gruntfile.js)
+| Tool  | Evidence  | Open-source Documentation  |
+|---|---|---|
+| NPM  | https://github.com/itgfirm/safe-food/blob/master/package.json  | https://www.npmjs.com/policies/npm-license  |
+| Bower  | https://github.com/itgfirm/safe-food/blob/master/bower.json  | http://bower.io/docs/about/  |
+| Grunt  | https://github.com/itgfirm/safe-food/blob/master/Gruntfile.js  | https://github.com/gruntjs/grunt/blob/master/LICENSE-MIT  |
 
 ### Runtime Technologies
 - [Node.js]()
