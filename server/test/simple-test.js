@@ -6,7 +6,7 @@ describe('server', function () {
   });
 
   describe('simple test', function(){
-    it('should respond true',function(done){
+    it('should be started',function(done){
       expect(200).to.equal(200);
       done();
     });
