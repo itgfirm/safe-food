@@ -1,4 +1,4 @@
-[<-- Back to the Evidence Listing](https://github.com/itgfirm/safe-food/edit/master/Evidence)  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Next Evidence (c) -->](https://github.com/itgfirm/safe-food/edit/master/Evidence/i)
+[<-- Back to the Evidence Listing](https://github.com/itgfirm/safe-food/edit/master/Evidence)  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Next Evidence (i) -->](https://github.com/itgfirm/safe-food/edit/master/Evidence/i)
 
 ***h. set up or used continuous monitoring***
 
@@ -20,7 +20,7 @@ Since the application is currently configured for continuous deployment, it is s
 
 
 ## Active and Continuous Monitoring
-Heroku is a PaaS built on the container concept where they can very easily keep the various parts of their stack up to date with minimal impact to the applications running on top of the stack.  To do this Heroku forces a restart of each container (dyno) at least once a day.  This process provides [Erosion Resistance] (https://devcenter.heroku.com/articles/erosion-resistance) by providing a mechnism for their engineers to push out patches and configuration updates to the OS and other key software in the Cedar-14 stack, with no actions required by application teams (i.e. their customers).  
+Heroku is a PaaS built on the container concept where they can very easily keep the various parts of their stack up to date with minimal impact to the applications running on top of the stack.  To do this Heroku forces a restart of each container (dyno) at least once a day.  This process provides [Erosion Resistance] (https://devcenter.heroku.com/articles/erosion-resistance) by providing a mechnism for their engineers to push out patches and configuration updates to the OS and other key software in the Cedar-14 stack, with no actions required by application teams (i.e. their customers).
 
 However, for the complete system, we need to consider the security controls and how they can be implemented, monitored and executed on efficiently, to implement continuous diagnostics & mitigation (CDM).
 
@@ -28,10 +28,10 @@ However, for the complete system, we need to consider the security controls and 
 The Safe Food application by virtue of being hosted by Heroku is able to inherit all of the security controls for the Heroku management applications, networking, OS, and Node.js frameworks.  Moreover, Heroku inherits the security controls from Amazon for their data centers, physical security, and several other areas. Heroku publishes a more detailed explaination of their [Security Controls](https://www.heroku.com/policy/security)
 
 ### Active Monitoring from Heroku
-Beyond these controls, we as the application developers and owners are then responsible for being aware of Heroku incidents and taking recommended actions where prescribed.  We do this by being cognizant of the [Heroku Status](https://status.heroku.com) and more importantly subscribing to receive alerts about incidents.  
+Beyond these controls, we as the application developers and owners are then responsible for being aware of Heroku incidents and taking recommended actions where prescribed.  We do this by being cognizant of the [Heroku Status](https://status.heroku.com) and more importantly subscribing to receive alerts about incidents.
 
 #### Incident RSS Feed
-Our team has subscribed our Slack channel to Heroku's [incident RSS feed](https://status.heroku.com/feed) and therefore is alerted about every platform issue including security incidents. 
+Our team has subscribed our Slack channel to Heroku's [incident RSS feed](https://status.heroku.com/feed) and therefore is alerted about every platform issue including security incidents.
 
 ![Image of Heroku Status Page](heroku_status.png)
 
@@ -48,7 +48,7 @@ We utilize Papertrail to capture, store, and access all logs from our applicatio
 ![image of papertrail](papertrail_logs.png)
 
 
-### Active Monitoring of Application Code and Deependencies
+### Active Monitoring of Application Code and Dependencies
 Additional security controls we provide are with the application code itself, including storing credentials, maintaining access controls for who can make modifications to the application. We are also response for monitoring and taking any required actions for security vulnerabilities discovered in the open source technologies that we are leveraging for our application. In addition to watching [US-CERT](https://www.us-cert.gov/ncas/alerts), we run an application called [requireSafe](https://requiresafe.com/) that scans Node modules for know vulnerabilities.
 
 ![requiresafe output image](requireSafe.png)
@@ -62,4 +62,4 @@ Internally ITG's security team is subscribed to US-CERT among other sources, and
 
 For other projects, ITG performs scanning of software and environments using various tools (Fortify, NESSUS, etc.) Given the current scope of the project, the technologies used and hosting environments chosen, the mentioned scans were not performed, but could be added as required by the security posture.
 
-[<-- Back to the Evidence Listing](https://github.com/itgfirm/safe-food/edit/master/Evidence)  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Next Evidence (c) -->](https://github.com/itgfirm/safe-food/edit/master/Evidence/i)
+[<-- Back to the Evidence Listing](https://github.com/itgfirm/safe-food/edit/master/Evidence)  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Next Evidence (i) -->](https://github.com/itgfirm/safe-food/edit/master/Evidence/i)
