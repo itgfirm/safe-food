@@ -5,7 +5,7 @@
 ## Single Repository
 ![github logo](github_logo.png)
 
-[GitHub](https://github.com/itgfirm/safe-food) serves as our repository for all source as well as configurations.  Most of our configurations (i.e. dependencies and settings) for the various libraries that we use are in the usual (by convention) places for Node.js/AngularJS projects such as [package.json](https://github.com/itgfirm/safe-food/blob/master/package.json), [bower.json](https://github.com/itgfirm/safe-food/blob/master/bower.json).
+[GitHub](https://github.com/itgfirm/safe-food) serves as our repository for all source as well as configurations.  Most of our configurations (i.e. dependencies and settings) for the various libraries that we use are in the usual (by convention) places for Node.js/AngularJS projects such as [package.json](https://github.com/itgfirm/safe-food/blob/master/package.json), [bower.json](https://github.com/itgfirm/safe-food/blob/master/bower.json). ITG setup change and configuration management practices that are aligned with our CMMI level-3 practices.
 
 The build and test steps are configured in the NPM Scripts section of [package.json](https://github.com/itgfirm/safe-food/blob/master/package.json) and our Grunt Tasks are configured in [Gruntfile.js](https://github.com/itgfirm/safe-food/blob/master/Gruntfile.js)
 
