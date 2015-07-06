@@ -1,4 +1,4 @@
-http://safe-food.herokuapp.com - Prototype
+http://safe-food.herokuapp.com - Prototype<br>
 https://github.com/itgfirm/safe-food - Repository
   
 ###Introduction
