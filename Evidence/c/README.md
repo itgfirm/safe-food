@@ -9,7 +9,6 @@ Modern and open-source technologies pervade all levels of our development and de
 
 ### Build Tools
 |   |   |   |
-|---|---|---|
 |NPM|[Evidence](https://github.com/itgfirm/safe-food/blob/master/package.json)|[Open Source Documentation](https://www.npmjs.com/policies/npm-license)|
 |Bower|[Evidence](https://github.com/itgfirm/safe-food/blob/master/bower.json)|[Open Source Documentation](http://bower.io/docs/about/)  |
 |Grunt|[Evidence](https://github.com/itgfirm/safe-food/blob/master/Gruntfile.js)|[Open Source Documentation](https://github.com/gruntjs/grunt/blob/master/LICENSE-MIT)|
