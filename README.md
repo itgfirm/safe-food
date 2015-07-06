@@ -21,6 +21,8 @@ Travis CI to support our CI integrated with SauceLabs to run automated tests
 ###Agile Execution
 Our prototype was developed using our proven Agile Scrum methodologies (Figure 1) to deliver an application that provides informative data to citizens detailing food safety recalls.
 
+![Agile and DevOps graphic](https://github.com/itgfirm/safe-food/blob/master/Documentation/ITG%20DevOps.png)
+
 We held a Backlog Development Meeting, led by the Product Owner. The Product Owner developed stories with acceptance criteria, and the Scrum Master led the team through grooming sessions to assign points to stories. Our stories included wireframes focused on human-centered design principles by our UX designer and test scripts from our QC specialists that ensured alignment with acceptance criteria, feature quality and industry accepted mobile responsive apps. Our architects developed the underpinning solution and data architectures and ensured alignment with GSA Enterprise Architecture (EA). Our target was to develop an evolutionary tool rather than a throw-away prototype.
  
 Our first Sprint Planning Meeting identified the Sprint Goal and Sprint Backlog. This enabled the Agile Sprint Board in JIRA to track work, velocity and progress. We began the sprint, and held daily standups.
@@ -33,4 +35,4 @@ Our Scrum Master monitored development progress and reallocated priorities as ne
  
 At the end of each day, work was presented to the Product Owner. The Product Owner validated that each acceptance criteria was met. Any items outside of scope of the stories or acceptance criteria were added to the backlog. Also, our Team discussed what worked and what didn’t during the day enabling the Scrum Master to resolve issues through continual process improvement that increased velocity to meet our tight deadline. Upon completion of the safeFood project we held a meeting to discuss lessons learned.
  
-As demonstrated in the provided Attachment E (INSERT URL), our safeFood app meets all criteria required for Pool 2. Our application represents the confluence of ITG’s highly experienced team, proven Agile Scrum practices, DevOps, tools experience, and federal standards.
+As demonstrated in the provided [Attachment E](https://github.com/itgfirm/safe-food/raw/master/Evidence/Attachment%20E%20Approach%20Criteria%20Evidence_ITG.xlsx), our safeFood app meets all criteria required for Pool 2. Our application represents the confluence of ITG’s highly experienced team, proven Agile Scrum practices, DevOps, tools experience, and federal standards.
