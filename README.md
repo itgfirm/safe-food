@@ -12,11 +12,11 @@ As customary, ITG’s Chief Information Security Officer (CISO) was engaged duri
 ###Selecting the Technologies
 We finalized the technology architecture and selected modern tools for project execution. Leveraging DevOps principles we rapidly provisioned the necessary environments to support continuous integration, continuous deployment, automated testing and acceptance. Our environments were provisioned on flexible infrastructure with elastic resources, using Heroku’s Cloud PaaS.
  
-To meet the requirements our Solution Architect selected
-AngularJS, Mocha, and Node.js, New Relic and Git
-LoopBack, a highly-extensible, open-source Node.js framework to create dynamic end-to-end REST APIs supporting secure data marshaling
-New Relic to provide analytics and performance monitoring
-Travis CI to support our CI integrated with SauceLabs to run automated tests
+To meet the requirements our Solution Architect selected:
+- AngularJS, Mocha, and Node.js, New Relic and Git
+- LoopBack, a highly-extensible, open-source Node.js framework to create dynamic end-to-end REST APIs supporting secure data marshaling
+- New Relic to provide analytics and performance monitoring
+- Travis CI to support our CI integrated with Open SauceLabs to run automated tests
  
 ###Agile Execution
 Our prototype was developed using our proven Agile Scrum methodologies (Figure 1) to deliver an application that provides informative data to citizens detailing food safety recalls.
