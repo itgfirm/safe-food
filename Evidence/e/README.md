@@ -30,7 +30,7 @@ Tests for end-to-end (and acceptance) can be found at /test/selenium/acceptance.
 
 The SauceLabs dashboard shows the individual test cases, including the outcome as well as the ability to replay the recorded test execution from the browser.
 
-![SauceLabs Output](https://github.com/itgfirm/safe-food/raw/master/Evidence/e/SauceLabs_dashboard.png)
+![SauceLabs Output](https://github.com/itgfirm/safe-food/blob/master/Evidence/e/SauceLabs_Dashboard.png)
 
 
 ### Cross-Browser Testing
@@ -39,7 +39,7 @@ SauceLabs provides the ability to easily add Operating Systems and Browsers to a
 Tests for cross-browser can be found at /test/selenium/acceptance.py
 * [base.py](https://github.com/itgfirm/safe-food/blob/master/test/selenium/base.py)
 
-![SauceLabs Badge](https://github.com/itgfirm/safe-food/raw/master/Evidence/e/SauceLabs_badge_cross-browser.png)
+![SauceLabs Badge](https://github.com/itgfirm/safe-food/blob/master/Evidence/e/SauceLabs_badge_cross-browser.png)
 
 (Note that failures are actually due to performance and tuning of the SauceLabs test execution environment.)
 
