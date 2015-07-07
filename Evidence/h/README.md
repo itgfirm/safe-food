@@ -6,9 +6,9 @@
 
 ITG federal clients benefit from our proactive and extensive approach to continuous monitoring. Given our experience in delivering FISMA compliant systems at GSA and other agencies, we are familiar with the continuous diagnostics & mitigation (CDM) activities necessary to support security operations. 
 
-Our approach is to evaluate every component of the system, prior to implementation, to identify risks nad determine acceptability. Then, once approved, all components must be continuously monitored to ensure the approved level of security is maintained.  
+Our approach is to evaluate every component of the system, prior to implementation, to identify risks and determine acceptability. Then, once approved, all components must be continuously monitored to ensure the approved level of security is maintained.  
 
-ITG selected Heroku understading that the risk tolerance defined by our Product Owner. We inherited several components of continuous monitoring from Heroku with the understanding that the technology utilized could be swapped out easily should additional risks be identified by the government. As with all systems, the nature of the data and the integrations, as identified by the appropriate privacy or legal officer, is critical in determining the level of security requirements for a system.
+ITG selected Heroku understading the risk tolerance defined by our Product Owner. We inherited several components of continuous monitoring from Heroku with the understanding that the technology utilized could be swapped out easily should additional risks be identified by the government. As with all systems, the nature of the data and the integrations, as identified by the appropriate privacy or legal officer, is critical in determining the level of security requirements for a system.
 
 ## Operational Visibility
 ITG leveraged the AWS FedRAMP package and inherited its core infrastructure components within a shared resposibility model since Heroku is deployed in the AWS environment. However, ITG understands that Heroku does not currently hold a FedRAMP ATO and that controls inhereted from Heroku would have to be assessed to meet federal and agency policy and requirements.
