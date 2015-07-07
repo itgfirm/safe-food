@@ -21,7 +21,7 @@ To fulfill these needs, we constructed the following team:
 | Category 6 - Front End Web Developer | Brian Johnston | Javascript Developer |
 | Category 6 - Front End Web Developer | Tito Araujo | UX Design & Graphics |
 | Category 8 - DevOps Engineer | Ben Rose | DevOps Engineer |
-| Category 6 - Front End Web Developer / User Researcher / Usability Tester | Kevin Foglio | Test Specialist |
+| Category 6 - Front End Web Developer | Kevin Foglio | Test Specialist |
 | Category 2 - Technical Architect | Kent Bridges | Security Architect |
 
 
