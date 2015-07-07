@@ -5,13 +5,20 @@
   "license": "MIT",
   "author": {
     "name": "Incentive Technology Group",
-    "email": "",
+    "email": "info@itgfirm.com",
     "url": "http://www.itgfirm.com"
   },
-  "homepage": "",
+  "homepage": "http://safe-food.herokuapp.com",
   "contributors": [
+    "Sudha Venkateswaran",
+    "Casey Johnson",
     "Phil Armour <phillip.armour@itgfirm.com>",
-    "Hitesh Patel <hitesh.patel@itgfirm.com>"
+    "Hitesh Patel <hitesh.patel@itgfirm.com>",
+    "Mohammed Nauage",
+    "Brian Johnston",
+    "Tito Araujo",
+    "Ben Rose",
+    "Kevin Foglio"
   ],
   "dependencies": {
     "bower": "^1.4.1",
