@@ -3,9 +3,13 @@
 ***j. used an iterative approach, where feedback informed subsequent work or versions of the prototype***
 
 ITG used an iterative approach. The sections below provide a narrative and links illustrating instances where feedback informed subsequent work of versions of our prototype. Three specific examples include:
-- [New Style for the Application](https://github.com/itgfirm/safe-food/tree/master/Evidence/j#3---execution)
-- [Modifications to Fields used for search and display](https://github.com/itgfirm/safe-food/tree/master/Evidence/j#4---reflection)
-- [Limited Ability to Sort via FDA API](https://github.com/itgfirm/safe-food/tree/master/Evidence/j#5---pivot)
+- [New style for the application](https://github.com/itgfirm/safe-food/tree/master/Evidence/j#3---execution)
+- [Modifications to fields used for search and display](https://github.com/itgfirm/safe-food/tree/master/Evidence/j#4---reflection)
+- [Modified requirements for limited ability to sort via FDA's API](https://github.com/itgfirm/safe-food/tree/master/Evidence/j#5---pivot)
+
+We also used our Continuous Deployment system to deploy updates from the team, making it immediately available for review and feedback.
+
+![build history](https://github.com/itgfirm/safe-food/blob/master/Evidence/f/TravisCI_Build_History.png)
 
 # 1 - Inception
 When the RFQ was published, our chosen stakeholders gathered to brainstorm ideas, and more generally come up with the idea for the application.  After developing potential ideas with some business cases and features fleshed out, they invited the technical team to discuss and provide feedback from a practical perspective. 
@@ -18,7 +22,7 @@ With our set of stories in the backlog, we gathered the entire team for the spri
 
 ![sprint planning image](https://github.com/itgfirm/safe-food/blob/master/Documentation/Process/JIRA/Screen%20Shot%202015-06-22%20at%209.20.13%20AM.png)
 
-Both of these activities resulted in a very interactive conversation between the developers and the Product Owner which were documented in the [story list that could be reasonably delivered in the sprint](https://github.com/itgfirm/safe-food/blob/master/Documentation/Process/JIRA/Initial_sprint_Stories.xlsx). 
+Both of these activities resulted in a very interactive conversation between the developers and the Product Owner which were documented in the [story list that could be reasonably delivered in the sprint](https://github.com/itgfirm/safe-food/blob/master/Documentation/Process/JIRA/Initial_Sprint_Stories.xlsx). 
 
 # 3 - Execution
 Once the sprint began, each day consisted of a scrum, a post-scrum discussion/follow-up, and demonstrations to the Product Owner.  We  utilized a collaboration tool called **Slack** for all communications in-between the previously mentioned events. 
