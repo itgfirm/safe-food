@@ -4,6 +4,10 @@
 
 ## Continuous Integration System - Travis CI
 ITG used [Travis CI as our continuous integration (CI) system](https://travis-ci.org/itgfirm/safe-food/builds).  It enabled us to configure [common build and test scripts](https://github.com/itgfirm/safe-food/blob/master/package.json) (via NPM) and ensure that we are [executing them consistently and regularly](https://github.com/itgfirm/safe-food/blob/master/.travis.yml).
+- [package.json](https://github.com/itgfirm/safe-food/blob/master/package.json)
+- [.travis.yml](https://github.com/itgfirm/safe-food/blob/master/.travis.yml)
+- [Gruntfile.js](https://github.com/itgfirm/safe-food/blob/master/Gruntfile.js)
+
 
 ### Continuous Integration with Continuous Deployments
 We chose to link the CI build to our Master, and only, branch in Github due to fact that we are a small team operating on a tight deadline and would benefit from tighter feedback loops from our build results in our integration environment. 
