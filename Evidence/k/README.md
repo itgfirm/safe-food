@@ -14,7 +14,7 @@
 * `grunt build` to jshint and build
 * `grunt test` for one-time test with karma and mocha (also jshint)
 
-### Run Locally for Front End Development (i.e. LievReload)
+### Run Locally for Front End Development (enables live reload)
 * `grunt serve` to watch src files to jshint, build, and livereload when changed
 
 ### Deployment & Local Full-Stack Development 
