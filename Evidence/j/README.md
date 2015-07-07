@@ -2,13 +2,16 @@
 
 ***j. used an iterative approach, where feedback informed subsequent work or versions of the prototype***
 
-ITG used an iterative approach. The sections below provide a narrative and links illustrating instances where feedback informed subsequent work of versions of our prototype. 
+ITG used an iterative approach. The sections below provide a narrative and links illustrating instances where feedback informed subsequent work of versions of our prototype. Three specific examples include:
+- [New Style for the Application](https://github.com/itgfirm/safe-food/tree/master/Evidence/j#3---execution)
+- [Modifications to Fields used for search and display](https://github.com/itgfirm/safe-food/tree/master/Evidence/j#4---reflection)
+- [Limited Ability to Sort via FDA API](https://github.com/itgfirm/safe-food/tree/master/Evidence/j#5---pivot)
 
 # 1 - Inception
 When the RFQ was published, our chosen stakeholders gathered to brainstorm ideas, and more generally come up with the idea for the application.  After developing potential ideas with some business cases and features fleshed out, they invited the technical team to discuss and provide feedback from a practical perspective. 
 
 * The team then collaboratively worked on [mock-ups of a hypothetical application](https://github.com/itgfirm/safe-food/blob/master/Documentation/Design/wireframe_v1.pdf) to facilitate further discussion and generate a common understanding. 
-* From those ideas, the Product Owner created [User Stories in JIRA and loaded them into the project’s backlog](https://github.com/itgfirm/safe-food/blob/master/Documentation/Process/JIRA/Screen%20Shot%202015-06-22%20at%209.20.13%20AM.png). 
+* The Product Owner created [User Stories in JIRA and loaded them into the project’s backlog](https://github.com/itgfirm/safe-food/blob/master/Documentation/Process/JIRA/Screen%20Shot%202015-06-22%20at%209.20.13%20AM.png). 
 
 # 2 - Sprint Planning
 With our set of stories in the backlog, we gathered the entire team for the sprint planning session. This consisted of working with the Product Owner to prioritize the stories and better groom the backlog; It also consisted of working with the technical team to size the stories into abstract categories of complexity and effort so that the entire team could better gauge what could be accomplished during the short sprint.  
@@ -40,20 +43,43 @@ Initial demos of the site displayed a style consisting of only some basic blue c
 
 ![Image of initial site](initial_site_style.png)
 
-These discussion led to the creation of [new stories](https://github.com/itgfirm/safe-food/blob/master/Documentation/Process/JIRA/Initial_sprint_Stories.xlsx) around adding better style for the site, including the navigation as well as the colors and the creation of a logo. These stories were added to the backlog as they came up (as opposed to being added to the ongoing sprint.)
+These discussion led to the creation of [new stories](https://github.com/itgfirm/safe-food/blob/master/Documentation/Process/JIRA/Initial_Sprint_Stories.xlsx) around adding better style for the site, including the navigation as well as the colors and the creation of a logo. These stories were added to the backlog as they came up (as opposed to being added to the ongoing sprint.)
+
+By the end of the Sprint, the final style of the application was quite different to the delight of the Product Owner:
+
+![image of new style](final_nav_and_search.png)
 
 # 4 - Reflection
-There were many points of reflection in our project resulting from technical clarifications on the API, demonostrations, and extensions/requirement changes provided by GSA.  Our team was able to openly discuss the issues and opportunities at each reflection point with our Product Manager and the entire development team. In most cases our team only needed to modify the story objectives or acceptance criteria for it to more closely align with the changing requirements. In some cases, we discussed changing the scope of the sprint by  removing specific stories from the sprint when they became obsolete or overly complicated.
+There were many points of reflection in our project resulting from technical clarifications on the API, demonstrations, as well as extensions provided by GSA.  Our team was able to openly discuss the issues and opportunities at each reflection point including the Product Manager, Scrum Master and the development team. In many cases our team only needed to agree to modify the story objectives or acceptance criteria for the sprint story to align with the evolving understanding of the requirement. 
+
+An example of this included revising the search fields.  The story went through several revisions after the inital requirement:
+
+![image of search field story](jira_search_fields.png)
+
+From there a [more detailed analysis and spec](https://github.com/itgfirm/safe-food/blob/master/Documentation/Design/ViewEntries_Design.docx) was devised.  And the resulting functionality is now much simpler, intuitive, and satisfies the intended requirements of the Product Owner:
+
+![image of search field story](final_search_fields.png)
+
+However in other cases, we needed to discussed the impacts of changing the scope of the sprint (typically by removing specific stories from the sprint when they became obsolete or overly complicated in favor of new or revised stories that more fully implemented the Product Owner's vision.
+
+In fact when we were informed of the first deadline extension we performed a small sprint planning session in which we allowed the Sprint to be extended and therefore the capacity to increase.  The Product Owner then worked with the team to select the desired additional stories that she felt would best improve the application.  These included the style stories as well as some additional stories we had ear-marked as "stretch" stories from before - such as using location services to automatically lookup recalls for the current user.
+
+As the following shows, there was an increase in scope half-way through the project:
+
+![image of jira scope increase](https://github.com/itgfirm/safe-food/blob/master/Documentation/Process/JIRA/Cumulative_Flow_Diagram.png)
 
 # 5 - Pivot
 From each Reflection Point, our team needed to pivot and be agile in our work.  During the tight collaboration required to modify stories and acceptance criteria, the developers discussed limitations and new ideas with the product owner, designer, and other proxy stakeholders.  The result was new implementations, new test cases, revised agile stories.  This level of accountability and transparency allowed the pivots to happen seamlessly throughout the project.
 
+One such example of this, was in our User Story for [sorting search results (ADSBPA-47)](https://github.com/itgfirm/safe-food/blob/master/Documentation/Process/JIRA/Final_Sprint_Stories.xlsx).  
+
+In that Story, the user wanted the ability to sort the search results by any of the fields returned.  Initial this seemed reasonable, however after becoming more familiar with the FDA Open Data API, it became clear that sorting wasn't supported by their API and the API limits the returned results to pages no larger than 100 records, so pulling all of the records to allow the user to sort them in the UI did not seem practical.
+
+However after some investigation, one of our developers came up with a way to efficiently query the counts of ranges of records to effectively sort the results by a date field (namely the date the recall was initiated).  This method allows the records in the search results to display in chronological order (newest at the top), which was the major motivation of the Product Owner in asking for search in the first place.  This compromise allowed the Product Owner to get the needed functionality, but it also allowed the technical team to work within the confines of the technologies to deliverable working and practical solutions.
+
+![image of sorted search results](sorted_results.png)
+
 # 6 - Release & Retrospection
 Upon completion of development and testing, ITG stabilized the code and deployment process to best represent a “production” environment. We also conducted a sprint retrospective with the development team and the Product Owner where we reviewed the effectiveness of our product and process. Each developer was able to express their thoughts and contribute ideas for future improvements. The Product Owner was also able to provide her perspective and similarly identify successes and suggest improvements.
-
-**Evidence Links**
-- JIRA
-- Slack
-- Documentation (mock-ups, etc.)
 
 [<-- Back to the Evidence Listing](https://github.com/itgfirm/safe-food/edit/master/Evidence)  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Next Evidence (k) -->](https://github.com/itgfirm/safe-food/edit/master/Evidence/k)
