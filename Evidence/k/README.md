@@ -16,10 +16,11 @@
 
 ### Run Locally for Front End Development (enables live reload)
 * `grunt serve` to watch src files to jshint, build, and livereload when changed
+* The server will run on http://localhost:9000
 
 ### Deployment & Local Full-Stack Development 
 * `npm start`  (requires all front-end code to be built via `grunt build`)
-
+* The server will run on http://locahost:3000  (note: the server binds to 0.0.0.0)
 
 **Key Files**
 - [package.json](https://github.com/itgfirm/safe-food/blob/master/package.json)
