@@ -33,6 +33,7 @@ Safe Food leverages several open source packages as mentioned previously. Below 
 |Jasmine|[Evidence](https://github.com/itgfirm/safe-food/blob/master/client/test/karma.conf.js)|[Open Source Documentation](https://github.com/jasmine/jasmine/blob/master/MIT.LICENSE)|
 |JSHint|[Evidence](https://github.com/itgfirm/safe-food/blob/master/.jshintrc)|[Open Source Documentation](https://github.com/jshint/jshint/blob/master/LICENSE)|
 |Selenium|[Evidence](https://github.com/itgfirm/safe-food/tree/master/test/selenium)|[Open Source Documentation](https://github.com/SeleniumHQ/selenium/blob/master/LICENSE)|
+|GitHub|[Evidence](https://github.com/itgfirm/safe-food)|[Open Source Documentation](https://help.github.com/articles/github-terms-of-service/) |
 
 
 [<-- Back to the Evidence Listing](https://github.com/itgfirm/safe-food/edit/master/Evidence)
