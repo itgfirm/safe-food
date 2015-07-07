@@ -36,7 +36,7 @@ The SauceLabs dashboard shows the individual test cases, including the outcome a
 ### Cross-Browser Testing
 SauceLabs provides the ability to easily add Operating Systems and Browsers to any test matrix. For Safe Food we chose to configure a testing environment for several common operating systems and browsers.  Below is our compliance based on those tests:
 
-Tests for cross-browser can be found at /test/selenium/acceptance.py
+Tests for cross-browser can be found at /test/selenium/base.py
 * [base.py](https://github.com/itgfirm/safe-food/blob/master/test/selenium/base.py)
 
 ![SauceLabs Badge](https://github.com/itgfirm/safe-food/blob/master/Evidence/e/SauceLabs_badge_cross-browser.png)
